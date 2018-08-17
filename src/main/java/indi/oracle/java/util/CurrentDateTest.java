@@ -29,6 +29,7 @@ public class CurrentDateTest {
     void millisTest() {
         System.out.println(new Date());
         System.out.println(new java.sql.Date(System.currentTimeMillis()));
+        System.out.println(LocalDate.now());
         System.out.println(LocalDate.now().format(DateTimeFormatter.BASIC_ISO_DATE));
     }
     
