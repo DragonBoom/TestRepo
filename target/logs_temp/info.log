@@ -3,3 +3,4 @@
 2018-07-30 12:07:19  INFO --- [main] (StartupInfoLogger.java:50) Starting JpaTest on DESKTOP-65DR0V4 with PID 6044 (started by Think in E:\github\TestRepo)
 2018-07-30 12:07:19  INFO --- [main] (SpringApplication.java:659) No active profile set, falling back to default profiles: default
 2018-07-30 12:07:28  INFO --- [main] (StartupInfoLogger.java:59) Started JpaTest in 9.628 seconds (JVM running for 12.338)
+2018-08-17 18:03:04  INFO --- [main] (AnnotationTest.java:22) 当前类路径(class path?) /E:/github/TestRepo/target/test-classes/
