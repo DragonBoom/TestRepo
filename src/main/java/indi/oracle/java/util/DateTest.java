@@ -8,7 +8,7 @@ import java.util.TimeZone;
 
 import org.junit.jupiter.api.Test;
 
-public class CurrentDateTest {
+public class DateTest {
 
     // @Test
     void getCurrentDateTest() {
@@ -26,7 +26,7 @@ public class CurrentDateTest {
     }
     
     @Test
-    void millisTest() {
+    void dateFormatTest() {
         System.out.println(new Date());
         System.out.println(new java.sql.Date(System.currentTimeMillis()));
         System.out.println(LocalDate.now());
@@ -34,7 +34,7 @@ public class CurrentDateTest {
     }
     
     // @Test
-    void localTest() {
+    void localDateTest() {
         String code = LocalDate.now().format(DateTimeFormatter.BASIC_ISO_DATE)
                 + "SCH"
                 + String.format("%05d", 123);

@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 public class CalendarTest {
 
-    // @Test
+    @Test
     void go() {
         Date date = new Date(System.currentTimeMillis());
         Calendar calendar = Calendar.getInstance();
