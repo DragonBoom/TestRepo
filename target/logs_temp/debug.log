@@ -1,41 +1,1244 @@
-2018-07-30 12:06:23 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
-2018-07-30 12:07:19 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
-2018-07-30 12:07:26 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
-2018-07-30 12:07:26 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
-2018-07-30 12:07:26 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
-2018-07-30 12:07:26 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
-2018-07-30 12:07:26 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
-2018-07-30 12:07:26 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
-2018-07-30 12:07:26 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
-2018-07-30 12:07:26 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
-2018-07-30 12:07:26 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
-2018-07-30 12:07:26 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
-2018-07-30 12:07:26 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
-2018-07-30 12:07:26 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
-2018-07-30 12:07:26 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
-2018-07-30 12:07:26 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
-2018-07-30 12:07:26 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
-2018-07-30 12:07:26 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\Think\AppData\Local\Temp (java.io.tmpdir)
-2018-07-30 12:07:26 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
-2018-07-30 12:07:26 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
-2018-07-30 12:07:26 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1836580864 bytes
-2018-07-30 12:07:26 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
-2018-07-30 12:07:26 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
-2018-07-30 12:07:26 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@1e6d30c0
-2018-07-30 12:07:26 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
-2018-07-30 12:07:26 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
-2018-07-30 12:07:26 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
-2018-07-30 12:07:26 DEBUG --- [main] (Loggers.java:213) Unsafe is available
-2018-07-30 12:07:26 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
-2018-07-30 12:07:26 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
-2018-07-30 12:07:26 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
-2018-07-30 12:07:26 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
-2018-07-30 12:07:26 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
-2018-07-30 12:07:26 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
-2018-07-30 12:07:26 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
-2018-07-30 12:07:26 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
-2018-07-30 12:07:26 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
-2018-07-30 12:07:26 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
-2018-07-30 12:07:26 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
-2018-07-30 12:07:26 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
-2018-07-30 12:07:26 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2018-08-15 21:43:06 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-15 21:49:19 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-15 21:49:48 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-15 21:50:39 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-15 21:51:43 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-15 21:51:52 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
+2018-08-15 21:51:52 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
+2018-08-15 21:51:52 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
+2018-08-15 21:51:52 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
+2018-08-15 21:51:52 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
+2018-08-15 21:51:52 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
+2018-08-15 21:51:52 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
+2018-08-15 21:51:52 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
+2018-08-15 21:51:52 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
+2018-08-15 21:51:52 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
+2018-08-15 21:51:52 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
+2018-08-15 21:51:52 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
+2018-08-15 21:51:52 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2018-08-15 21:51:52 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
+2018-08-15 21:51:52 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
+2018-08-15 21:51:52 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\DRAGON~1\AppData\Local\Temp (java.io.tmpdir)
+2018-08-15 21:51:52 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2018-08-15 21:51:52 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
+2018-08-15 21:51:52 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1884815360 bytes
+2018-08-15 21:51:52 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2018-08-15 21:51:52 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
+2018-08-15 21:51:52 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@477523ba
+2018-08-15 21:51:52 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
+2018-08-15 21:51:52 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
+2018-08-15 21:51:52 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
+2018-08-15 21:51:52 DEBUG --- [main] (Loggers.java:213) Unsafe is available
+2018-08-15 21:51:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
+2018-08-15 21:51:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
+2018-08-15 21:51:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
+2018-08-15 21:51:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
+2018-08-15 21:51:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
+2018-08-15 21:51:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
+2018-08-15 21:51:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
+2018-08-15 21:51:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
+2018-08-15 21:51:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2018-08-15 21:51:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
+2018-08-15 21:51:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
+2018-08-15 21:51:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2018-08-15 21:51:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2018-08-15 22:00:53 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-15 22:01:03 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
+2018-08-15 22:01:03 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
+2018-08-15 22:01:03 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
+2018-08-15 22:01:03 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
+2018-08-15 22:01:03 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
+2018-08-15 22:01:03 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
+2018-08-15 22:01:03 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
+2018-08-15 22:01:03 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
+2018-08-15 22:01:03 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
+2018-08-15 22:01:03 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
+2018-08-15 22:01:03 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
+2018-08-15 22:01:03 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
+2018-08-15 22:01:03 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2018-08-15 22:01:03 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
+2018-08-15 22:01:03 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
+2018-08-15 22:01:03 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\DRAGON~1\AppData\Local\Temp (java.io.tmpdir)
+2018-08-15 22:01:03 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2018-08-15 22:01:03 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
+2018-08-15 22:01:03 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1884815360 bytes
+2018-08-15 22:01:03 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2018-08-15 22:01:03 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
+2018-08-15 22:01:03 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@2c34402
+2018-08-15 22:01:03 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
+2018-08-15 22:01:04 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
+2018-08-15 22:01:04 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
+2018-08-15 22:01:04 DEBUG --- [main] (Loggers.java:213) Unsafe is available
+2018-08-15 22:01:04 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
+2018-08-15 22:01:04 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
+2018-08-15 22:01:04 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
+2018-08-15 22:01:04 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
+2018-08-15 22:01:04 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
+2018-08-15 22:01:04 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
+2018-08-15 22:01:04 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
+2018-08-15 22:01:04 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
+2018-08-15 22:01:04 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2018-08-15 22:01:04 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
+2018-08-15 22:01:04 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
+2018-08-15 22:01:04 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2018-08-15 22:01:04 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2018-08-15 22:19:50 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-15 22:19:58 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
+2018-08-15 22:19:58 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
+2018-08-15 22:19:58 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
+2018-08-15 22:19:58 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
+2018-08-15 22:19:58 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
+2018-08-15 22:19:58 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
+2018-08-15 22:19:58 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
+2018-08-15 22:19:58 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
+2018-08-15 22:19:58 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
+2018-08-15 22:19:58 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
+2018-08-15 22:19:58 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
+2018-08-15 22:19:58 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
+2018-08-15 22:19:58 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2018-08-15 22:19:58 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
+2018-08-15 22:19:58 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
+2018-08-15 22:19:58 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\DRAGON~1\AppData\Local\Temp (java.io.tmpdir)
+2018-08-15 22:19:58 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2018-08-15 22:19:58 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
+2018-08-15 22:19:58 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1884815360 bytes
+2018-08-15 22:19:58 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2018-08-15 22:19:58 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
+2018-08-15 22:19:58 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@22fb9a2c
+2018-08-15 22:19:58 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
+2018-08-15 22:19:59 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
+2018-08-15 22:19:59 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
+2018-08-15 22:19:59 DEBUG --- [main] (Loggers.java:213) Unsafe is available
+2018-08-15 22:19:59 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
+2018-08-15 22:19:59 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
+2018-08-15 22:19:59 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
+2018-08-15 22:19:59 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
+2018-08-15 22:19:59 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
+2018-08-15 22:19:59 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
+2018-08-15 22:19:59 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
+2018-08-15 22:19:59 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
+2018-08-15 22:19:59 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2018-08-15 22:19:59 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
+2018-08-15 22:19:59 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
+2018-08-15 22:19:59 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2018-08-15 22:19:59 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2018-08-15 22:21:14 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-15 22:21:23 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
+2018-08-15 22:21:23 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
+2018-08-15 22:21:23 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
+2018-08-15 22:21:23 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
+2018-08-15 22:21:23 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
+2018-08-15 22:21:23 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
+2018-08-15 22:21:23 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
+2018-08-15 22:21:23 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
+2018-08-15 22:21:23 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
+2018-08-15 22:21:23 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
+2018-08-15 22:21:23 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
+2018-08-15 22:21:23 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
+2018-08-15 22:21:23 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2018-08-15 22:21:23 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
+2018-08-15 22:21:23 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
+2018-08-15 22:21:23 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\DRAGON~1\AppData\Local\Temp (java.io.tmpdir)
+2018-08-15 22:21:23 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2018-08-15 22:21:23 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
+2018-08-15 22:21:23 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1884815360 bytes
+2018-08-15 22:21:23 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2018-08-15 22:21:23 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
+2018-08-15 22:21:23 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@21527b8
+2018-08-15 22:21:23 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
+2018-08-15 22:21:23 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
+2018-08-15 22:21:23 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
+2018-08-15 22:21:23 DEBUG --- [main] (Loggers.java:213) Unsafe is available
+2018-08-15 22:21:23 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
+2018-08-15 22:21:23 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
+2018-08-15 22:21:23 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
+2018-08-15 22:21:23 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
+2018-08-15 22:21:23 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
+2018-08-15 22:21:23 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
+2018-08-15 22:21:23 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
+2018-08-15 22:21:23 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
+2018-08-15 22:21:23 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2018-08-15 22:21:23 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
+2018-08-15 22:21:23 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
+2018-08-15 22:21:23 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2018-08-15 22:21:23 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2018-08-15 22:22:56 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-15 22:23:06 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
+2018-08-15 22:23:06 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
+2018-08-15 22:23:06 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
+2018-08-15 22:23:06 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
+2018-08-15 22:23:06 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
+2018-08-15 22:23:06 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
+2018-08-15 22:23:06 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
+2018-08-15 22:23:06 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
+2018-08-15 22:23:06 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
+2018-08-15 22:23:06 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
+2018-08-15 22:23:06 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
+2018-08-15 22:23:06 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
+2018-08-15 22:23:06 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2018-08-15 22:23:06 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
+2018-08-15 22:23:06 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
+2018-08-15 22:23:06 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\DRAGON~1\AppData\Local\Temp (java.io.tmpdir)
+2018-08-15 22:23:06 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2018-08-15 22:23:06 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
+2018-08-15 22:23:06 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1884815360 bytes
+2018-08-15 22:23:06 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2018-08-15 22:23:06 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
+2018-08-15 22:23:06 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@2c34402
+2018-08-15 22:23:06 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
+2018-08-15 22:23:06 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
+2018-08-15 22:23:06 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
+2018-08-15 22:23:06 DEBUG --- [main] (Loggers.java:213) Unsafe is available
+2018-08-15 22:23:07 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
+2018-08-15 22:23:07 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
+2018-08-15 22:23:07 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
+2018-08-15 22:23:07 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
+2018-08-15 22:23:07 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
+2018-08-15 22:23:07 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
+2018-08-15 22:23:07 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
+2018-08-15 22:23:07 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
+2018-08-15 22:23:07 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2018-08-15 22:23:07 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
+2018-08-15 22:23:07 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
+2018-08-15 22:23:07 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2018-08-15 22:23:07 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2018-08-15 22:23:45 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-15 22:23:54 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
+2018-08-15 22:23:54 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
+2018-08-15 22:23:54 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
+2018-08-15 22:23:54 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
+2018-08-15 22:23:54 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
+2018-08-15 22:23:54 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
+2018-08-15 22:23:54 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
+2018-08-15 22:23:54 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
+2018-08-15 22:23:54 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
+2018-08-15 22:23:54 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
+2018-08-15 22:23:54 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
+2018-08-15 22:23:54 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
+2018-08-15 22:23:54 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2018-08-15 22:23:54 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
+2018-08-15 22:23:54 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
+2018-08-15 22:23:54 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\DRAGON~1\AppData\Local\Temp (java.io.tmpdir)
+2018-08-15 22:23:54 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2018-08-15 22:23:54 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
+2018-08-15 22:23:54 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1884815360 bytes
+2018-08-15 22:23:54 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2018-08-15 22:23:54 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
+2018-08-15 22:23:54 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@2d74cbbd
+2018-08-15 22:23:54 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
+2018-08-15 22:23:54 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
+2018-08-15 22:23:54 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
+2018-08-15 22:23:54 DEBUG --- [main] (Loggers.java:213) Unsafe is available
+2018-08-15 22:23:54 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
+2018-08-15 22:23:54 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
+2018-08-15 22:23:54 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
+2018-08-15 22:23:54 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
+2018-08-15 22:23:54 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
+2018-08-15 22:23:54 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
+2018-08-15 22:23:54 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
+2018-08-15 22:23:54 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
+2018-08-15 22:23:54 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2018-08-15 22:23:54 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
+2018-08-15 22:23:54 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
+2018-08-15 22:23:54 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2018-08-15 22:23:54 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2018-08-15 22:24:31 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-15 22:24:40 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
+2018-08-15 22:24:40 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
+2018-08-15 22:24:41 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
+2018-08-15 22:24:41 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
+2018-08-15 22:24:41 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
+2018-08-15 22:24:41 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
+2018-08-15 22:24:41 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
+2018-08-15 22:24:41 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
+2018-08-15 22:24:41 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
+2018-08-15 22:24:41 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
+2018-08-15 22:24:41 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
+2018-08-15 22:24:41 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
+2018-08-15 22:24:41 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2018-08-15 22:24:41 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
+2018-08-15 22:24:41 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
+2018-08-15 22:24:41 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\DRAGON~1\AppData\Local\Temp (java.io.tmpdir)
+2018-08-15 22:24:41 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2018-08-15 22:24:41 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
+2018-08-15 22:24:41 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1884815360 bytes
+2018-08-15 22:24:41 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2018-08-15 22:24:41 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
+2018-08-15 22:24:41 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@7e58f697
+2018-08-15 22:24:41 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
+2018-08-15 22:24:41 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
+2018-08-15 22:24:41 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
+2018-08-15 22:24:41 DEBUG --- [main] (Loggers.java:213) Unsafe is available
+2018-08-15 22:24:41 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
+2018-08-15 22:24:41 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
+2018-08-15 22:24:41 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
+2018-08-15 22:24:41 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
+2018-08-15 22:24:41 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
+2018-08-15 22:24:41 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
+2018-08-15 22:24:41 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
+2018-08-15 22:24:41 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
+2018-08-15 22:24:41 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2018-08-15 22:24:41 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
+2018-08-15 22:24:41 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
+2018-08-15 22:24:41 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2018-08-15 22:24:41 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2018-08-15 22:25:21 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-15 22:25:29 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
+2018-08-15 22:25:29 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
+2018-08-15 22:25:29 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
+2018-08-15 22:25:29 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
+2018-08-15 22:25:29 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
+2018-08-15 22:25:29 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
+2018-08-15 22:25:29 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
+2018-08-15 22:25:29 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
+2018-08-15 22:25:29 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
+2018-08-15 22:25:29 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
+2018-08-15 22:25:29 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
+2018-08-15 22:25:29 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
+2018-08-15 22:25:29 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2018-08-15 22:25:29 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
+2018-08-15 22:25:29 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
+2018-08-15 22:25:29 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\DRAGON~1\AppData\Local\Temp (java.io.tmpdir)
+2018-08-15 22:25:29 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2018-08-15 22:25:29 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
+2018-08-15 22:25:29 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1884815360 bytes
+2018-08-15 22:25:29 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2018-08-15 22:25:29 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
+2018-08-15 22:25:29 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@5cc3e49b
+2018-08-15 22:25:29 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
+2018-08-15 22:25:29 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
+2018-08-15 22:25:29 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
+2018-08-15 22:25:29 DEBUG --- [main] (Loggers.java:213) Unsafe is available
+2018-08-15 22:25:30 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
+2018-08-15 22:25:30 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
+2018-08-15 22:25:30 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
+2018-08-15 22:25:30 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
+2018-08-15 22:25:30 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
+2018-08-15 22:25:30 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
+2018-08-15 22:25:30 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
+2018-08-15 22:25:30 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
+2018-08-15 22:25:30 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2018-08-15 22:25:30 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
+2018-08-15 22:25:30 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
+2018-08-15 22:25:30 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2018-08-15 22:25:30 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2018-08-15 22:27:33 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-15 22:27:41 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
+2018-08-15 22:27:41 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
+2018-08-15 22:27:41 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
+2018-08-15 22:27:41 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
+2018-08-15 22:27:41 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
+2018-08-15 22:27:41 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
+2018-08-15 22:27:41 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
+2018-08-15 22:27:41 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
+2018-08-15 22:27:41 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
+2018-08-15 22:27:41 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
+2018-08-15 22:27:41 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
+2018-08-15 22:27:41 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
+2018-08-15 22:27:41 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2018-08-15 22:27:41 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
+2018-08-15 22:27:41 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
+2018-08-15 22:27:41 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\DRAGON~1\AppData\Local\Temp (java.io.tmpdir)
+2018-08-15 22:27:41 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2018-08-15 22:27:41 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
+2018-08-15 22:27:41 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1884815360 bytes
+2018-08-15 22:27:41 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2018-08-15 22:27:41 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
+2018-08-15 22:27:41 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@2d74cbbd
+2018-08-15 22:27:41 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
+2018-08-15 22:27:41 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
+2018-08-15 22:27:41 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
+2018-08-15 22:27:41 DEBUG --- [main] (Loggers.java:213) Unsafe is available
+2018-08-15 22:27:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
+2018-08-15 22:27:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
+2018-08-15 22:27:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
+2018-08-15 22:27:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
+2018-08-15 22:27:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
+2018-08-15 22:27:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
+2018-08-15 22:27:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
+2018-08-15 22:27:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
+2018-08-15 22:27:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2018-08-15 22:27:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
+2018-08-15 22:27:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
+2018-08-15 22:27:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2018-08-15 22:27:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2018-08-15 22:28:32 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-15 22:28:42 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
+2018-08-15 22:28:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
+2018-08-15 22:28:42 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
+2018-08-15 22:28:42 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
+2018-08-15 22:28:42 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
+2018-08-15 22:28:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
+2018-08-15 22:28:42 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
+2018-08-15 22:28:42 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
+2018-08-15 22:28:42 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
+2018-08-15 22:28:42 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
+2018-08-15 22:28:42 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
+2018-08-15 22:28:42 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
+2018-08-15 22:28:42 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2018-08-15 22:28:42 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
+2018-08-15 22:28:42 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
+2018-08-15 22:28:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\DRAGON~1\AppData\Local\Temp (java.io.tmpdir)
+2018-08-15 22:28:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2018-08-15 22:28:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
+2018-08-15 22:28:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1884815360 bytes
+2018-08-15 22:28:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2018-08-15 22:28:42 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
+2018-08-15 22:28:42 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@2ab9e43e
+2018-08-15 22:28:42 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
+2018-08-15 22:28:42 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
+2018-08-15 22:28:42 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
+2018-08-15 22:28:42 DEBUG --- [main] (Loggers.java:213) Unsafe is available
+2018-08-15 22:28:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
+2018-08-15 22:28:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
+2018-08-15 22:28:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
+2018-08-15 22:28:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
+2018-08-15 22:28:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
+2018-08-15 22:28:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
+2018-08-15 22:28:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
+2018-08-15 22:28:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
+2018-08-15 22:28:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2018-08-15 22:28:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
+2018-08-15 22:28:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
+2018-08-15 22:28:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2018-08-15 22:28:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2018-08-15 22:30:24 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-15 22:30:34 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
+2018-08-15 22:30:34 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
+2018-08-15 22:30:34 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
+2018-08-15 22:30:34 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
+2018-08-15 22:30:35 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
+2018-08-15 22:30:35 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
+2018-08-15 22:30:35 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
+2018-08-15 22:30:35 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
+2018-08-15 22:30:35 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
+2018-08-15 22:30:35 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
+2018-08-15 22:30:35 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
+2018-08-15 22:30:35 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
+2018-08-15 22:30:35 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2018-08-15 22:30:35 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
+2018-08-15 22:30:35 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
+2018-08-15 22:30:35 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\DRAGON~1\AppData\Local\Temp (java.io.tmpdir)
+2018-08-15 22:30:35 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2018-08-15 22:30:35 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
+2018-08-15 22:30:35 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1884815360 bytes
+2018-08-15 22:30:35 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2018-08-15 22:30:35 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
+2018-08-15 22:30:35 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@113eed88
+2018-08-15 22:30:35 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
+2018-08-15 22:30:35 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
+2018-08-15 22:30:35 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
+2018-08-15 22:30:35 DEBUG --- [main] (Loggers.java:213) Unsafe is available
+2018-08-15 22:30:35 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
+2018-08-15 22:30:35 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
+2018-08-15 22:30:35 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
+2018-08-15 22:30:35 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
+2018-08-15 22:30:35 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
+2018-08-15 22:30:35 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
+2018-08-15 22:30:35 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
+2018-08-15 22:30:35 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
+2018-08-15 22:30:35 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2018-08-15 22:30:35 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
+2018-08-15 22:30:35 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
+2018-08-15 22:30:35 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2018-08-15 22:30:35 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2018-08-15 22:31:02 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-15 22:31:09 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
+2018-08-15 22:31:09 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
+2018-08-15 22:31:10 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
+2018-08-15 22:31:10 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
+2018-08-15 22:31:10 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
+2018-08-15 22:31:10 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
+2018-08-15 22:31:10 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
+2018-08-15 22:31:10 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
+2018-08-15 22:31:10 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
+2018-08-15 22:31:10 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
+2018-08-15 22:31:10 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
+2018-08-15 22:31:10 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
+2018-08-15 22:31:10 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2018-08-15 22:31:10 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
+2018-08-15 22:31:10 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
+2018-08-15 22:31:10 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\DRAGON~1\AppData\Local\Temp (java.io.tmpdir)
+2018-08-15 22:31:10 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2018-08-15 22:31:10 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
+2018-08-15 22:31:10 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1884815360 bytes
+2018-08-15 22:31:10 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2018-08-15 22:31:10 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
+2018-08-15 22:31:10 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@3e2d44f3
+2018-08-15 22:31:10 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
+2018-08-15 22:31:10 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
+2018-08-15 22:31:10 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
+2018-08-15 22:31:10 DEBUG --- [main] (Loggers.java:213) Unsafe is available
+2018-08-15 22:31:10 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
+2018-08-15 22:31:10 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
+2018-08-15 22:31:10 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
+2018-08-15 22:31:10 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
+2018-08-15 22:31:10 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
+2018-08-15 22:31:10 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
+2018-08-15 22:31:10 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
+2018-08-15 22:31:10 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
+2018-08-15 22:31:10 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2018-08-15 22:31:10 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
+2018-08-15 22:31:10 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
+2018-08-15 22:31:10 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2018-08-15 22:31:10 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2018-08-15 22:32:31 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-15 22:32:41 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
+2018-08-15 22:32:41 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
+2018-08-15 22:32:41 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
+2018-08-15 22:32:41 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
+2018-08-15 22:32:41 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
+2018-08-15 22:32:41 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
+2018-08-15 22:32:41 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
+2018-08-15 22:32:41 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
+2018-08-15 22:32:41 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
+2018-08-15 22:32:41 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
+2018-08-15 22:32:41 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
+2018-08-15 22:32:41 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
+2018-08-15 22:32:41 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2018-08-15 22:32:41 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
+2018-08-15 22:32:41 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
+2018-08-15 22:32:41 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\DRAGON~1\AppData\Local\Temp (java.io.tmpdir)
+2018-08-15 22:32:41 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2018-08-15 22:32:41 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
+2018-08-15 22:32:41 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1884815360 bytes
+2018-08-15 22:32:41 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2018-08-15 22:32:41 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
+2018-08-15 22:32:41 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@3eac2e8a
+2018-08-15 22:32:41 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
+2018-08-15 22:32:41 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
+2018-08-15 22:32:41 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
+2018-08-15 22:32:41 DEBUG --- [main] (Loggers.java:213) Unsafe is available
+2018-08-15 22:32:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
+2018-08-15 22:32:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
+2018-08-15 22:32:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
+2018-08-15 22:32:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
+2018-08-15 22:32:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
+2018-08-15 22:32:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
+2018-08-15 22:32:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
+2018-08-15 22:32:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
+2018-08-15 22:32:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2018-08-15 22:32:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
+2018-08-15 22:32:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
+2018-08-15 22:32:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2018-08-15 22:32:42 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2018-08-15 22:33:05 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-15 22:33:13 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
+2018-08-15 22:33:13 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
+2018-08-15 22:33:13 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
+2018-08-15 22:33:13 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
+2018-08-15 22:33:13 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
+2018-08-15 22:33:13 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
+2018-08-15 22:33:13 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
+2018-08-15 22:33:13 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
+2018-08-15 22:33:13 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
+2018-08-15 22:33:13 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
+2018-08-15 22:33:13 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
+2018-08-15 22:33:13 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
+2018-08-15 22:33:13 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2018-08-15 22:33:13 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
+2018-08-15 22:33:13 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
+2018-08-15 22:33:13 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\DRAGON~1\AppData\Local\Temp (java.io.tmpdir)
+2018-08-15 22:33:13 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2018-08-15 22:33:13 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
+2018-08-15 22:33:13 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1884815360 bytes
+2018-08-15 22:33:13 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2018-08-15 22:33:14 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
+2018-08-15 22:33:14 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@3eac2e8a
+2018-08-15 22:33:14 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
+2018-08-15 22:33:14 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
+2018-08-15 22:33:14 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
+2018-08-15 22:33:14 DEBUG --- [main] (Loggers.java:213) Unsafe is available
+2018-08-15 22:33:14 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
+2018-08-15 22:33:14 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
+2018-08-15 22:33:14 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
+2018-08-15 22:33:14 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
+2018-08-15 22:33:14 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
+2018-08-15 22:33:14 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
+2018-08-15 22:33:14 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
+2018-08-15 22:33:14 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
+2018-08-15 22:33:14 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2018-08-15 22:33:14 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
+2018-08-15 22:33:14 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
+2018-08-15 22:33:14 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2018-08-15 22:33:14 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2018-08-15 22:33:35 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-15 22:33:44 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
+2018-08-15 22:33:44 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
+2018-08-15 22:33:45 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
+2018-08-15 22:33:45 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
+2018-08-15 22:33:45 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
+2018-08-15 22:33:45 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
+2018-08-15 22:33:45 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
+2018-08-15 22:33:45 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
+2018-08-15 22:33:45 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
+2018-08-15 22:33:45 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
+2018-08-15 22:33:45 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
+2018-08-15 22:33:45 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
+2018-08-15 22:33:45 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2018-08-15 22:33:45 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
+2018-08-15 22:33:45 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
+2018-08-15 22:33:45 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\DRAGON~1\AppData\Local\Temp (java.io.tmpdir)
+2018-08-15 22:33:45 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2018-08-15 22:33:45 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
+2018-08-15 22:33:45 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1884815360 bytes
+2018-08-15 22:33:45 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2018-08-15 22:33:45 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
+2018-08-15 22:33:45 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@baa227e
+2018-08-15 22:33:45 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
+2018-08-15 22:33:45 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
+2018-08-15 22:33:45 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
+2018-08-15 22:33:45 DEBUG --- [main] (Loggers.java:213) Unsafe is available
+2018-08-15 22:33:45 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
+2018-08-15 22:33:45 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
+2018-08-15 22:33:45 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
+2018-08-15 22:33:45 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
+2018-08-15 22:33:45 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
+2018-08-15 22:33:45 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
+2018-08-15 22:33:45 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
+2018-08-15 22:33:45 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
+2018-08-15 22:33:45 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2018-08-15 22:33:45 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
+2018-08-15 22:33:45 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
+2018-08-15 22:33:45 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2018-08-15 22:33:45 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2018-08-15 22:35:23 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-15 22:35:32 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
+2018-08-15 22:35:32 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
+2018-08-15 22:35:32 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
+2018-08-15 22:35:32 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
+2018-08-15 22:35:32 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
+2018-08-15 22:35:32 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
+2018-08-15 22:35:32 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
+2018-08-15 22:35:32 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
+2018-08-15 22:35:32 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
+2018-08-15 22:35:32 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
+2018-08-15 22:35:32 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
+2018-08-15 22:35:32 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
+2018-08-15 22:35:32 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2018-08-15 22:35:32 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
+2018-08-15 22:35:32 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
+2018-08-15 22:35:32 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\DRAGON~1\AppData\Local\Temp (java.io.tmpdir)
+2018-08-15 22:35:32 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2018-08-15 22:35:32 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
+2018-08-15 22:35:32 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1884815360 bytes
+2018-08-15 22:35:32 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2018-08-15 22:35:32 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
+2018-08-15 22:35:32 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@7d88fa9c
+2018-08-15 22:35:32 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
+2018-08-15 22:35:32 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
+2018-08-15 22:35:32 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
+2018-08-15 22:35:32 DEBUG --- [main] (Loggers.java:213) Unsafe is available
+2018-08-15 22:35:32 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
+2018-08-15 22:35:32 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
+2018-08-15 22:35:32 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
+2018-08-15 22:35:32 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
+2018-08-15 22:35:32 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
+2018-08-15 22:35:32 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
+2018-08-15 22:35:32 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
+2018-08-15 22:35:32 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
+2018-08-15 22:35:32 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2018-08-15 22:35:32 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
+2018-08-15 22:35:32 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
+2018-08-15 22:35:32 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2018-08-15 22:35:32 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2018-08-15 22:35:54 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-15 22:36:02 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
+2018-08-15 22:36:02 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
+2018-08-15 22:36:02 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
+2018-08-15 22:36:02 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
+2018-08-15 22:36:02 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
+2018-08-15 22:36:02 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
+2018-08-15 22:36:02 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
+2018-08-15 22:36:02 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
+2018-08-15 22:36:02 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
+2018-08-15 22:36:02 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
+2018-08-15 22:36:02 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
+2018-08-15 22:36:02 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
+2018-08-15 22:36:02 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2018-08-15 22:36:02 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
+2018-08-15 22:36:02 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
+2018-08-15 22:36:02 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\DRAGON~1\AppData\Local\Temp (java.io.tmpdir)
+2018-08-15 22:36:02 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2018-08-15 22:36:02 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
+2018-08-15 22:36:02 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1884815360 bytes
+2018-08-15 22:36:02 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2018-08-15 22:36:02 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
+2018-08-15 22:36:02 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@360d41d0
+2018-08-15 22:36:02 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
+2018-08-15 22:36:02 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
+2018-08-15 22:36:02 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
+2018-08-15 22:36:02 DEBUG --- [main] (Loggers.java:213) Unsafe is available
+2018-08-15 22:36:03 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
+2018-08-15 22:36:03 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
+2018-08-15 22:36:03 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
+2018-08-15 22:36:03 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
+2018-08-15 22:36:03 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
+2018-08-15 22:36:03 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
+2018-08-15 22:36:03 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
+2018-08-15 22:36:03 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
+2018-08-15 22:36:03 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2018-08-15 22:36:03 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
+2018-08-15 22:36:03 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
+2018-08-15 22:36:03 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2018-08-15 22:36:03 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2018-08-15 22:36:34 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-15 22:36:43 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
+2018-08-15 22:36:43 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
+2018-08-15 22:36:43 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
+2018-08-15 22:36:43 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
+2018-08-15 22:36:43 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
+2018-08-15 22:36:43 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
+2018-08-15 22:36:43 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
+2018-08-15 22:36:43 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
+2018-08-15 22:36:43 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
+2018-08-15 22:36:43 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
+2018-08-15 22:36:43 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
+2018-08-15 22:36:43 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
+2018-08-15 22:36:43 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2018-08-15 22:36:43 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
+2018-08-15 22:36:43 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
+2018-08-15 22:36:43 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\DRAGON~1\AppData\Local\Temp (java.io.tmpdir)
+2018-08-15 22:36:43 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2018-08-15 22:36:43 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
+2018-08-15 22:36:43 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1884815360 bytes
+2018-08-15 22:36:43 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2018-08-15 22:36:43 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
+2018-08-15 22:36:43 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@3eac2e8a
+2018-08-15 22:36:43 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
+2018-08-15 22:36:43 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
+2018-08-15 22:36:43 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
+2018-08-15 22:36:43 DEBUG --- [main] (Loggers.java:213) Unsafe is available
+2018-08-15 22:36:44 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
+2018-08-15 22:36:44 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
+2018-08-15 22:36:44 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
+2018-08-15 22:36:44 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
+2018-08-15 22:36:44 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
+2018-08-15 22:36:44 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
+2018-08-15 22:36:44 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
+2018-08-15 22:36:44 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
+2018-08-15 22:36:44 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2018-08-15 22:36:44 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
+2018-08-15 22:36:44 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
+2018-08-15 22:36:44 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2018-08-15 22:36:44 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2018-08-15 22:36:54 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-15 22:37:02 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
+2018-08-15 22:37:02 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
+2018-08-15 22:37:02 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
+2018-08-15 22:37:02 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
+2018-08-15 22:37:02 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
+2018-08-15 22:37:02 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
+2018-08-15 22:37:02 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
+2018-08-15 22:37:02 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
+2018-08-15 22:37:02 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
+2018-08-15 22:37:02 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
+2018-08-15 22:37:02 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
+2018-08-15 22:37:02 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
+2018-08-15 22:37:02 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2018-08-15 22:37:02 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
+2018-08-15 22:37:02 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
+2018-08-15 22:37:02 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\DRAGON~1\AppData\Local\Temp (java.io.tmpdir)
+2018-08-15 22:37:02 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2018-08-15 22:37:02 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
+2018-08-15 22:37:02 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1884815360 bytes
+2018-08-15 22:37:02 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2018-08-15 22:37:02 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
+2018-08-15 22:37:02 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@7bec8cb0
+2018-08-15 22:37:02 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
+2018-08-15 22:37:02 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
+2018-08-15 22:37:02 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
+2018-08-15 22:37:02 DEBUG --- [main] (Loggers.java:213) Unsafe is available
+2018-08-15 22:37:03 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
+2018-08-15 22:37:03 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
+2018-08-15 22:37:03 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
+2018-08-15 22:37:03 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
+2018-08-15 22:37:03 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
+2018-08-15 22:37:03 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
+2018-08-15 22:37:03 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
+2018-08-15 22:37:03 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
+2018-08-15 22:37:03 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2018-08-15 22:37:03 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
+2018-08-15 22:37:03 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
+2018-08-15 22:37:03 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2018-08-15 22:37:03 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2018-08-15 22:37:25 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-15 22:37:33 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
+2018-08-15 22:37:33 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
+2018-08-15 22:37:33 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
+2018-08-15 22:37:33 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
+2018-08-15 22:37:33 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
+2018-08-15 22:37:33 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
+2018-08-15 22:37:33 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
+2018-08-15 22:37:33 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
+2018-08-15 22:37:33 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
+2018-08-15 22:37:33 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
+2018-08-15 22:37:33 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
+2018-08-15 22:37:33 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
+2018-08-15 22:37:33 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2018-08-15 22:37:33 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
+2018-08-15 22:37:33 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
+2018-08-15 22:37:33 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\DRAGON~1\AppData\Local\Temp (java.io.tmpdir)
+2018-08-15 22:37:33 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2018-08-15 22:37:33 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
+2018-08-15 22:37:33 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1884815360 bytes
+2018-08-15 22:37:33 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2018-08-15 22:37:33 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
+2018-08-15 22:37:33 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@360d41d0
+2018-08-15 22:37:33 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
+2018-08-15 22:37:33 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
+2018-08-15 22:37:34 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
+2018-08-15 22:37:34 DEBUG --- [main] (Loggers.java:213) Unsafe is available
+2018-08-15 22:37:34 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
+2018-08-15 22:37:34 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
+2018-08-15 22:37:34 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
+2018-08-15 22:37:34 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
+2018-08-15 22:37:34 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
+2018-08-15 22:37:34 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
+2018-08-15 22:37:34 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
+2018-08-15 22:37:34 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
+2018-08-15 22:37:34 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2018-08-15 22:37:34 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
+2018-08-15 22:37:34 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
+2018-08-15 22:37:34 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2018-08-15 22:37:34 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2018-08-15 22:39:52 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-15 22:40:01 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
+2018-08-15 22:40:01 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
+2018-08-15 22:40:01 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
+2018-08-15 22:40:01 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
+2018-08-15 22:40:01 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
+2018-08-15 22:40:01 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
+2018-08-15 22:40:01 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
+2018-08-15 22:40:01 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
+2018-08-15 22:40:01 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
+2018-08-15 22:40:01 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
+2018-08-15 22:40:01 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
+2018-08-15 22:40:01 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
+2018-08-15 22:40:01 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2018-08-15 22:40:01 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
+2018-08-15 22:40:01 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
+2018-08-15 22:40:01 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\DRAGON~1\AppData\Local\Temp (java.io.tmpdir)
+2018-08-15 22:40:01 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2018-08-15 22:40:01 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
+2018-08-15 22:40:01 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1884815360 bytes
+2018-08-15 22:40:01 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2018-08-15 22:40:01 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
+2018-08-15 22:40:01 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@3e2d44f3
+2018-08-15 22:40:01 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
+2018-08-15 22:40:01 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
+2018-08-15 22:40:01 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
+2018-08-15 22:40:01 DEBUG --- [main] (Loggers.java:213) Unsafe is available
+2018-08-15 22:40:01 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
+2018-08-15 22:40:01 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
+2018-08-15 22:40:01 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
+2018-08-15 22:40:01 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
+2018-08-15 22:40:01 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
+2018-08-15 22:40:01 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
+2018-08-15 22:40:01 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
+2018-08-15 22:40:01 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
+2018-08-15 22:40:01 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2018-08-15 22:40:01 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
+2018-08-15 22:40:01 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
+2018-08-15 22:40:01 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2018-08-15 22:40:01 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2018-08-15 22:40:28 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-15 22:40:37 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
+2018-08-15 22:40:37 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
+2018-08-15 22:40:37 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
+2018-08-15 22:40:37 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
+2018-08-15 22:40:37 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
+2018-08-15 22:40:37 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
+2018-08-15 22:40:37 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
+2018-08-15 22:40:37 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
+2018-08-15 22:40:37 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
+2018-08-15 22:40:37 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
+2018-08-15 22:40:37 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
+2018-08-15 22:40:37 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
+2018-08-15 22:40:37 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2018-08-15 22:40:37 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
+2018-08-15 22:40:37 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
+2018-08-15 22:40:37 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\DRAGON~1\AppData\Local\Temp (java.io.tmpdir)
+2018-08-15 22:40:37 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2018-08-15 22:40:37 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
+2018-08-15 22:40:37 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1884815360 bytes
+2018-08-15 22:40:37 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2018-08-15 22:40:37 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
+2018-08-15 22:40:37 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@7d88fa9c
+2018-08-15 22:40:37 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
+2018-08-15 22:40:37 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
+2018-08-15 22:40:37 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
+2018-08-15 22:40:37 DEBUG --- [main] (Loggers.java:213) Unsafe is available
+2018-08-15 22:40:38 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
+2018-08-15 22:40:38 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
+2018-08-15 22:40:38 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
+2018-08-15 22:40:38 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
+2018-08-15 22:40:38 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
+2018-08-15 22:40:38 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
+2018-08-15 22:40:38 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
+2018-08-15 22:40:38 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
+2018-08-15 22:40:38 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2018-08-15 22:40:38 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
+2018-08-15 22:40:38 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
+2018-08-15 22:40:38 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2018-08-15 22:40:38 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2018-08-15 22:41:08 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-15 22:41:17 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
+2018-08-15 22:41:17 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
+2018-08-15 22:41:17 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
+2018-08-15 22:41:17 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
+2018-08-15 22:41:17 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
+2018-08-15 22:41:17 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
+2018-08-15 22:41:17 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
+2018-08-15 22:41:17 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
+2018-08-15 22:41:17 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
+2018-08-15 22:41:17 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
+2018-08-15 22:41:17 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
+2018-08-15 22:41:17 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
+2018-08-15 22:41:17 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2018-08-15 22:41:17 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
+2018-08-15 22:41:17 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
+2018-08-15 22:41:17 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\DRAGON~1\AppData\Local\Temp (java.io.tmpdir)
+2018-08-15 22:41:17 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2018-08-15 22:41:17 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
+2018-08-15 22:41:17 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1884815360 bytes
+2018-08-15 22:41:17 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2018-08-15 22:41:17 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
+2018-08-15 22:41:17 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@5d3f99d7
+2018-08-15 22:41:17 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
+2018-08-15 22:41:17 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
+2018-08-15 22:41:17 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
+2018-08-15 22:41:17 DEBUG --- [main] (Loggers.java:213) Unsafe is available
+2018-08-15 22:41:18 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
+2018-08-15 22:41:18 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
+2018-08-15 22:41:18 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
+2018-08-15 22:41:18 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
+2018-08-15 22:41:18 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
+2018-08-15 22:41:18 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
+2018-08-15 22:41:18 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
+2018-08-15 22:41:18 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
+2018-08-15 22:41:18 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2018-08-15 22:41:18 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
+2018-08-15 22:41:18 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
+2018-08-15 22:41:18 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2018-08-15 22:41:18 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2018-08-15 22:43:38 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-15 22:43:47 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
+2018-08-15 22:43:47 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
+2018-08-15 22:43:47 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
+2018-08-15 22:43:47 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
+2018-08-15 22:43:47 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
+2018-08-15 22:43:47 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
+2018-08-15 22:43:47 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
+2018-08-15 22:43:47 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
+2018-08-15 22:43:48 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
+2018-08-15 22:43:48 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
+2018-08-15 22:43:48 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
+2018-08-15 22:43:48 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
+2018-08-15 22:43:48 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2018-08-15 22:43:48 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
+2018-08-15 22:43:48 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
+2018-08-15 22:43:48 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\DRAGON~1\AppData\Local\Temp (java.io.tmpdir)
+2018-08-15 22:43:48 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2018-08-15 22:43:48 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
+2018-08-15 22:43:48 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1884815360 bytes
+2018-08-15 22:43:48 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2018-08-15 22:43:48 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
+2018-08-15 22:43:48 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@7d88fa9c
+2018-08-15 22:43:48 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
+2018-08-15 22:43:48 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
+2018-08-15 22:43:48 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
+2018-08-15 22:43:48 DEBUG --- [main] (Loggers.java:213) Unsafe is available
+2018-08-15 22:43:48 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
+2018-08-15 22:43:48 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
+2018-08-15 22:43:48 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
+2018-08-15 22:43:48 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
+2018-08-15 22:43:48 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
+2018-08-15 22:43:48 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
+2018-08-15 22:43:48 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
+2018-08-15 22:43:48 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
+2018-08-15 22:43:48 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2018-08-15 22:43:48 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
+2018-08-15 22:43:48 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
+2018-08-15 22:43:48 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2018-08-15 22:43:48 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2018-08-15 22:44:17 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-15 22:44:26 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
+2018-08-15 22:44:26 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
+2018-08-15 22:44:26 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
+2018-08-15 22:44:26 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
+2018-08-15 22:44:26 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
+2018-08-15 22:44:26 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
+2018-08-15 22:44:26 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
+2018-08-15 22:44:26 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
+2018-08-15 22:44:26 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
+2018-08-15 22:44:26 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
+2018-08-15 22:44:26 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
+2018-08-15 22:44:26 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
+2018-08-15 22:44:26 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2018-08-15 22:44:26 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
+2018-08-15 22:44:26 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
+2018-08-15 22:44:26 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\DRAGON~1\AppData\Local\Temp (java.io.tmpdir)
+2018-08-15 22:44:26 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2018-08-15 22:44:26 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
+2018-08-15 22:44:26 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1884815360 bytes
+2018-08-15 22:44:26 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2018-08-15 22:44:26 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
+2018-08-15 22:44:26 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@3dc82e6a
+2018-08-15 22:44:26 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
+2018-08-15 22:44:26 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
+2018-08-15 22:44:26 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
+2018-08-15 22:44:26 DEBUG --- [main] (Loggers.java:213) Unsafe is available
+2018-08-15 22:44:26 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
+2018-08-15 22:44:26 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
+2018-08-15 22:44:26 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
+2018-08-15 22:44:26 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
+2018-08-15 22:44:26 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
+2018-08-15 22:44:26 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
+2018-08-15 22:44:26 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
+2018-08-15 22:44:26 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
+2018-08-15 22:44:26 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2018-08-15 22:44:26 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
+2018-08-15 22:44:26 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
+2018-08-15 22:44:26 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2018-08-15 22:44:26 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2018-08-15 22:44:50 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-15 22:45:01 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
+2018-08-15 22:45:01 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
+2018-08-15 22:45:01 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
+2018-08-15 22:45:01 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
+2018-08-15 22:45:01 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
+2018-08-15 22:45:01 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
+2018-08-15 22:45:01 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
+2018-08-15 22:45:01 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
+2018-08-15 22:45:01 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
+2018-08-15 22:45:01 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
+2018-08-15 22:45:01 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
+2018-08-15 22:45:01 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
+2018-08-15 22:45:01 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2018-08-15 22:45:01 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
+2018-08-15 22:45:01 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
+2018-08-15 22:45:01 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\DRAGON~1\AppData\Local\Temp (java.io.tmpdir)
+2018-08-15 22:45:01 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2018-08-15 22:45:01 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
+2018-08-15 22:45:01 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1884815360 bytes
+2018-08-15 22:45:01 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2018-08-15 22:45:01 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
+2018-08-15 22:45:01 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@2c34402
+2018-08-15 22:45:01 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
+2018-08-15 22:45:01 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
+2018-08-15 22:45:01 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
+2018-08-15 22:45:01 DEBUG --- [main] (Loggers.java:213) Unsafe is available
+2018-08-15 22:45:01 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
+2018-08-15 22:45:01 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
+2018-08-15 22:45:01 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
+2018-08-15 22:45:01 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
+2018-08-15 22:45:01 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
+2018-08-15 22:45:01 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
+2018-08-15 22:45:01 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
+2018-08-15 22:45:01 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
+2018-08-15 22:45:01 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2018-08-15 22:45:01 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
+2018-08-15 22:45:01 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
+2018-08-15 22:45:01 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2018-08-15 22:45:01 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2018-08-15 22:45:57 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-15 22:46:05 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
+2018-08-15 22:46:05 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
+2018-08-15 22:46:05 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
+2018-08-15 22:46:05 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
+2018-08-15 22:46:05 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
+2018-08-15 22:46:05 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
+2018-08-15 22:46:05 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
+2018-08-15 22:46:05 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
+2018-08-15 22:46:05 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
+2018-08-15 22:46:05 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
+2018-08-15 22:46:05 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
+2018-08-15 22:46:05 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
+2018-08-15 22:46:05 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2018-08-15 22:46:05 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
+2018-08-15 22:46:05 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
+2018-08-15 22:46:05 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\DRAGON~1\AppData\Local\Temp (java.io.tmpdir)
+2018-08-15 22:46:05 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2018-08-15 22:46:05 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
+2018-08-15 22:46:05 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1884815360 bytes
+2018-08-15 22:46:05 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2018-08-15 22:46:05 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
+2018-08-15 22:46:05 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@4fd80300
+2018-08-15 22:46:05 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
+2018-08-15 22:46:05 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
+2018-08-15 22:46:05 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
+2018-08-15 22:46:05 DEBUG --- [main] (Loggers.java:213) Unsafe is available
+2018-08-15 22:46:05 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
+2018-08-15 22:46:05 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
+2018-08-15 22:46:05 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
+2018-08-15 22:46:05 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
+2018-08-15 22:46:05 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
+2018-08-15 22:46:05 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
+2018-08-15 22:46:05 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
+2018-08-15 22:46:05 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
+2018-08-15 22:46:05 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2018-08-15 22:46:05 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
+2018-08-15 22:46:05 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
+2018-08-15 22:46:05 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2018-08-15 22:46:05 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2018-08-15 22:46:26 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-15 22:46:34 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
+2018-08-15 22:46:34 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
+2018-08-15 22:46:34 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
+2018-08-15 22:46:34 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
+2018-08-15 22:46:34 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
+2018-08-15 22:46:34 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
+2018-08-15 22:46:34 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
+2018-08-15 22:46:34 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
+2018-08-15 22:46:34 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
+2018-08-15 22:46:34 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
+2018-08-15 22:46:34 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
+2018-08-15 22:46:34 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
+2018-08-15 22:46:34 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2018-08-15 22:46:34 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
+2018-08-15 22:46:34 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
+2018-08-15 22:46:34 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\DRAGON~1\AppData\Local\Temp (java.io.tmpdir)
+2018-08-15 22:46:34 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2018-08-15 22:46:34 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
+2018-08-15 22:46:34 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1884815360 bytes
+2018-08-15 22:46:34 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2018-08-15 22:46:34 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
+2018-08-15 22:46:34 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@9f0fc36
+2018-08-15 22:46:34 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
+2018-08-15 22:46:34 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
+2018-08-15 22:46:34 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
+2018-08-15 22:46:34 DEBUG --- [main] (Loggers.java:213) Unsafe is available
+2018-08-15 22:46:35 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
+2018-08-15 22:46:35 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
+2018-08-15 22:46:35 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
+2018-08-15 22:46:35 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
+2018-08-15 22:46:35 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
+2018-08-15 22:46:35 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
+2018-08-15 22:46:35 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
+2018-08-15 22:46:35 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
+2018-08-15 22:46:35 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2018-08-15 22:46:35 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
+2018-08-15 22:46:35 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
+2018-08-15 22:46:35 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2018-08-15 22:46:35 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2018-08-15 22:46:57 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-15 22:47:07 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
+2018-08-15 22:47:07 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
+2018-08-15 22:47:07 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
+2018-08-15 22:47:07 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
+2018-08-15 22:47:08 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
+2018-08-15 22:47:08 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
+2018-08-15 22:47:08 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
+2018-08-15 22:47:08 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
+2018-08-15 22:47:08 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
+2018-08-15 22:47:08 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
+2018-08-15 22:47:08 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
+2018-08-15 22:47:08 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
+2018-08-15 22:47:08 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2018-08-15 22:47:08 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
+2018-08-15 22:47:08 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
+2018-08-15 22:47:08 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\DRAGON~1\AppData\Local\Temp (java.io.tmpdir)
+2018-08-15 22:47:08 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2018-08-15 22:47:08 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
+2018-08-15 22:47:08 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1884815360 bytes
+2018-08-15 22:47:08 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2018-08-15 22:47:08 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
+2018-08-15 22:47:08 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@5f883d90
+2018-08-15 22:47:08 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
+2018-08-15 22:47:08 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
+2018-08-15 22:47:08 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
+2018-08-15 22:47:08 DEBUG --- [main] (Loggers.java:213) Unsafe is available
+2018-08-15 22:47:08 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
+2018-08-15 22:47:08 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
+2018-08-15 22:47:08 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
+2018-08-15 22:47:08 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
+2018-08-15 22:47:08 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
+2018-08-15 22:47:08 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
+2018-08-15 22:47:08 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
+2018-08-15 22:47:08 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
+2018-08-15 22:47:08 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2018-08-15 22:47:08 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
+2018-08-15 22:47:08 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
+2018-08-15 22:47:08 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2018-08-15 22:47:08 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2018-08-15 22:48:21 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-15 22:48:31 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
+2018-08-15 22:48:31 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
+2018-08-15 22:48:31 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
+2018-08-15 22:48:31 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
+2018-08-15 22:48:31 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
+2018-08-15 22:48:31 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
+2018-08-15 22:48:31 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
+2018-08-15 22:48:31 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
+2018-08-15 22:48:31 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
+2018-08-15 22:48:31 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
+2018-08-15 22:48:31 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
+2018-08-15 22:48:31 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
+2018-08-15 22:48:31 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2018-08-15 22:48:31 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
+2018-08-15 22:48:31 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
+2018-08-15 22:48:31 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\DRAGON~1\AppData\Local\Temp (java.io.tmpdir)
+2018-08-15 22:48:31 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2018-08-15 22:48:31 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
+2018-08-15 22:48:31 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1884815360 bytes
+2018-08-15 22:48:31 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2018-08-15 22:48:31 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
+2018-08-15 22:48:31 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@9f0fc36
+2018-08-15 22:48:31 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
+2018-08-15 22:48:31 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
+2018-08-15 22:48:31 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
+2018-08-15 22:48:31 DEBUG --- [main] (Loggers.java:213) Unsafe is available
+2018-08-15 22:48:31 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
+2018-08-15 22:48:31 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
+2018-08-15 22:48:31 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
+2018-08-15 22:48:31 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
+2018-08-15 22:48:31 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
+2018-08-15 22:48:31 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
+2018-08-15 22:48:31 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
+2018-08-15 22:48:31 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
+2018-08-15 22:48:31 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2018-08-15 22:48:31 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
+2018-08-15 22:48:31 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
+2018-08-15 22:48:31 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2018-08-15 22:48:31 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2018-08-15 22:49:06 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2018-08-15 22:49:16 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
+2018-08-15 22:49:16 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
+2018-08-15 22:49:16 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
+2018-08-15 22:49:16 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
+2018-08-15 22:49:16 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
+2018-08-15 22:49:16 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
+2018-08-15 22:49:16 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
+2018-08-15 22:49:16 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
+2018-08-15 22:49:16 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
+2018-08-15 22:49:16 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
+2018-08-15 22:49:16 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
+2018-08-15 22:49:16 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
+2018-08-15 22:49:16 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2018-08-15 22:49:16 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
+2018-08-15 22:49:16 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
+2018-08-15 22:49:16 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\DRAGON~1\AppData\Local\Temp (java.io.tmpdir)
+2018-08-15 22:49:16 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2018-08-15 22:49:16 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
+2018-08-15 22:49:16 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1884815360 bytes
+2018-08-15 22:49:16 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2018-08-15 22:49:16 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
+2018-08-15 22:49:16 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@23afc725
+2018-08-15 22:49:16 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
+2018-08-15 22:49:16 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
+2018-08-15 22:49:16 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
+2018-08-15 22:49:16 DEBUG --- [main] (Loggers.java:213) Unsafe is available
+2018-08-15 22:49:17 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
+2018-08-15 22:49:17 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
+2018-08-15 22:49:17 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
+2018-08-15 22:49:17 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
+2018-08-15 22:49:17 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
+2018-08-15 22:49:17 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
+2018-08-15 22:49:17 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
+2018-08-15 22:49:17 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
+2018-08-15 22:49:17 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2018-08-15 22:49:17 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
+2018-08-15 22:49:17 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
+2018-08-15 22:49:17 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2018-08-15 22:49:17 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
