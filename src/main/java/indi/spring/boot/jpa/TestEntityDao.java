@@ -1,4 +1,4 @@
-package inid.spring.boot.jpa;
+package indi.spring.boot.jpa;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

@@ -1,4 +1,4 @@
-package inid.spring.boot.jpa;
+package indi.spring.boot.jpa;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

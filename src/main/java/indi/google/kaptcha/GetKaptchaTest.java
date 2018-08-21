@@ -1,4 +1,4 @@
-package inid.google.kaptcha;
+package indi.google.kaptcha;
 
 import java.awt.image.BufferedImage;
 import java.io.File;

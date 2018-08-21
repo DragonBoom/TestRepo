@@ -1,4 +1,4 @@
-package inid.spring.boot.jpa;
+package indi.spring.boot.jpa;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

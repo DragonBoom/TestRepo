@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2018-08-15 21:43:06  INFO --- [main] (StartupInfoLogger.java:50) Starting Application on DESKTOP-FNJM48D with PID 5760 (E:\java\Github\TestRepo\target\classes started by DragonBoom in E:\java\Github\TestRepo)
 2018-08-15 21:43:06  INFO --- [main] (SpringApplication.java:659) No active profile set, falling back to default profiles: default
 2018-08-15 21:43:09  INFO --- [main] (DirectJDKLog.java:180) Initializing ProtocolHandler ["http-nio-8080"]
@@ -130,3 +131,11 @@
 2018-08-15 22:49:06  INFO --- [main] (StartupInfoLogger.java:50) Starting TotalTest on DESKTOP-FNJM48D with PID 12836 (started by DragonBoom in E:\java\Github\TestRepo)
 2018-08-15 22:49:06  INFO --- [main] (SpringApplication.java:659) No active profile set, falling back to default profiles: default
 2018-08-15 22:49:17  INFO --- [main] (StartupInfoLogger.java:59) Started TotalTest in 11.349 seconds (JVM running for 13.523)
+=======
+2018-07-30 12:06:23  INFO --- [main] (StartupInfoLogger.java:50) Starting JpaTest on DESKTOP-65DR0V4 with PID 8872 (started by Think in E:\github\TestRepo)
+2018-07-30 12:06:23  INFO --- [main] (SpringApplication.java:659) No active profile set, falling back to default profiles: default
+2018-07-30 12:07:19  INFO --- [main] (StartupInfoLogger.java:50) Starting JpaTest on DESKTOP-65DR0V4 with PID 6044 (started by Think in E:\github\TestRepo)
+2018-07-30 12:07:19  INFO --- [main] (SpringApplication.java:659) No active profile set, falling back to default profiles: default
+2018-07-30 12:07:28  INFO --- [main] (StartupInfoLogger.java:59) Started JpaTest in 9.628 seconds (JVM running for 12.338)
+2018-08-17 18:03:04  INFO --- [main] (AnnotationTest.java:22) 当前类路径(class path?) /E:/github/TestRepo/target/test-classes/
+>>>>>>> 1d5fdfd4b1b845f2b4fb31228d2ecd9284eff170

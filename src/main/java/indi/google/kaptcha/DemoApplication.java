@@ -1,4 +1,4 @@
-package inid.google.kaptcha;
+package indi.google.kaptcha;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

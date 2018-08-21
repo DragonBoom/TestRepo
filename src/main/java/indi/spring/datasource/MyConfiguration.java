@@ -1,4 +1,4 @@
-package inid.spring.datasource;
+package indi.spring.datasource;
 
 import javax.sql.DataSource;
 

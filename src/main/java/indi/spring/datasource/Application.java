@@ -1,4 +1,4 @@
-package inid.spring.datasource;
+package indi.spring.datasource;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
