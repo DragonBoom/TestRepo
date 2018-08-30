@@ -4,3 +4,4 @@
 2018-08-30 14:41:34  WARN --- [main] (JpaBaseConfiguration.java:235) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2018-08-30 14:43:08  WARN --- [main] (JpaBaseConfiguration.java:235) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2018-08-30 14:46:14  WARN --- [main] (JpaBaseConfiguration.java:235) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-08-30 15:39:11  WARN --- [main] (SqlExceptionHelper.java:129) SQL Error: 1364, SQLState: HY000

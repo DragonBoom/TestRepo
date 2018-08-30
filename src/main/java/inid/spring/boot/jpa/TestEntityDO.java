@@ -8,6 +8,7 @@ import javax.persistence.Id;
 public class TestEntityDO {
 
     @Id
+    @Column(name = "id_")
     private Long id;
 
     @Column

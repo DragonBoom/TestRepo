@@ -20,7 +20,7 @@ class TotalTest {
         if (!dao.existsById(entity.getId())) {
             dao.save(entity);
         } else {
-            System.out.println(dao.getByUsername("wahaha"));
+            System.out.println(dao.getOne(entity.getId()));
         }
     }
 }

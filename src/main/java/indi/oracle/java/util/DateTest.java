@@ -3,6 +3,7 @@ package indi.oracle.java.util;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
 
@@ -25,7 +26,7 @@ public class DateTest {
         System.out.println(date);
     }
     
-    @Test
+    // @Test
     void dateFormatTest() {
         System.out.println(new Date());
         System.out.println(new java.sql.Date(System.currentTimeMillis()));
@@ -39,5 +40,18 @@ public class DateTest {
                 + "SCH"
                 + String.format("%05d", 123);
         System.out.println(code);
+    }
+    
+    @Test
+    void dateCompare() {
+        Date date = new Date();
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        calendar.set(Calendar.DATE, 1);
+        
+        System.out.println(date);
+        System.out.println(calendar.getTime());
+
+        System.out.println(date.compareTo(calendar.getTime()));
     }
 }
