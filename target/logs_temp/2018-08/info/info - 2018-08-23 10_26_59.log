@@ -1,0 +1,8 @@
+2018-08-22 10:27:14  INFO --- [main] (PriorityQueueTest.java:39) order: 10
+2018-08-22 10:27:14  INFO --- [main] (PriorityQueueTest.java:39) order: 9
+2018-08-22 10:27:14  INFO --- [main] (PriorityQueueTest.java:39) order: 3
+2018-08-22 10:27:14  INFO --- [main] (PriorityQueueTest.java:39) order: 1
+2018-08-22 10:27:53  INFO --- [main] (PriorityQueueTest.java:40) order: 10
+2018-08-22 10:27:53  INFO --- [main] (PriorityQueueTest.java:40) order: 9
+2018-08-22 10:27:53  INFO --- [main] (PriorityQueueTest.java:40) order: 3
+2018-08-22 10:27:53  INFO --- [main] (PriorityQueueTest.java:40) order: 1

@@ -1,2 +1,26 @@
-2018-08-17 17:48:29  INFO --- [main] (AnnotationTest.java:22) 当前类路径(class path?) /E:/github/TestRepo/target/test-classes/
-2018-08-17 17:50:02  INFO --- [main] (AnnotationTest.java:22) 当前类路径(class path?) /E:/github/TestRepo/target/test-classes/
+2018-08-30 14:34:16  INFO --- [main] (StartupInfoLogger.java:50) Starting TotalTest on DESKTOP-65DR0V4 with PID 13552 (started by Think in E:\github\TestRepo)
+2018-08-30 14:34:17  INFO --- [main] (SpringApplication.java:659) No active profile set, falling back to default profiles: default
+2018-08-30 14:34:49  INFO --- [main] (StartupInfoLogger.java:50) Starting TotalTest on DESKTOP-65DR0V4 with PID 12056 (started by Think in E:\github\TestRepo)
+2018-08-30 14:34:49  INFO --- [main] (SpringApplication.java:659) No active profile set, falling back to default profiles: default
+2018-08-30 14:35:00  INFO --- [main] (StartupInfoLogger.java:59) Started TotalTest in 12.003 seconds (JVM running for 14.223)
+2018-08-30 14:35:48  INFO --- [main] (StartupInfoLogger.java:50) Starting TotalTest on DESKTOP-65DR0V4 with PID 4856 (started by Think in E:\github\TestRepo)
+2018-08-30 14:35:48  INFO --- [main] (SpringApplication.java:659) No active profile set, falling back to default profiles: default
+2018-08-30 14:35:58  INFO --- [main] (StartupInfoLogger.java:59) Started TotalTest in 10.337 seconds (JVM running for 12.618)
+2018-08-30 14:41:26  INFO --- [main] (StartupInfoLogger.java:50) Starting TotalTest on DESKTOP-65DR0V4 with PID 6832 (started by Think in E:\github\TestRepo)
+2018-08-30 14:41:26  INFO --- [main] (SpringApplication.java:659) No active profile set, falling back to default profiles: default
+2018-08-30 14:41:36  INFO --- [main] (StartupInfoLogger.java:59) Started TotalTest in 10.429 seconds (JVM running for 12.738)
+2018-08-30 14:43:01  INFO --- [main] (StartupInfoLogger.java:50) Starting TotalTest on DESKTOP-65DR0V4 with PID 6840 (started by Think in E:\github\TestRepo)
+2018-08-30 14:43:01  INFO --- [main] (SpringApplication.java:659) No active profile set, falling back to default profiles: default
+2018-08-30 14:43:11  INFO --- [main] (StartupInfoLogger.java:59) Started TotalTest in 10.154 seconds (JVM running for 12.203)
+2018-08-30 14:46:06  INFO --- [main] (StartupInfoLogger.java:50) Starting TotalTest on DESKTOP-65DR0V4 with PID 548 (started by Think in E:\github\TestRepo)
+2018-08-30 14:46:06  INFO --- [main] (SpringApplication.java:659) No active profile set, falling back to default profiles: default
+2018-08-30 14:46:16  INFO --- [main] (StartupInfoLogger.java:59) Started TotalTest in 9.933 seconds (JVM running for 11.98)
+2018-08-30 14:48:21  INFO --- [main] (StartupInfoLogger.java:50) Starting TotalTest on DESKTOP-65DR0V4 with PID 7828 (started by Think in E:\github\TestRepo)
+2018-08-30 14:48:21  INFO --- [main] (SpringApplication.java:659) No active profile set, falling back to default profiles: default
+2018-08-30 14:48:32  INFO --- [main] (StartupInfoLogger.java:59) Started TotalTest in 11.311 seconds (JVM running for 13.751)
+2018-08-30 14:49:44  INFO --- [main] (StartupInfoLogger.java:50) Starting TotalTest on DESKTOP-65DR0V4 with PID 4476 (started by Think in E:\github\TestRepo)
+2018-08-30 14:49:44  INFO --- [main] (SpringApplication.java:659) No active profile set, falling back to default profiles: default
+2018-08-30 14:49:54  INFO --- [main] (StartupInfoLogger.java:59) Started TotalTest in 10.451 seconds (JVM running for 12.617)
+2018-08-30 14:50:04  INFO --- [main] (StartupInfoLogger.java:50) Starting TotalTest on DESKTOP-65DR0V4 with PID 3148 (started by Think in E:\github\TestRepo)
+2018-08-30 14:50:04  INFO --- [main] (SpringApplication.java:659) No active profile set, falling back to default profiles: default
+2018-08-30 14:50:14  INFO --- [main] (StartupInfoLogger.java:59) Started TotalTest in 10.328 seconds (JVM running for 12.312)
