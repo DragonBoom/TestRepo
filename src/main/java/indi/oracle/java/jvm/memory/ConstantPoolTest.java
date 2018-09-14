@@ -4,10 +4,10 @@ import org.junit.Test;
 
 // Java 编程语言只有值传递参数。当一个对象实例作为一个参数被传递到方法中时，参数的值就是该对象的引用一个副本。指向同一个对象,对象的内容可以在被调用的方法中改变，
 // 但对象的引用(不是引用的副本)是永远不会改变的。 
-public class MainTest {
+public class ConstantPoolTest {
 
 	@Test
-	public void constantPoolTest() {
+	public void mainTest() {
 		String s = "hell";
 		String s2 = "o";
 		String s3 = "hello";
