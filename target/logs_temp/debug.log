@@ -1,561 +1,278 @@
-2018-08-30 14:34:17 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
-2018-08-30 14:34:49 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
-2018-08-30 14:34:58 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
-2018-08-30 14:34:58 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
-2018-08-30 14:34:58 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
-2018-08-30 14:34:58 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
-2018-08-30 14:34:58 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
-2018-08-30 14:34:59 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
-2018-08-30 14:34:59 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
-2018-08-30 14:34:59 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
-2018-08-30 14:34:59 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
-2018-08-30 14:34:59 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
-2018-08-30 14:34:59 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
-2018-08-30 14:34:59 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
-2018-08-30 14:34:59 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
-2018-08-30 14:34:59 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
-2018-08-30 14:34:59 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
-2018-08-30 14:34:59 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\Think\AppData\Local\Temp (java.io.tmpdir)
-2018-08-30 14:34:59 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
-2018-08-30 14:34:59 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
-2018-08-30 14:34:59 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1836580864 bytes
-2018-08-30 14:34:59 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
-2018-08-30 14:34:59 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
-2018-08-30 14:34:59 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@2a6dbb7c
-2018-08-30 14:34:59 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
-2018-08-30 14:34:59 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
-2018-08-30 14:34:59 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
-2018-08-30 14:34:59 DEBUG --- [main] (Loggers.java:213) Unsafe is available
-2018-08-30 14:34:59 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
-2018-08-30 14:34:59 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
-2018-08-30 14:34:59 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
-2018-08-30 14:34:59 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
-2018-08-30 14:34:59 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
-2018-08-30 14:34:59 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
-2018-08-30 14:34:59 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
-2018-08-30 14:34:59 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
-2018-08-30 14:34:59 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
-2018-08-30 14:34:59 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
-2018-08-30 14:34:59 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
-2018-08-30 14:34:59 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
-2018-08-30 14:34:59 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
-2018-08-30 14:35:48 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
-2018-08-30 14:35:57 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
-2018-08-30 14:35:57 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
-2018-08-30 14:35:57 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
-2018-08-30 14:35:57 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
-2018-08-30 14:35:57 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
-2018-08-30 14:35:57 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
-2018-08-30 14:35:57 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
-2018-08-30 14:35:57 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
-2018-08-30 14:35:57 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
-2018-08-30 14:35:57 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
-2018-08-30 14:35:57 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
-2018-08-30 14:35:57 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
-2018-08-30 14:35:57 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
-2018-08-30 14:35:57 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
-2018-08-30 14:35:57 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
-2018-08-30 14:35:57 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\Think\AppData\Local\Temp (java.io.tmpdir)
-2018-08-30 14:35:57 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
-2018-08-30 14:35:57 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
-2018-08-30 14:35:57 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1836580864 bytes
-2018-08-30 14:35:57 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
-2018-08-30 14:35:57 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
-2018-08-30 14:35:57 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@2c154508
-2018-08-30 14:35:57 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
-2018-08-30 14:35:57 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
-2018-08-30 14:35:57 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
-2018-08-30 14:35:57 DEBUG --- [main] (Loggers.java:213) Unsafe is available
-2018-08-30 14:35:57 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
-2018-08-30 14:35:57 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
-2018-08-30 14:35:57 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
-2018-08-30 14:35:57 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
-2018-08-30 14:35:57 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
-2018-08-30 14:35:57 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
-2018-08-30 14:35:57 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
-2018-08-30 14:35:57 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
-2018-08-30 14:35:57 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
-2018-08-30 14:35:57 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
-2018-08-30 14:35:57 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
-2018-08-30 14:35:57 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
-2018-08-30 14:35:57 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
-2018-08-30 14:41:26 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
-2018-08-30 14:41:34 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
-2018-08-30 14:41:34 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
-2018-08-30 14:41:34 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
-2018-08-30 14:41:34 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
-2018-08-30 14:41:34 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
-2018-08-30 14:41:34 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
-2018-08-30 14:41:34 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
-2018-08-30 14:41:34 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
-2018-08-30 14:41:34 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
-2018-08-30 14:41:34 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
-2018-08-30 14:41:34 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
-2018-08-30 14:41:34 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
-2018-08-30 14:41:34 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
-2018-08-30 14:41:34 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
-2018-08-30 14:41:34 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
-2018-08-30 14:41:34 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\Think\AppData\Local\Temp (java.io.tmpdir)
-2018-08-30 14:41:34 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
-2018-08-30 14:41:34 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
-2018-08-30 14:41:34 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1836580864 bytes
-2018-08-30 14:41:34 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
-2018-08-30 14:41:34 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
-2018-08-30 14:41:34 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@2b62475a
-2018-08-30 14:41:34 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
-2018-08-30 14:41:34 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
-2018-08-30 14:41:34 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
-2018-08-30 14:41:34 DEBUG --- [main] (Loggers.java:213) Unsafe is available
-2018-08-30 14:41:34 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
-2018-08-30 14:41:34 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
-2018-08-30 14:41:34 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
-2018-08-30 14:41:34 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
-2018-08-30 14:41:34 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
-2018-08-30 14:41:34 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
-2018-08-30 14:41:34 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
-2018-08-30 14:41:34 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
-2018-08-30 14:41:34 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
-2018-08-30 14:41:34 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
-2018-08-30 14:41:34 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
-2018-08-30 14:41:34 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
-2018-08-30 14:41:34 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
-2018-08-30 14:43:01 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
-2018-08-30 14:43:09 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
-2018-08-30 14:43:09 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
-2018-08-30 14:43:09 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
-2018-08-30 14:43:09 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
-2018-08-30 14:43:09 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
-2018-08-30 14:43:09 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
-2018-08-30 14:43:09 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
-2018-08-30 14:43:09 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
-2018-08-30 14:43:09 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
-2018-08-30 14:43:09 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
-2018-08-30 14:43:09 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
-2018-08-30 14:43:09 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
-2018-08-30 14:43:09 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
-2018-08-30 14:43:09 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
-2018-08-30 14:43:09 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
-2018-08-30 14:43:09 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\Think\AppData\Local\Temp (java.io.tmpdir)
-2018-08-30 14:43:09 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
-2018-08-30 14:43:09 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
-2018-08-30 14:43:09 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1836580864 bytes
-2018-08-30 14:43:09 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
-2018-08-30 14:43:09 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
-2018-08-30 14:43:09 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@60e67c06
-2018-08-30 14:43:09 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
-2018-08-30 14:43:09 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
-2018-08-30 14:43:09 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
-2018-08-30 14:43:09 DEBUG --- [main] (Loggers.java:213) Unsafe is available
-2018-08-30 14:43:09 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
-2018-08-30 14:43:09 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
-2018-08-30 14:43:09 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
-2018-08-30 14:43:09 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
-2018-08-30 14:43:09 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
-2018-08-30 14:43:09 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
-2018-08-30 14:43:09 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
-2018-08-30 14:43:09 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
-2018-08-30 14:43:09 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
-2018-08-30 14:43:09 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
-2018-08-30 14:43:09 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
-2018-08-30 14:43:09 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
-2018-08-30 14:43:09 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
-2018-08-30 14:46:06 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
-2018-08-30 14:46:14 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
-2018-08-30 14:46:14 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
-2018-08-30 14:46:14 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
-2018-08-30 14:46:14 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
-2018-08-30 14:46:14 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
-2018-08-30 14:46:14 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
-2018-08-30 14:46:14 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
-2018-08-30 14:46:14 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
-2018-08-30 14:46:14 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
-2018-08-30 14:46:14 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
-2018-08-30 14:46:14 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
-2018-08-30 14:46:14 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
-2018-08-30 14:46:14 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
-2018-08-30 14:46:14 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
-2018-08-30 14:46:14 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
-2018-08-30 14:46:14 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\Think\AppData\Local\Temp (java.io.tmpdir)
-2018-08-30 14:46:14 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
-2018-08-30 14:46:14 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
-2018-08-30 14:46:14 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1836580864 bytes
-2018-08-30 14:46:14 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
-2018-08-30 14:46:14 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
-2018-08-30 14:46:14 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@31e22365
-2018-08-30 14:46:14 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
-2018-08-30 14:46:14 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
-2018-08-30 14:46:14 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
-2018-08-30 14:46:14 DEBUG --- [main] (Loggers.java:213) Unsafe is available
-2018-08-30 14:46:14 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
-2018-08-30 14:46:14 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
-2018-08-30 14:46:14 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
-2018-08-30 14:46:14 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
-2018-08-30 14:46:14 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
-2018-08-30 14:46:14 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
-2018-08-30 14:46:14 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
-2018-08-30 14:46:14 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
-2018-08-30 14:46:14 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
-2018-08-30 14:46:14 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
-2018-08-30 14:46:14 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
-2018-08-30 14:46:14 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
-2018-08-30 14:46:14 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
-2018-08-30 14:48:21 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
-2018-08-30 14:48:30 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
-2018-08-30 14:48:30 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
-2018-08-30 14:48:30 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
-2018-08-30 14:48:30 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
-2018-08-30 14:48:30 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
-2018-08-30 14:48:30 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
-2018-08-30 14:48:30 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
-2018-08-30 14:48:30 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
-2018-08-30 14:48:30 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
-2018-08-30 14:48:30 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
-2018-08-30 14:48:30 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
-2018-08-30 14:48:30 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
-2018-08-30 14:48:30 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
-2018-08-30 14:48:30 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
-2018-08-30 14:48:30 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
-2018-08-30 14:48:30 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\Think\AppData\Local\Temp (java.io.tmpdir)
-2018-08-30 14:48:30 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
-2018-08-30 14:48:30 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
-2018-08-30 14:48:30 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1836580864 bytes
-2018-08-30 14:48:30 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
-2018-08-30 14:48:30 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
-2018-08-30 14:48:30 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@31e22365
-2018-08-30 14:48:30 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
-2018-08-30 14:48:30 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
-2018-08-30 14:48:30 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
-2018-08-30 14:48:30 DEBUG --- [main] (Loggers.java:213) Unsafe is available
-2018-08-30 14:48:31 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
-2018-08-30 14:48:31 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
-2018-08-30 14:48:31 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
-2018-08-30 14:48:31 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
-2018-08-30 14:48:31 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
-2018-08-30 14:48:31 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
-2018-08-30 14:48:31 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
-2018-08-30 14:48:31 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
-2018-08-30 14:48:31 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
-2018-08-30 14:48:31 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
-2018-08-30 14:48:31 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
-2018-08-30 14:48:31 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
-2018-08-30 14:48:31 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
-2018-08-30 14:49:44 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
-2018-08-30 14:49:53 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
-2018-08-30 14:49:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
-2018-08-30 14:49:53 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
-2018-08-30 14:49:53 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
-2018-08-30 14:49:53 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
-2018-08-30 14:49:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
-2018-08-30 14:49:53 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
-2018-08-30 14:49:53 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
-2018-08-30 14:49:53 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
-2018-08-30 14:49:53 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
-2018-08-30 14:49:53 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
-2018-08-30 14:49:53 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
-2018-08-30 14:49:53 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
-2018-08-30 14:49:53 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
-2018-08-30 14:49:53 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
-2018-08-30 14:49:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\Think\AppData\Local\Temp (java.io.tmpdir)
-2018-08-30 14:49:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
-2018-08-30 14:49:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
-2018-08-30 14:49:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1836580864 bytes
-2018-08-30 14:49:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
-2018-08-30 14:49:53 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
-2018-08-30 14:49:53 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@7be62956
-2018-08-30 14:49:53 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
-2018-08-30 14:49:53 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
-2018-08-30 14:49:53 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
-2018-08-30 14:49:53 DEBUG --- [main] (Loggers.java:213) Unsafe is available
-2018-08-30 14:49:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
-2018-08-30 14:49:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
-2018-08-30 14:49:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
-2018-08-30 14:49:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
-2018-08-30 14:49:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
-2018-08-30 14:49:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
-2018-08-30 14:49:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
-2018-08-30 14:49:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
-2018-08-30 14:49:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
-2018-08-30 14:49:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
-2018-08-30 14:49:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
-2018-08-30 14:49:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
-2018-08-30 14:49:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
-2018-08-30 14:50:04 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
-2018-08-30 14:50:13 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
-2018-08-30 14:50:13 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
-2018-08-30 14:50:13 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
-2018-08-30 14:50:13 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
-2018-08-30 14:50:13 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
-2018-08-30 14:50:13 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
-2018-08-30 14:50:13 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
-2018-08-30 14:50:13 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
-2018-08-30 14:50:13 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
-2018-08-30 14:50:13 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
-2018-08-30 14:50:13 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
-2018-08-30 14:50:13 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
-2018-08-30 14:50:13 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
-2018-08-30 14:50:13 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
-2018-08-30 14:50:13 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
-2018-08-30 14:50:13 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\Think\AppData\Local\Temp (java.io.tmpdir)
-2018-08-30 14:50:13 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
-2018-08-30 14:50:13 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
-2018-08-30 14:50:13 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1836580864 bytes
-2018-08-30 14:50:13 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
-2018-08-30 14:50:13 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
-2018-08-30 14:50:13 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@31e22365
-2018-08-30 14:50:13 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
-2018-08-30 14:50:13 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
-2018-08-30 14:50:13 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
-2018-08-30 14:50:13 DEBUG --- [main] (Loggers.java:213) Unsafe is available
-2018-08-30 14:50:13 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
-2018-08-30 14:50:13 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
-2018-08-30 14:50:13 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
-2018-08-30 14:50:13 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
-2018-08-30 14:50:13 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
-2018-08-30 14:50:13 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
-2018-08-30 14:50:13 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
-2018-08-30 14:50:13 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
-2018-08-30 14:50:13 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
-2018-08-30 14:50:13 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
-2018-08-30 14:50:13 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
-2018-08-30 14:50:13 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
-2018-08-30 14:50:13 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
-2018-08-30 15:37:48 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
-2018-08-30 15:37:58 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
-2018-08-30 15:37:58 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
-2018-08-30 15:37:58 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
-2018-08-30 15:37:58 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
-2018-08-30 15:37:58 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
-2018-08-30 15:37:58 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
-2018-08-30 15:37:58 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
-2018-08-30 15:37:58 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
-2018-08-30 15:37:58 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
-2018-08-30 15:37:58 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
-2018-08-30 15:37:58 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
-2018-08-30 15:37:58 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
-2018-08-30 15:37:58 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
-2018-08-30 15:37:58 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
-2018-08-30 15:37:58 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
-2018-08-30 15:37:58 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\Think\AppData\Local\Temp (java.io.tmpdir)
-2018-08-30 15:37:58 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
-2018-08-30 15:37:58 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
-2018-08-30 15:37:58 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1836580864 bytes
-2018-08-30 15:37:58 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
-2018-08-30 15:37:58 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
-2018-08-30 15:37:58 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@3ad2883a
-2018-08-30 15:37:58 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
-2018-08-30 15:37:58 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
-2018-08-30 15:37:58 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
-2018-08-30 15:37:58 DEBUG --- [main] (Loggers.java:213) Unsafe is available
-2018-08-30 15:37:58 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
-2018-08-30 15:37:58 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
-2018-08-30 15:37:58 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
-2018-08-30 15:37:58 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
-2018-08-30 15:37:58 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
-2018-08-30 15:37:58 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
-2018-08-30 15:37:58 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
-2018-08-30 15:37:58 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
-2018-08-30 15:37:58 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
-2018-08-30 15:37:58 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
-2018-08-30 15:37:58 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
-2018-08-30 15:37:58 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
-2018-08-30 15:37:58 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
-2018-08-30 15:38:20 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
-2018-08-30 15:38:29 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
-2018-08-30 15:38:29 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
-2018-08-30 15:38:29 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
-2018-08-30 15:38:29 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
-2018-08-30 15:38:29 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
-2018-08-30 15:38:29 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
-2018-08-30 15:38:29 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
-2018-08-30 15:38:29 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
-2018-08-30 15:38:29 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
-2018-08-30 15:38:29 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
-2018-08-30 15:38:29 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
-2018-08-30 15:38:29 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
-2018-08-30 15:38:29 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
-2018-08-30 15:38:29 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
-2018-08-30 15:38:29 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
-2018-08-30 15:38:29 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\Think\AppData\Local\Temp (java.io.tmpdir)
-2018-08-30 15:38:29 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
-2018-08-30 15:38:29 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
-2018-08-30 15:38:29 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1836580864 bytes
-2018-08-30 15:38:29 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
-2018-08-30 15:38:29 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
-2018-08-30 15:38:29 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@24f90aff
-2018-08-30 15:38:29 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
-2018-08-30 15:38:29 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
-2018-08-30 15:38:29 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
-2018-08-30 15:38:29 DEBUG --- [main] (Loggers.java:213) Unsafe is available
-2018-08-30 15:38:29 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
-2018-08-30 15:38:29 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
-2018-08-30 15:38:29 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
-2018-08-30 15:38:29 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
-2018-08-30 15:38:29 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
-2018-08-30 15:38:29 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
-2018-08-30 15:38:29 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
-2018-08-30 15:38:29 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
-2018-08-30 15:38:29 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
-2018-08-30 15:38:29 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
-2018-08-30 15:38:29 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
-2018-08-30 15:38:29 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
-2018-08-30 15:38:29 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
-2018-08-30 15:38:59 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
-2018-08-30 15:39:08 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
-2018-08-30 15:39:08 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
-2018-08-30 15:39:08 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
-2018-08-30 15:39:08 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
-2018-08-30 15:39:08 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
-2018-08-30 15:39:08 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
-2018-08-30 15:39:08 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
-2018-08-30 15:39:08 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
-2018-08-30 15:39:08 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
-2018-08-30 15:39:08 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
-2018-08-30 15:39:08 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
-2018-08-30 15:39:08 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
-2018-08-30 15:39:08 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
-2018-08-30 15:39:08 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
-2018-08-30 15:39:08 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
-2018-08-30 15:39:08 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\Think\AppData\Local\Temp (java.io.tmpdir)
-2018-08-30 15:39:08 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
-2018-08-30 15:39:08 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
-2018-08-30 15:39:08 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1836580864 bytes
-2018-08-30 15:39:08 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
-2018-08-30 15:39:08 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
-2018-08-30 15:39:08 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@5724c7da
-2018-08-30 15:39:08 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
-2018-08-30 15:39:08 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
-2018-08-30 15:39:08 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
-2018-08-30 15:39:08 DEBUG --- [main] (Loggers.java:213) Unsafe is available
-2018-08-30 15:39:09 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
-2018-08-30 15:39:09 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
-2018-08-30 15:39:09 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
-2018-08-30 15:39:09 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
-2018-08-30 15:39:09 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
-2018-08-30 15:39:09 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
-2018-08-30 15:39:09 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
-2018-08-30 15:39:09 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
-2018-08-30 15:39:09 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
-2018-08-30 15:39:09 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
-2018-08-30 15:39:09 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
-2018-08-30 15:39:09 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
-2018-08-30 15:39:09 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
-2018-08-30 15:44:40 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
-2018-08-30 15:44:49 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
-2018-08-30 15:44:49 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
-2018-08-30 15:44:49 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
-2018-08-30 15:44:49 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
-2018-08-30 15:44:49 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
-2018-08-30 15:44:49 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
-2018-08-30 15:44:49 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
-2018-08-30 15:44:49 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
-2018-08-30 15:44:49 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
-2018-08-30 15:44:49 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
-2018-08-30 15:44:49 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
-2018-08-30 15:44:49 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
-2018-08-30 15:44:49 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
-2018-08-30 15:44:49 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
-2018-08-30 15:44:49 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
-2018-08-30 15:44:49 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\Think\AppData\Local\Temp (java.io.tmpdir)
-2018-08-30 15:44:49 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
-2018-08-30 15:44:49 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
-2018-08-30 15:44:49 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1836580864 bytes
-2018-08-30 15:44:49 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
-2018-08-30 15:44:49 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
-2018-08-30 15:44:49 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@7210f559
-2018-08-30 15:44:49 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
-2018-08-30 15:44:49 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
-2018-08-30 15:44:49 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
-2018-08-30 15:44:49 DEBUG --- [main] (Loggers.java:213) Unsafe is available
-2018-08-30 15:44:50 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
-2018-08-30 15:44:50 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
-2018-08-30 15:44:50 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
-2018-08-30 15:44:50 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
-2018-08-30 15:44:50 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
-2018-08-30 15:44:50 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
-2018-08-30 15:44:50 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
-2018-08-30 15:44:50 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
-2018-08-30 15:44:50 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
-2018-08-30 15:44:50 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
-2018-08-30 15:44:50 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
-2018-08-30 15:44:50 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
-2018-08-30 15:44:50 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
-2018-08-30 15:45:41 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
-2018-08-30 15:45:59 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
-2018-08-30 15:45:59 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
-2018-08-30 15:45:59 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
-2018-08-30 15:45:59 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
-2018-08-30 15:46:00 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
-2018-08-30 15:46:00 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
-2018-08-30 15:46:00 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
-2018-08-30 15:46:00 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
-2018-08-30 15:46:00 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
-2018-08-30 15:46:00 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
-2018-08-30 15:46:00 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
-2018-08-30 15:46:00 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
-2018-08-30 15:46:00 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
-2018-08-30 15:46:00 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
-2018-08-30 15:46:00 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
-2018-08-30 15:46:00 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\Think\AppData\Local\Temp (java.io.tmpdir)
-2018-08-30 15:46:00 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
-2018-08-30 15:46:00 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
-2018-08-30 15:46:00 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1836580864 bytes
-2018-08-30 15:46:00 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
-2018-08-30 15:46:00 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
-2018-08-30 15:46:00 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@452ec287
-2018-08-30 15:46:00 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
-2018-08-30 15:46:00 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
-2018-08-30 15:46:00 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
-2018-08-30 15:46:00 DEBUG --- [main] (Loggers.java:213) Unsafe is available
-2018-08-30 15:46:00 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
-2018-08-30 15:46:00 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
-2018-08-30 15:46:00 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
-2018-08-30 15:46:00 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
-2018-08-30 15:46:00 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
-2018-08-30 15:46:00 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
-2018-08-30 15:46:00 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
-2018-08-30 15:46:00 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
-2018-08-30 15:46:00 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
-2018-08-30 15:46:00 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
-2018-08-30 15:46:00 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
-2018-08-30 15:46:00 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
-2018-08-30 15:46:00 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
-2018-08-30 15:46:37 DEBUG --- [main] (StartupInfoLogger.java:53) Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
-2018-08-30 15:46:51 DEBUG --- [main] (Slf4JLogger.java:71) Using SLF4J as the default logging framework
-2018-08-30 15:46:51 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.eventLoopThreads: 4
-2018-08-30 15:46:52 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.level: simple
-2018-08-30 15:46:52 DEBUG --- [main] (Slf4JLogger.java:81) -Dio.netty.leakDetection.targetRecords: 4
-2018-08-30 15:46:52 DEBUG --- [main] (Slf4JLogger.java:71) Platform: Windows
-2018-08-30 15:46:52 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noUnsafe: false
-2018-08-30 15:46:52 DEBUG --- [main] (Slf4JLogger.java:76) Java version: 8
-2018-08-30 15:46:52 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.theUnsafe: available
-2018-08-30 15:46:52 DEBUG --- [main] (Slf4JLogger.java:71) sun.misc.Unsafe.copyMemory: available
-2018-08-30 15:46:52 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.Buffer.address: available
-2018-08-30 15:46:52 DEBUG --- [main] (Slf4JLogger.java:71) direct buffer constructor: available
-2018-08-30 15:46:52 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.Bits.unaligned: available, true
-2018-08-30 15:46:52 DEBUG --- [main] (Slf4JLogger.java:71) jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
-2018-08-30 15:46:52 DEBUG --- [main] (Slf4JLogger.java:76) java.nio.DirectByteBuffer.<init>(long, int): available
-2018-08-30 15:46:52 DEBUG --- [main] (Slf4JLogger.java:76) sun.misc.Unsafe: available
-2018-08-30 15:46:52 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.tmpdir: C:\Users\Think\AppData\Local\Temp (java.io.tmpdir)
-2018-08-30 15:46:52 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.bitMode: 64 (sun.arch.data.model)
-2018-08-30 15:46:52 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.noPreferDirect: false
-2018-08-30 15:46:52 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.maxDirectMemory: 1836580864 bytes
-2018-08-30 15:46:52 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.uninitializedArrayAllocationThreshold: -1
-2018-08-30 15:46:52 DEBUG --- [main] (Slf4JLogger.java:71) java.nio.ByteBuffer.cleaner(): available
-2018-08-30 15:46:52 DEBUG --- [main] (Slf4JLogger.java:76) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@410f53b2
-2018-08-30 15:46:52 DEBUG --- [main] (Slf4JLogger.java:71) org.jctools-core.MpscChunkedArrayQueue: available
-2018-08-30 15:46:52 DEBUG --- [main] (Loggers.java:213) Using Slf4j logging framework
-2018-08-30 15:46:52 DEBUG --- [main] (Loggers.java:213) Starting UnsafeSupport init in Java 1.8
-2018-08-30 15:46:52 DEBUG --- [main] (Loggers.java:213) Unsafe is available
-2018-08-30 15:46:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numHeapArenas: 8
-2018-08-30 15:46:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.numDirectArenas: 8
-2018-08-30 15:46:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.pageSize: 8192
-2018-08-30 15:46:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxOrder: 11
-2018-08-30 15:46:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.chunkSize: 16777216
-2018-08-30 15:46:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.tinyCacheSize: 512
-2018-08-30 15:46:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.smallCacheSize: 256
-2018-08-30 15:46:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.normalCacheSize: 64
-2018-08-30 15:46:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
-2018-08-30 15:46:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.cacheTrimInterval: 8192
-2018-08-30 15:46:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.allocator.useCacheForAllThreads: true
-2018-08-30 15:46:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
-2018-08-30 15:46:53 DEBUG --- [main] (Slf4JLogger.java:76) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: false
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Boolean' value 'false' to type 'Boolean'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a Boolean
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: 0
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Integer' value '0' to type 'Byte'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:171)     Converted to Byte value '0'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value:  
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Character' value ' ' to type 'Character'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a Character
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: 0
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Integer' value '0' to type 'Double'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:171)     Converted to Double value '0.0'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: 0
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Integer' value '0' to type 'Float'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:171)     Converted to Float value '0.0'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: 0
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Integer' value '0' to type 'Integer'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a Integer
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: 0
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Integer' value '0' to type 'Long'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:171)     Converted to Long value '0'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: 0
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Integer' value '0' to type 'Short'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:171)     Converted to Short value '0'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: 0.0
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'BigDecimal' value '0.0' to type 'BigDecimal'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a BigDecimal
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: 0
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'BigInteger' value '0' to type 'BigInteger'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a BigInteger
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: false
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Boolean' value 'false' to type 'Boolean'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a Boolean
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: 0
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Integer' value '0' to type 'Byte'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:171)     Converted to Byte value '0'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value:  
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Character' value ' ' to type 'Character'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a Character
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: 0
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Integer' value '0' to type 'Double'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:171)     Converted to Double value '0.0'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: 0
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Integer' value '0' to type 'Float'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:171)     Converted to Float value '0.0'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: 0
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Integer' value '0' to type 'Integer'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a Integer
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: 0
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Integer' value '0' to type 'Long'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:171)     Converted to Long value '0'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: 0
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Integer' value '0' to type 'Short'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:171)     Converted to Short value '0'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: 
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'String' value '' to type 'String'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [Z@66498326
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'boolean[]' value '[Z@66498326' to type 'boolean[]'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a boolean[]
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [B@cad498c
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'byte[]' value '[B@cad498c' to type 'byte[]'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a byte[]
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [C@1e6454ec
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'char[]' value '[C@1e6454ec' to type 'char[]'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a char[]
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [D@2accdbb5
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'double[]' value '[D@2accdbb5' to type 'double[]'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a double[]
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [F@b62d79
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'float[]' value '[F@b62d79' to type 'float[]'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a float[]
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [I@6631f5ca
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'int[]' value '[I@6631f5ca' to type 'int[]'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a int[]
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [J@5ace1ed4
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'long[]' value '[J@5ace1ed4' to type 'long[]'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a long[]
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [S@1613674b
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'short[]' value '[S@1613674b' to type 'short[]'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a short[]
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [Ljava.math.BigDecimal;@27ff5d15
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'BigDecimal[]' value '[Ljava.math.BigDecimal;@27ff5d15' to type 'BigDecimal[]'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a BigDecimal[]
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [Ljava.math.BigInteger;@649bec2e
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'BigInteger[]' value '[Ljava.math.BigInteger;@649bec2e' to type 'BigInteger[]'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a BigInteger[]
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [Ljava.lang.Boolean;@34f5090e
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Boolean[]' value '[Ljava.lang.Boolean;@34f5090e' to type 'Boolean[]'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a Boolean[]
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [Ljava.lang.Byte;@a2431d0
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Byte[]' value '[Ljava.lang.Byte;@a2431d0' to type 'Byte[]'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a Byte[]
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [Ljava.lang.Character;@1a4013
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Character[]' value '[Ljava.lang.Character;@1a4013' to type 'Character[]'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a Character[]
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [Ljava.lang.Double;@306f16f3
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Double[]' value '[Ljava.lang.Double;@306f16f3' to type 'Double[]'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a Double[]
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [Ljava.lang.Float;@22e357dc
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Float[]' value '[Ljava.lang.Float;@22e357dc' to type 'Float[]'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a Float[]
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [Ljava.lang.Integer;@10163d6
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Integer[]' value '[Ljava.lang.Integer;@10163d6' to type 'Integer[]'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a Integer[]
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [Ljava.lang.Long;@15bbf42f
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Long[]' value '[Ljava.lang.Long;@15bbf42f' to type 'Long[]'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a Long[]
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [Ljava.lang.Short;@5f9b2141
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Short[]' value '[Ljava.lang.Short;@5f9b2141' to type 'Short[]'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a Short[]
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [Ljava.lang.String;@48974e45
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'String[]' value '[Ljava.lang.String;@48974e45' to type 'String[]'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a String[]
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [Ljava.lang.Class;@6a84a97d
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Class[]' value '[Ljava.lang.Class;@6a84a97d' to type 'Class[]'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a Class[]
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [Ljava.util.Date;@6c130c45
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Date[]' value '[Ljava.util.Date;@6c130c45' to type 'Date[]'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a Date[]
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [Ljava.util.Calendar;@223aa2f7
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Calendar[]' value '[Ljava.util.Calendar;@223aa2f7' to type 'Calendar[]'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a Calendar[]
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [Ljava.io.File;@193f604a
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'java.io.File[]' value '[Ljava.io.File;@193f604a' to type 'java.io.File[]'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a java.io.File[]
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [Ljava.sql.Date;@57af006c
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'java.sql.Date[]' value '[Ljava.sql.Date;@57af006c' to type 'java.sql.Date[]'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a java.sql.Date[]
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [Ljava.sql.Time;@932bc4a
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'java.sql.Time[]' value '[Ljava.sql.Time;@932bc4a' to type 'java.sql.Time[]'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a java.sql.Time[]
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [Ljava.sql.Timestamp;@2fd1433e
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'java.sql.Timestamp[]' value '[Ljava.sql.Timestamp;@2fd1433e' to type 'java.sql.Timestamp[]'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a java.sql.Timestamp[]
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [Ljava.net.URL;@3514a4c0
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'java.net.URL[]' value '[Ljava.net.URL;@3514a4c0' to type 'java.net.URL[]'
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a java.net.URL[]
+2018-09-27 15:51:38 DEBUG --- [main] (AbstractConverter.java:140) Converting 'String' value '123' to type 'String'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: false
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Boolean' value 'false' to type 'Boolean'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a Boolean
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: 0
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Integer' value '0' to type 'Byte'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:171)     Converted to Byte value '0'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value:  
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Character' value ' ' to type 'Character'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a Character
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: 0
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Integer' value '0' to type 'Double'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:171)     Converted to Double value '0.0'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: 0
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Integer' value '0' to type 'Float'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:171)     Converted to Float value '0.0'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: 0
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Integer' value '0' to type 'Integer'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a Integer
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: 0
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Integer' value '0' to type 'Long'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:171)     Converted to Long value '0'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: 0
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Integer' value '0' to type 'Short'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:171)     Converted to Short value '0'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: 0.0
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'BigDecimal' value '0.0' to type 'BigDecimal'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a BigDecimal
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: 0
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'BigInteger' value '0' to type 'BigInteger'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a BigInteger
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: false
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Boolean' value 'false' to type 'Boolean'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a Boolean
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: 0
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Integer' value '0' to type 'Byte'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:171)     Converted to Byte value '0'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value:  
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Character' value ' ' to type 'Character'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a Character
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: 0
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Integer' value '0' to type 'Double'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:171)     Converted to Double value '0.0'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: 0
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Integer' value '0' to type 'Float'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:171)     Converted to Float value '0.0'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: 0
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Integer' value '0' to type 'Integer'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a Integer
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: 0
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Integer' value '0' to type 'Long'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:171)     Converted to Long value '0'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: 0
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Integer' value '0' to type 'Short'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:171)     Converted to Short value '0'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: 
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'String' value '' to type 'String'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [Z@1ba9117e
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'boolean[]' value '[Z@1ba9117e' to type 'boolean[]'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a boolean[]
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [B@732c2a62
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'byte[]' value '[B@732c2a62' to type 'byte[]'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a byte[]
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [C@272ed83b
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'char[]' value '[C@272ed83b' to type 'char[]'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a char[]
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [D@41fecb8b
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'double[]' value '[D@41fecb8b' to type 'double[]'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a double[]
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [F@120f102b
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'float[]' value '[F@120f102b' to type 'float[]'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a float[]
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [I@625732
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'int[]' value '[I@625732' to type 'int[]'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a int[]
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [J@51dcb805
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'long[]' value '[J@51dcb805' to type 'long[]'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a long[]
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [S@66498326
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'short[]' value '[S@66498326' to type 'short[]'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a short[]
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [Ljava.math.BigDecimal;@cad498c
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'BigDecimal[]' value '[Ljava.math.BigDecimal;@cad498c' to type 'BigDecimal[]'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a BigDecimal[]
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [Ljava.math.BigInteger;@2accdbb5
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'BigInteger[]' value '[Ljava.math.BigInteger;@2accdbb5' to type 'BigInteger[]'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a BigInteger[]
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [Ljava.lang.Boolean;@6631f5ca
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Boolean[]' value '[Ljava.lang.Boolean;@6631f5ca' to type 'Boolean[]'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a Boolean[]
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [Ljava.lang.Byte;@1613674b
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Byte[]' value '[Ljava.lang.Byte;@1613674b' to type 'Byte[]'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a Byte[]
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [Ljava.lang.Character;@4e096385
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Character[]' value '[Ljava.lang.Character;@4e096385' to type 'Character[]'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a Character[]
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [Ljava.lang.Double;@693fe6c9
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Double[]' value '[Ljava.lang.Double;@693fe6c9' to type 'Double[]'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a Double[]
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [Ljava.lang.Float;@31e5415e
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Float[]' value '[Ljava.lang.Float;@31e5415e' to type 'Float[]'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a Float[]
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [Ljava.lang.Integer;@1cbb87f3
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Integer[]' value '[Ljava.lang.Integer;@1cbb87f3' to type 'Integer[]'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a Integer[]
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [Ljava.lang.Long;@1b6e1eff
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Long[]' value '[Ljava.lang.Long;@1b6e1eff' to type 'Long[]'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a Long[]
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [Ljava.lang.Short;@702b8b12
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Short[]' value '[Ljava.lang.Short;@702b8b12' to type 'Short[]'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a Short[]
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [Ljava.lang.String;@49912c99
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'String[]' value '[Ljava.lang.String;@49912c99' to type 'String[]'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a String[]
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [Ljava.lang.Class;@10163d6
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Class[]' value '[Ljava.lang.Class;@10163d6' to type 'Class[]'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a Class[]
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [Ljava.util.Date;@2dde1bff
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Date[]' value '[Ljava.util.Date;@2dde1bff' to type 'Date[]'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a Date[]
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [Ljava.util.Calendar;@550ee7e5
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'Calendar[]' value '[Ljava.util.Calendar;@550ee7e5' to type 'Calendar[]'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a Calendar[]
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [Ljava.io.File;@247d8ae
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'java.io.File[]' value '[Ljava.io.File;@247d8ae' to type 'java.io.File[]'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a java.io.File[]
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [Ljava.sql.Date;@6a84a97d
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'java.sql.Date[]' value '[Ljava.sql.Date;@6a84a97d' to type 'java.sql.Date[]'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a java.sql.Date[]
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [Ljava.sql.Time;@50ad3bc1
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'java.sql.Time[]' value '[Ljava.sql.Time;@50ad3bc1' to type 'java.sql.Time[]'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a java.sql.Time[]
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [Ljava.sql.Timestamp;@6d3a388c
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'java.sql.Timestamp[]' value '[Ljava.sql.Timestamp;@6d3a388c' to type 'java.sql.Timestamp[]'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a java.sql.Timestamp[]
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:353) Setting default value: [Ljava.net.URL;@20f5239f
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'java.net.URL[]' value '[Ljava.net.URL;@20f5239f' to type 'java.net.URL[]'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:162)     No conversion required, value is already a java.net.URL[]
+2018-09-27 15:54:15 DEBUG --- [main] (BeanUtilsBean.java:242) BeanUtils.copyProperties(Value [name=null, id=null], {name=wahaha, id=123})
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'String' value 'wahaha' to type 'String'
+2018-09-27 15:54:15 DEBUG --- [main] (AbstractConverter.java:140) Converting 'String' value '123' to type 'String'
