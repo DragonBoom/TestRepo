@@ -15,6 +15,5 @@ public class ClassPathResourceTest {
     void go() throws ClassNotFoundException {
         ClassPathResource resource = new ClassPathResource("indi.oracle.java.reflect.MyClass");
         System.out.println(resource.getClassLoader());
-        
     }
 }
