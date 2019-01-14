@@ -1,3 +1,0 @@
-2018-07-30 12:07:26 TRACE --- [main] (Loggers.java:193) sun.misc.Unsafe.theUnsafe ok
-2018-07-30 12:07:26 TRACE --- [main] (Loggers.java:193) sun.misc.Unsafe.copyMemory ok
-2018-07-30 12:07:26 TRACE --- [main] (Loggers.java:193) java.nio.Buffer.address ok
