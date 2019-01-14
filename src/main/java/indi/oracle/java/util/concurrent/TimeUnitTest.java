@@ -16,9 +16,21 @@ public class TimeUnitTest {
         Assertions.assertEquals(aDay, aDay2);
     }
     
-    @Test
+//    @Test
     void getEnumByStringTest() {
         System.out.println(TimeUnit.valueOf("HOURS"));
         System.out.println(TimeUnit.valueOf("SECONDS"));
+    }
+    
+//    @Test
+    void negativeTest() {
+        long millis = TimeUnit.MILLISECONDS.toMillis(-123L);
+        System.out.println(millis);
+    }
+    
+    @Test
+    void convertTest() {
+        long days = TimeUnit.MILLISECONDS.toDays(1000 * 60 * 60 * 37L); /* 24 < 37 < 48*/
+        System.out.println(days);// = 1 即不满2天则计一天
     }
 }

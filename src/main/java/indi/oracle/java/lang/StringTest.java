@@ -23,11 +23,33 @@ public class StringTest {
     /**
      * 换行测试
      */
-    @Test
+//    @Test
     void newLineTest() {
         String x = "a\nf";
         
         System.out.println(x.indexOf("\n"));
         System.out.println(x);
     }
+    
+    /**
+     * 测试字符串与null相加
+     */
+//    @Test
+    void addNullTest() {
+        System.out.println("ff"+ null);
+    }
+    
+    /**
+     * 测试空字符串
+     */
+//    @Test
+    void emptyStrTest() {
+        String empty = "";
+        String[] strs = empty.split(",");
+        System.out.println(strs);
+        for (String string : strs) {
+            System.out.println("is it exist? " + string);
+        }
+    }
+    
 }

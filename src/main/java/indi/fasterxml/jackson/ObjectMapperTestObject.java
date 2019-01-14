@@ -3,13 +3,16 @@ package indi.fasterxml.jackson;
 import java.util.Arrays;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+@JsonIgnoreProperties({"id"})
 public class ObjectMapperTestObject {
 
     private String id;
-    @JsonIgnore
     private String name;
+    @JsonIgnore
     private byte[] bytes;
+    @JsonIgnoreProperties
     private ObjectMapperTestObject testClass;
 
     public String getId() {
