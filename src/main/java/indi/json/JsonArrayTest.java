@@ -17,6 +17,5 @@ public class JsonArrayTest {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
     }
 }

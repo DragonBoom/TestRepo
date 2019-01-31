@@ -36,13 +36,14 @@ public class GetKaptchaTest {
 
         defaultKaptcha.setConfig(new Config(prop));
         BufferedImage image = defaultKaptcha.createImage("RUA");
+        
         ImageIO.write(image, "jpg", new File(location));
     }
 
     @AfterEach
     void after() throws IOException {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Press Anything...");
+        System.out.println("Press Anything To Delete Img ...");
         scan.nextLine();
         scan.close();
         Path p = Paths.get(location);

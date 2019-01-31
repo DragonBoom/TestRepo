@@ -1,4 +1,4 @@
-package indi.jackson;
+package indi.fasterxml.jackson;
 
 import java.io.IOException;
 import java.util.Date;

@@ -1,4 +1,4 @@
-package indi.jackson;
+package indi.fasterxml.jackson;
 
 import java.io.IOException;
 
@@ -12,6 +12,9 @@ public class ObjectMapperTest {
 
     @Test
     public void simpleTest() {
+        /*
+         * 简单测试能不能把字节数组序列化
+         */
         ObjectMapper mapper = new ObjectMapper();
         ObjectWriter writer = mapper.writer();
         try {
