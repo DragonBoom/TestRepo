@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beansProjectDescription>
 	<version>1</version>
-	<pluginVersion><![CDATA[3.9.0.201707061730-RELEASE]]></pluginVersion>
+<<<<<<< HEAD
+	<pluginVersion><![CDATA[3.9.4.201804120850-RELEASE]]></pluginVersion>
+=======
+	<pluginVersion><![CDATA[3.9.5.201807030714-RELEASE]]></pluginVersion>
+>>>>>>> com
 	<configSuffixes>
 		<configSuffix><![CDATA[xml]]></configSuffix>
 	</configSuffixes>
@@ -10,6 +14,14 @@
 		<config>src/main/Resource/configuration.xml</config>
 	</configs>
 	<autoconfigs>
+		<config>java:inid.google.kaptcha.DemoApplication</config>
+		<config>java:inid.spring.boot.jpa.Application</config>
+		<config>java:indi.spring.Application</config>
+<<<<<<< HEAD
+		<config>java:indi.spring.core.mvc.jpa.Main</config>
+=======
+>>>>>>> com
+		<config>java:inid.spring.datasource.Application</config>
 	</autoconfigs>
 	<configSets>
 	</configSets>

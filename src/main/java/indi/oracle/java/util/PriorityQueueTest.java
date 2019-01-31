@@ -9,6 +9,9 @@ import org.slf4j.LoggerFactory;
 public class PriorityQueueTest {
 	private final static Logger logger = LoggerFactory.getLogger("");
 
+	/**
+	 * 优先级越大越优先取出
+	 */
 	@Test
 	public void priorityQueueTest() {
 		PriorityQueue<MyClass> queue = new PriorityQueue<>(Collections.reverseOrder());

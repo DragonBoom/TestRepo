@@ -20,7 +20,7 @@ public class FinalizeTest {
 		} else {
 			System.out.println("wow he till alive!");
 		}
-		// part 2
+		// part 2 why?
 		FinalizeEscapeGC.SAVE_HOOK = null;
 		System.gc();
 		try {
