@@ -4,8 +4,11 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 
-//@ExtendWith()
+import indi.util.extension.TestSeparateExtension;
+
+@ExtendWith(TestSeparateExtension.class)
 class PathTest {
     Path path1 = Paths.get("d:", "w");
     Path path2 = Paths.get("d:", "w", "f");
