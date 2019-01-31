@@ -1,5 +1,6 @@
 package indi.fasterxml.jackson;
 
+<<<<<<< HEAD
 import java.io.IOException;
 import java.util.Iterator;
 
@@ -27,5 +28,14 @@ public class XmlTest {
             System.out.println(elements.next());
         }
         System.out.println();
+=======
+import org.junit.jupiter.api.Test;
+
+public class XmlTest {
+
+    @Test
+    void go() {
+        
+>>>>>>> com
     }
 }

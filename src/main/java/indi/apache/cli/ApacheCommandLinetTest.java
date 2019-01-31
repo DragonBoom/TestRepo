@@ -25,8 +25,10 @@ public class ApacheCommandLinetTest {
 			e.printStackTrace();
 		}
 		System.out.println(cl.getArgList());
+		System.out.println("+++");
 		System.out.println(cl.getOptionObject('a'));
 		HelpFormatter helper = new HelpFormatter();
+		System.out.println("+++");
 		helper.printHelp("--", os);
 	}
 }

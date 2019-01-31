@@ -9,7 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class AnnotationTest {
-	private static final Logger logger = LoggerFactory.getLogger("");
+	private static final Logger logger = LoggerFactory.getLogger("AnnotationTest");
 
 	/**
 	 * 利用反射获取注解

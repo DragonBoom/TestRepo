@@ -12,7 +12,7 @@ import com.zaxxer.hikari.HikariDataSource;
 @EnableJpaRepositories
 public class MyConfiguration {
 
-    @Bean
+    // @Bean
     public DataSource dataSource() {
         HikariDataSource dataSource = new HikariDataSource();
         dataSource.setJdbcUrl(
