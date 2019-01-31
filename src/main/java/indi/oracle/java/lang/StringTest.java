@@ -1,6 +1,5 @@
 package indi.oracle.java.lang;
 
-<<<<<<< HEAD
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -32,10 +31,6 @@ class StringTest {
     void constructorTest() {
         String[] strs = new String[] { "123", "123" };
     }
-=======
-import org.junit.jupiter.api.Test;
-
-public class StringTest {
 
     // @Test
     void splitTest() {
@@ -85,5 +80,4 @@ public class StringTest {
         }
     }
     
->>>>>>> com
 }

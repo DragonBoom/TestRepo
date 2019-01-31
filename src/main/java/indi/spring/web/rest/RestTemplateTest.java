@@ -1,15 +1,11 @@
 package indi.spring.web.rest;
 
-<<<<<<< HEAD
-import org.springframework.boot.test.context.SpringBootTest;
-=======
 import java.io.File;
 import java.io.IOException;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.ResourceAccessException;
->>>>>>> com
 import org.springframework.web.client.RestTemplate;
 
 import com.google.common.io.Files;
