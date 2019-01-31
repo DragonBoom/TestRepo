@@ -1,4 +1,4 @@
-package indi.spring.boot.jpa;
+package indi.spring.jpa;
 
 import javax.sql.DataSource;
 
