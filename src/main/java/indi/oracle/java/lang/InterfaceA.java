@@ -1,4 +1,4 @@
-package indi.oracle.java;
+package indi.oracle.java.lang;
 
 public interface InterfaceA {
 
