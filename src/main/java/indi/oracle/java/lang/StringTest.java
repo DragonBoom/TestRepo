@@ -3,11 +3,13 @@ package indi.oracle.java.lang;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 class StringTest {
 
-    //    @Test
+    @Test
+    @Disabled
     void char2StringTest() {
 
         String c = "(213_)]";
@@ -20,28 +22,22 @@ class StringTest {
         System.out.println(count);
     }
 
-    // @Test
-    void spilitTest() {
+    /**
+     * 测试使用对不满足分隔符的表达式的字符串使用split方法会有什么结果
+     * <p>
+     * 已知：不会报错
+     */
+     @Test
+     @Disabled
+    void noMatchSspilitTest() {
         String str = "开始";
         for (String ele : str.split("\\W")) {
             System.out.println(ele);
         }
     }
 
-    void constructorTest() {
-        String[] strs = new String[] { "123", "123" };
-    }
-
-    // @Test
-    void splitTest() {
-        String s = new String("www|fff|www");
-        String[] afterSplit = s.split("\\|");
-        for (String str : afterSplit) {
-            System.out.println(str);
-        }
-    }
-    
-    // @Test
+    @Test
+    @Disabled
     void formatTest() {
         String s = new String("wwwww\nwwww");
         System.out.println(s);
@@ -51,7 +47,8 @@ class StringTest {
     /**
      * 换行测试
      */
-//    @Test
+    @Test
+    @Disabled
     void newLineTest() {
         String x = "a\nf";
         
@@ -62,22 +59,17 @@ class StringTest {
     /**
      * 测试字符串与null相加
      */
-//    @Test
+    @Test
+    @Disabled
     void addNullTest() {
         System.out.println("ff"+ null);
     }
     
     /**
-     * 测试空字符串
+     * 测试字符串hashCode
      */
-//    @Test
-    void emptyStrTest() {
-        String empty = "";
-        String[] strs = empty.split(",");
-        System.out.println(strs);
-        for (String string : strs) {
-            System.out.println("is it exist? " + string);
-        }
+    @Test
+    void hashCodeTest() {
+        "hello".hashCode();
     }
-    
 }
