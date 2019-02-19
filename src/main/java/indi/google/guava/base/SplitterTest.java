@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import com.google.common.base.Splitter;
 
-public class DeTest {
+public class SplitterTest {
     private static final String toTest = "粤ABD645、粤ABQ133、闽ACA745、";
 
     @Test
