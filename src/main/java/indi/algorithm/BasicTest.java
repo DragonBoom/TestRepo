@@ -15,5 +15,7 @@ public class BasicTest {
     void remainderTest() {
         System.out.println(1%10);// case: 1
         System.out.println(10%10);// case: 0
+        System.out.println(-12%10);// case: -2
+        
     }
 }
