@@ -38,36 +38,34 @@ class ReverseInteger {
 
     /**
      * 模仿leetcode上的标准答案
+     * 
+     * <p>
+     * 思路: 倒转操作容易靠入栈/出栈实现，对整数a来说，出栈的数值即是offset = a % 10，出栈是 a /= 10，而入栈则是 a = a * 10 + offset
+     * 
+     * @author DragonBoom@2019.02.19 update finally (hope so)
      */
     int solution2(int x) {
-        int result = 0;
-        boolean negative = false;
-        
-        // 若x为负数，则取绝对值处理，最后返回时再还原，便于判断是否越界
         /**
-         * 越界判断条件本身就很容易越界
+         * 越界判断条件本身就可能越界 ！
+         * 
          */
-        if (x < 0) {
-            negative = true;
-            x = -x;
-        }
-       
+        int result = 0;
+        int max = Integer.MAX_VALUE / 10;
+        int min = Integer.MIN_VALUE / 10;
+
         while (x != 0) {
             // pop
             int offset = x % 10;
             x /= 10;
 
             // push
-            if (result > (Integer.MAX_VALUE - offset) / 10) {
+            if (result > max - offset / 10 || result < min - offset / 10) {// 不能用 (Integer.MAX_VALUE - offset) /
+                                                                           // 10，可能会越界
                 return 0;
             }
             result = result * 10 + offset;
         }
-        
-        if (negative) {
-            return -result;
-        } else {
-            return result;
-        }
+
+        return result;
     }
 }
