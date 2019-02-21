@@ -48,6 +48,15 @@ public class PalindromeNumber {
     /**
      * 思路：倒转一半
      * 
+     * <p>转化题目：题目可以理解为判断1个数的前半部分是否等于后半部分
+     * <p>性质：对a,b分别是s的前/后半部分，若s的前半部分等于后半部分，则a == b || a = b / 10 || b = a / 10，
+     * 后面两个判断适用于s的位数为奇数的情况
+     * 
+     * 时间复杂度 O(lg(n))  We divided the input by 10 for every iteration, so the time complexity is O(\log_{10}(n))O(log 
+10  (by leetcode)
+ (n))
+     * 空间复杂度 O(1)
+     * 
      * @param x
      * @return
      */
