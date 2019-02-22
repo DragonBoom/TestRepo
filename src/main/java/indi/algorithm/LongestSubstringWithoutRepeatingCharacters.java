@@ -95,9 +95,14 @@ public class LongestSubstringWithoutRepeatingCharacters {
     }
     
     /**
-     * HashSet 滑动窗口解法 因为使用了集合，远不如solution2....
+     * HashSet 滑动窗口解法 因为使用了HashSet，远不如solution2....
      * <p>
-     * runtime: 28ms 62.41%<br>
+     * 性质：<br>
+     * 若发生了冲突，则下一个无重复序列必然从第一个冲突元素的下一位开始
+     * 
+     * <p>这种解法存在优化空间，即用某种方式替换HashSet判断当前序列是否有特定元素
+     * 
+     * <p>runtime: 28ms 62.41%<br>
      * memory: 40mb 14.10%
      */
     int solution3(String s) {
@@ -110,7 +115,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
         
         while (begin < len && end < len) {
             if (set.contains(s.charAt(end))) {
-                set.remove(s.charAt(begin));
+                set.remove(s.charAt(begin));// 发生冲突，进入（可能的）下一序列
                 begin++;
             } else {
                 set.add(s.charAt(end));
