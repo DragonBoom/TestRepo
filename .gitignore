@@ -29,12 +29,8 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-<<<<<<< HEAD
-
 # my
 target
 =======
 target
->>>>>>> com
->>>>>>> home
 target/classes/META-INF/maven/Indi/TestRepo/pom.properties
