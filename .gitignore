@@ -20,5 +20,5 @@
 *.rar
 
 # my
-/target/*
-/log/*
+target/
+log/
