@@ -20,4 +20,5 @@
 *.rar
 
 # my
-/target/*
+target
+log
