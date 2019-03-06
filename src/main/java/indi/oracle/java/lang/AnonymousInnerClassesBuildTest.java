@@ -2,9 +2,11 @@ package indi.oracle.java.lang;
 
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.function.Consumer;
 
 import org.junit.jupiter.api.Test;
+
 
 public class AnonymousInnerClassesBuildTest {
 
@@ -25,5 +27,6 @@ public class AnonymousInnerClassesBuildTest {
             new HashMap() {};
             new HashMap() {};
         };
+        
     }
 }
