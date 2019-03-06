@@ -48,6 +48,8 @@ public class TestSeparateExtension
         }
         System.out.println(new StringBuilder(SEPARATOR).append(" Test Over, Use ").append(timeDesc).toString());
         System.out.println();// 空一行
+        
+        ctx.getExecutionException().ifPresent(Throwable::printStackTrace);// 打印异常堆记录
     }
     
     @Override

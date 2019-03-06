@@ -94,19 +94,22 @@ public class MedianOfTwoSortedArrays {
     }
 
     public double solution2(int[] nums1, int[] nums2) {
-        // if empty
-        if (nums1.length == 0) {
-            return getMid(nums2);
-        } else if (nums2.length == 0) {
-            return getMid(nums1);
-        }
-
-        // if lucky
-        if (nums1[nums1.length - 1] <= nums2[0]) {
-            return getMidBetweenOrdered(nums1, nums2);
-        } else if (nums2[nums2.length - 1] <= nums1[0]) {
-            return getMidBetweenOrdered(nums2, nums1);
-        }
+        /**
+         * 去掉【对不必遍历的情况的特殊处理】，反而更快了，占用内存也更低了？？？ TODO
+         */
+//        // if empty
+//        if (nums1.length == 0) {
+//            return getMid(nums2);
+//        } else if (nums2.length == 0) {
+//            return getMid(nums1);
+//        }
+//
+//        // if lucky
+//        if (nums1[nums1.length - 1] <= nums2[0]) {
+//            return getMidBetweenOrdered(nums1, nums2);
+//        } else if (nums2[nums2.length - 1] <= nums1[0]) {
+//            return getMidBetweenOrdered(nums2, nums1);
+//        }
 
         // if not lucky
         // loop (m + n) / 2
@@ -118,15 +121,33 @@ public class MedianOfTwoSortedArrays {
 
         int last = 0;
         while (true) {
-            int cur = 0;
             // if i1 / i2 go end
             if (i1 == nums1.length) {
-                cur = nums2[i2];
-                i2++;
+                if (len % 2 == 0) {
+                    if (i1 + i2 + 1 == finalMid) {
+                        return average(nums1[i1 - 1], nums2[i2]);
+                    } else {
+                        i2 = finalMid - nums1.length - 1;// update i2
+                        return average(nums2[i2 - 1], nums2[i2]);
+                    }
+                } else {
+                    return nums2[finalMid - nums1.length - 1];
+                }
             } else if (i2 == nums2.length) {
-                cur = nums1[i1];
-                i1++;
-            } else if (nums1[i1] <= nums2[i2]) {
+                if (len % 2 == 0) {
+                    if (i1 + i2 + 1 == finalMid) {
+                        return average(nums2[i2 - 1], nums1[i1]);
+                    } else {
+                        i1 = finalMid - nums2.length - 1;// update i1
+                        return average(nums1[i1 - 1], nums1[i1]);
+                    }
+                } else {
+                    return nums1[finalMid - nums2.length - 1];
+                }
+            }
+            // pop lastest
+            int cur = 0;
+            if (nums1[i1] <= nums2[i2]) {
                 cur = nums1[i1];
                 i1++;// pop
             } else if (nums2[i2] < nums1[i1]) {// could optimise ?
@@ -143,7 +164,62 @@ public class MedianOfTwoSortedArrays {
             }
             last = cur;// go next and refresh last
         }
-//        return 0;
+    }
+
+    /**
+     * leetcode 的标准答案，时间复杂度为 O(log(min(m,n)))
+     * 
+     * <p>
+     * <a href=
+     * "https://leetcode.com/problems/median-of-two-sorted-arrays/solution/">link</a>
+     * 
+     */
+    public double solution3(int[] A, int[] B) {
+        int m = A.length;
+        int n = B.length;
+        if (m > n) { // to ensure m<=n
+            int[] temp = A;
+            A = B;
+            B = temp;
+            int tmp = m;
+            m = n;
+            n = tmp;
+        }
+        int iMin = 0, iMax = m, halfLen = (m + n + 1) / 2;
+        // 利用分治法查找满足条件的元素
+        while (iMin <= iMax) {
+            int i = (iMin + iMax) / 2;
+            int j = halfLen - i;
+            if (i < iMax && B[j - 1] > A[i]) {
+                iMin = i + 1; // i is too small
+            } else if (i > iMin && A[i - 1] > B[j]) {
+                iMax = i - 1; // i is too big
+            } else { // i is perfect
+                int maxLeft = 0;
+                if (i == 0) {
+                    maxLeft = B[j - 1];
+                } else if (j == 0) {
+                    maxLeft = A[i - 1];
+                } else {
+                    maxLeft = Math.max(A[i - 1], B[j - 1]);
+                }
+                if ((m + n) % 2 == 1) {
+                    return maxLeft;
+                }
+
+                int minRight = 0;
+                if (i == m) {
+                    minRight = B[j];
+                } else if (j == n) {
+                    minRight = A[i];
+                } else {
+                    minRight = Math.min(B[j], A[i]);
+                }
+
+                return (maxLeft + minRight) / 2.0;
+            }
+        }
+        return 0.0;
     }
 
     @Test
