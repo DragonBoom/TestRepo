@@ -1,10 +1,8 @@
 package indi.oracle.java.jvm;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.Test;
 
-class InfoTest {
+class RuntimeInfoTest {
 
 	@Test
 	void test() {
@@ -14,7 +12,7 @@ class InfoTest {
 		System.out.println("max mem : " + maxMem);
 		System.out.println("free mem : " + freeMem);
 		Runnable r = () -> {
-			System.exit(0);
+			System.exit(0);// close application
 		};
 		Thread t = new Thread(r);
 		t.start();

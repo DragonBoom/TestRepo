@@ -1,13 +1,21 @@
 package indi.oracle.java.jvm.memory;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+
+import indi.util.extension.TestSeparateExtension;
 
 // Java 编程语言只有值传递参数。当一个对象实例作为一个参数被传递到方法中时，参数的值就是该对象的引用一个副本。指向同一个对象,对象的内容可以在被调用的方法中改变，
 // 但对象的引用(不是引用的副本)是永远不会改变的。 
-public class ConstantPoolTest {
+@ExtendWith(TestSeparateExtension.class)
+class ConstantPoolTest {
 
-	@Test
-	public void mainTest() {
+    /**
+     * 即执行intern()后，并不是把字符串对象移动至常量池，而是在常量池创建相同字面量的字符串<br>
+     * 但似乎并非所有情况都是这种处理方式 ？ TODO 补全
+     */
+    @Test
+	public void internTest() {
 		String s = "hell";
 		String s2 = "o";
 		String s3 = "hello";
@@ -19,8 +27,16 @@ public class ConstantPoolTest {
 			System.out.println("s4 != s3");
 		}
 		// 执行intern()方法后，將s4加入到字符串池
+		String s5 = s4;
+		System.out.println("s5 = s4");
 		s4 = s4.intern();
-		System.out.println("after intern():");
+		System.out.println("after s4.intern() :");
+        if (s5 == s4) {
+            System.out.println("s5 == s4");
+        } else {
+            System.out.println("s5 != s4");
+        }
+		System.out.println("and");
 		if (s4 == s3) {
 			System.out.println("s4 == s3");
 		} else {

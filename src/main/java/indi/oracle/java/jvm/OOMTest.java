@@ -3,7 +3,9 @@ package indi.oracle.java.jvm;
 import java.util.ArrayList;
 import java.util.List;
 
-class OOMTest {
+import org.junit.jupiter.api.Test;
+
+public class OOMTest {
 	
 	/**
 	 * VM args: -Xms20m -Xmx20m -XX:+HeapDumpOnOutOfMemoryError
@@ -14,17 +16,23 @@ class OOMTest {
 	 * Heap dump file created [22197345 bytes in 0.097 secs]
 	 * @param args
 	 */
-	// @Test
+//	@Test
 	public static void main(String[] args) {
-		List<OOMObject> list = new ArrayList<OOMObject>();
-		int i = 99;
-		while (i > 0) {
-			list.add(new OOMObject());
-			i--;
-		}
+	    try {
+	        List<String> list = new ArrayList<>();
+	        int i = 9999;
+	        while (i > 0) {
+	            list.add("1 " + System.currentTimeMillis());
+	            i--;
+	        }
+	        
+	        System.out.println(list);
+	    } catch (Throwable e) {
+	        e.printStackTrace();
+	    }
 	}
 	
 	static class OOMObject {
-		
+		private byte[] bytes = new byte[1234]; 
 	}
 }
