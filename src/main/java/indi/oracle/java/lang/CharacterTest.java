@@ -44,6 +44,7 @@ class CharacterTest {
      *  字符长度测试
      */
     @Test
+    @Disabled
     void lengthTest() {
         PrintUtils.with(str -> ((String)str).toCharArray().length)
                 .print("1")
@@ -53,5 +54,18 @@ class CharacterTest {
                 .print("繁体")// [繁体] -> 2
                 ;
 
+    }
+    
+    @Test
+    void string2CharTest() {
+        System.out.println(Character.toString('a'));// => String.toString('a');
+    }
+    
+    @Test
+    void unicodeTest() {
+        Character c = new Character('a');
+        System.out.println(c >= 0x4e00 && c <= 0x9fa5);// false
+        Character c1 = new Character('啊');
+        System.out.println(c >= 0x4e00 && c1 <= 0x9fa5);// true
     }
 }
