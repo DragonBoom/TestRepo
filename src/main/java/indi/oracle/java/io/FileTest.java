@@ -20,7 +20,7 @@ class FileTest {
         File file1 = new File("e://test.txt");
         File file2 = new File("e://test.txt");
         file2.delete();
-        List<String> readLines = Files.readLines(file1, Charset.defaultCharset());
+        List<String> readLines = Files.readLines(file1, Charset.defaultCharset());// java.io.FileNotFoundException: e:\test.txt (系统找不到指定的文件。)
         System.out.println(readLines);
     }
 }

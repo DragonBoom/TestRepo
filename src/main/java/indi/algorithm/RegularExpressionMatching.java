@@ -94,7 +94,9 @@ public class RegularExpressionMatching {
 	}
 	
 	/**
-	 * solution 1
+	 * solution 1: recursion
+	 * 
+	 * Time Complexity: 递归次数 * 每次递归最大的复杂度
 	 */
     boolean isMatch(String s, String p) {
         System.out.println(s + " | " + p);

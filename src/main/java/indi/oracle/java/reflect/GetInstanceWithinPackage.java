@@ -5,7 +5,6 @@ import java.net.URL;
 import java.util.Enumeration;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.core.io.ClassPathResource;
 
 class GetInstanceWithinPackage {
 

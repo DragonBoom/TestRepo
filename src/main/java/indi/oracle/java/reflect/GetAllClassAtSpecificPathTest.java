@@ -7,12 +7,9 @@ import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Iterator;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
-
-import indi.util.PrintUtils;
 
 /**
  * 测试获取当前类所在的路径
@@ -27,9 +24,9 @@ class GetAllClassAtSpecificPathTest {
     void test(String location) throws URISyntaxException, IOException, ClassNotFoundException {
         URL url = Thread.currentThread().getContextClassLoader().getResource(location);
         Path path = Paths.get(url.toURI());
-        PrintUtils.print(path);
+        System.out.println(path);
         if (!Files.isDirectory(path)) {
-            PrintUtils.print("not found");
+            System.out.println("not found");
             return;
         }
         DirectoryStream<Path> stream = Files.newDirectoryStream(path);
