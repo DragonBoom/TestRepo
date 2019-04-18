@@ -1,4 +1,4 @@
-package indi.oracle.java.reflect;
+package indi.oracle.java.lang.reflect;
 
 import org.junit.Test;
 

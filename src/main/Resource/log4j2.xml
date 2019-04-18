@@ -24,7 +24,8 @@
 			<ThresholdFilter level="info" onMatch="ACCEPT"
 				onMismatch="DENY" />
 			<!-- 输出日志的格式 -->
-			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %5p --- [%t] (%F:%L) %m%n" />
+			<PatternLayout
+				pattern="%d{yyyy-MM-dd HH:mm:ss} %5p --- [%t] (%F:%L) %m%n" />
 		</Console>
 
 		<!-- 这个输出控制台的配置，这里输出error级别的信息到System.err，在eclipse控制台上看到的是红色文字 -->
@@ -32,7 +33,8 @@
 			<ThresholdFilter level="ERROR" onMatch="ACCEPT"
 				onMismatch="DENY" />
 			<!-- 输出日志的格式 -->
-			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %5p --- [%t] (%F:%L) %m%n" />
+			<PatternLayout
+				pattern="%d{yyyy-MM-dd HH:mm:ss} %5p --- [%t] (%F:%L) %m%n" />
 		</Console>
 
 		<!-- 关于RollingFile节点属性说明： -->
@@ -52,14 +54,15 @@
 			fileName="${LOG_HOME}/trace.log"
 			filePattern="${LOG_HOME}/%d{yyyy-MM}/trace/trace - %d{yyyy-MM-dd HH_mm_ss}.log">
 			<!-- 输出日志的格式 -->
-			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %5p --- [%t] (%F:%L) %m%n" />
+			<PatternLayout
+				pattern="%d{yyyy-MM-dd HH:mm:ss} %5p --- [%t] (%F:%L) %m%n" />
 			<Policies>
 				<!-- 每个日志文件最大大小，单位可以是KB、MB、GB -->
 				<SizeBasedTriggeringPolicy size="10MB" />
 				<!-- 按时间间隔生成新文件，其中间隔interval的单位需要参照filePattern里时间的最小单位， 即如果filePattern配置的日期格式为 
 					%d{yyyy-MM-dd HH} ，则单位为小时， 如果filePattern配置的日期格式为 %d{yyyy-MM-dd} ，则单位为天 -->
-				<TimeBasedTriggeringPolicy interval="86400"
-					modulate="true" />
+				<TimeBasedTriggeringPolicy
+					interval="86400" modulate="true" />
 			</Policies>
 
 			<Filters>
@@ -77,14 +80,15 @@
 			fileName="${LOG_HOME}/debug.log"
 			filePattern="${LOG_HOME}/%d{yyyy-MM}/debug/debug - %d{yyyy-MM-dd HH_mm_ss}.log">
 			<!-- 输出日志的格式 -->
-			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %5p --- [%t] (%F:%L) %m%n" />
+			<PatternLayout
+				pattern="%d{yyyy-MM-dd HH:mm:ss} %5p --- [%t] (%F:%L) %m%n" />
 			<Policies>
 				<!-- 每个日志文件最大大小，单位可以是KB、MB、GB -->
 				<SizeBasedTriggeringPolicy size="10MB" />
 				<!-- 按时间间隔生成新文件，其中间隔interval的单位需要参照filePattern里时间的最小单位， 即如果filePattern配置的日期格式为 
 					%d{yyyy-MM-dd HH} ，则单位为小时， 如果filePattern配置的日期格式为 %d{yyyy-MM-dd} ，则单位为天 -->
-				<TimeBasedTriggeringPolicy interval="86400"
-					modulate="true" />
+				<TimeBasedTriggeringPolicy
+					interval="86400" modulate="true" />
 			</Policies>
 
 			<Filters>
@@ -102,14 +106,15 @@
 			fileName="${LOG_HOME}/info.log"
 			filePattern="${LOG_HOME}/%d{yyyy-MM}/info/info - %d{yyyy-MM-dd HH_mm_ss}.log">
 			<!-- 输出日志的格式 -->
-			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %5p --- [%t] (%F:%L) %m%n" />
+			<PatternLayout
+				pattern="%d{yyyy-MM-dd HH:mm:ss} %5p --- [%t] (%F:%L) %m%n" />
 			<Policies>
 				<!-- 每个日志文件最大大小，单位可以是KB、MB、GB -->
 				<SizeBasedTriggeringPolicy size="10MB" />
 				<!-- 按时间间隔生成新文件，其中间隔interval的单位需要参照filePattern里时间的最小单位， 即如果filePattern配置的日期格式为 
 					%d{yyyy-MM-dd HH} ，则单位为小时， 如果filePattern配置的日期格式为 %d{yyyy-MM-dd} ，则单位为天 -->
-				<TimeBasedTriggeringPolicy interval="86400"
-					modulate="true" />
+				<TimeBasedTriggeringPolicy
+					interval="86400" modulate="true" />
 			</Policies>
 			<Filters>
 				<!-- 此Filter意思是，只输出info级别的数据。 DENY，日志将立即被抛弃不再经过其他过滤器； NEUTRAL，有序列表里的下个过滤器过接着处理日志； 
@@ -126,14 +131,15 @@
 			fileName="${LOG_HOME}/warn.log"
 			filePattern="${LOG_HOME}/%d{yyyy-MM}/warn/warn - %d{yyyy-MM-dd HH_mm_ss}.log">
 			<!-- 输出日志的格式 -->
-			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %5p --- [%t] (%F:%L) %m%n" />
+			<PatternLayout
+				pattern="%d{yyyy-MM-dd HH:mm:ss} %5p --- [%t] (%F:%L) %m%n" />
 			<Policies>
 				<!-- 每个日志文件最大大小，单位可以是KB、MB、GB -->
 				<SizeBasedTriggeringPolicy size="10MB" />
 				<!-- 按时间间隔生成新文件，其中间隔interval的单位需要参照filePattern里时间的最小单位， 即如果filePattern配置的日期格式为 
 					%d{yyyy-MM-dd HH} ，则单位为小时， 如果filePattern配置的日期格式为 %d{yyyy-MM-dd} ，则单位为天 -->
-				<TimeBasedTriggeringPolicy interval="86400"
-					modulate="true" />
+				<TimeBasedTriggeringPolicy
+					interval="86400" modulate="true" />
 			</Policies>
 
 			<Filters>
@@ -151,14 +157,15 @@
 			fileName="${LOG_HOME}/error.log"
 			filePattern="${LOG_HOME}/%d{yyyy-MM-dd}/error/error - %d{yyyy-MM-dd HH_mm_ss}.log">
 			<!-- 输出日志的格式 -->
-			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %5p --- [%t] (%F:%L) %m%n" />
+			<PatternLayout
+				pattern="%d{yyyy-MM-dd HH:mm:ss} %5p --- [%t] (%F:%L) %m%n" />
 			<Policies>
 				<!-- 每个日志文件最大大小，单位可以是KB、MB、GB -->
 				<SizeBasedTriggeringPolicy size="10MB" />
 				<!-- 按时间间隔生成新文件，其中间隔interval的单位需要参照filePattern里时间的最小单位， 即如果filePattern配置的日期格式为 
 					%d{yyyy-MM-dd HH} ，则单位为小时， 如果filePattern配置的日期格式为 %d{yyyy-MM-dd} ，则单位为天 -->
-				<TimeBasedTriggeringPolicy interval="86400"
-					modulate="true" />
+				<TimeBasedTriggeringPolicy
+					interval="86400" modulate="true" />
 			</Policies>
 			<Filters>
 				<!-- 此Filter意思是，只输出error级别的数据。 DENY，日志将立即被抛弃不再经过其他过滤器； NEUTRAL，有序列表里的下个过滤器过接着处理日志； 
