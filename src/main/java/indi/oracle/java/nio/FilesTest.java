@@ -1,0 +1,23 @@
+package indi.oracle.java.nio;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+
+import indi.util.extension.TestSeparateExtension;
+
+@ExtendWith(TestSeparateExtension.class)
+public class FilesTest {
+
+    /**
+     * 对于move方法，在windows系统下，文件夹可以在同一个盘符下移动而不报错， 但当文件夹需要跨盘移动时就会报
+     * java.nio.file.DirectoryNotEmptyException: d:\test 异常
+     */
+    @Test
+    void moveTest() throws IOException {
+        Files.move(Paths.get("e:", "test"), Paths.get("d:", "test"));// java.nio.file.DirectoryNotEmptyException: d:\test
+    }
+}

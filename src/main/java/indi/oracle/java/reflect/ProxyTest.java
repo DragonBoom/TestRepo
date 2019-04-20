@@ -17,7 +17,8 @@ public class ProxyTest {
         MyInvocationHandler ih = new MyInvocationHandler();
         Class<?>[] classes = {Runnable.class, Comparable.class};
         Runnable proxyInstance = (Runnable) Proxy.newProxyInstance(this.getClass().getClassLoader(), classes, ih);
-        System.out.println(proxyInstance.getClass());
+        System.out.println(proxyInstance);
+        System.out.println("name: " + proxyInstance.getClass().getName());
         proxyInstance.toString();
         proxyInstance.run();
         

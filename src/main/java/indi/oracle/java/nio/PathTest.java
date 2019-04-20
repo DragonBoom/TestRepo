@@ -9,6 +9,11 @@ import org.junit.jupiter.api.extension.ExtendWith;
 
 import indi.util.extension.TestSeparateExtension;
 
+/**
+ * 值得一提的是，Path的方法可能会修改本身的路径
+ * @author DragonBoom
+ *
+ */
 @ExtendWith(TestSeparateExtension.class)
 class PathTest {
     Path path1 = Paths.get("d:", "w");
@@ -19,9 +24,11 @@ class PathTest {
      * resolve 也是拼接，若传入路径是绝对路径，则只会返回传入路径
      */
     @Test
-    @Disabled
+//    @Disabled
     void resolveTest() {
         System.out.println(path1.resolve(path2));// case: d:\w\w\f
+        System.out.println(path1);
+        System.out.println(path2);
     }
     
     /**
@@ -30,14 +37,16 @@ class PathTest {
      * 若两个路径没有相同部分，则将抛异常
      */
     @Test
-    @Disabled
+//    @Disabled
     void releativeTest() {
         System.out.println(path1.relativize(path3));// case: t
 //        System.out.println(path1.relativize(path2));// case: java.lang.IllegalArgumentException: 'other' is different type of Path
         System.out.println(path3.relativize(path1));// case: ..
+        System.out.println(path1.resolve(path1.relativize(path3)));// case: w\f\..
     }
     
     @Test
+    @Disabled
     void newPathTest() {
         Path path = Paths.get("");// 不会报错
         System.out.println(path);
