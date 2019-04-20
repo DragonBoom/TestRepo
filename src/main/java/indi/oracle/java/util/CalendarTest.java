@@ -6,6 +6,7 @@ import java.util.Date;
 import java.util.concurrent.TimeUnit;
 import java.util.function.BiConsumer;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import com.google.common.collect.ImmutableMap;
@@ -52,7 +53,7 @@ public class CalendarTest {
         calendar.setTime(date);
         calendar.setFirstDayOfWeek(Calendar.MONDAY);
         int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
-        calendar.add(Calendar.DAY_OF_WEEK, Calendar.MONDAY + 5 - dayOfWeek);
+        calendar.add(Calendar.DAY_OF_WEEK, Calendar.SATURDAY - dayOfWeek);
         // 将时分秒均设为0
         calendar.set(Calendar.HOUR_OF_DAY, 0);
         calendar.set(Calendar.MINUTE, 0);
@@ -70,7 +71,8 @@ public class CalendarTest {
             .put("s", (time, calendar) -> calendar.add(Calendar.SECOND, Integer.parseInt(time.substring(0, time.length() - 1))))
             .build();
     
-//    @Test
+    @Test
+    @Disabled
     void parseStrTest() {
         Date createDate = new Date();
         String str = "0y 0mo 0w 0d 1h 11m 11s";
@@ -86,21 +88,6 @@ public class CalendarTest {
                 biConsumer.accept(s, calendar);
             }
         }
-        
-//        time = split[0].substring(0, split[0].length() - 1);
-//        calendar.add(Calendar.YEAR, Integer.parseInt(time));
-//        time = split[1].substring(0, split[1].length() - 2);
-//        calendar.add(Calendar.MONTH, Integer.parseInt(time));
-//        time = split[2].substring(0, split[2].length() - 1);
-//        calendar.add(Calendar.WEEK_OF_MONTH, Integer.parseInt(time));
-//        time = split[3].substring(0, split[3].length() - 1);
-//        calendar.add(Calendar.DAY_OF_MONTH, Integer.parseInt(time));
-//        time = split[4].substring(0, split[4].length() - 1);
-//        calendar.add(Calendar.HOUR_OF_DAY, Integer.parseInt(time));
-//        time = split[5].substring(0, split[5].length() - 1);
-//        calendar.add(Calendar.MINUTE, Integer.parseInt(time));
-//        time = split[6].substring(0, split[6].length() - 1);
-//        calendar.add(Calendar.SECOND, Integer.parseInt(time));
         System.out.println(calendar.getTime());
     }
 }

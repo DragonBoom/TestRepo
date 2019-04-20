@@ -16,7 +16,8 @@ import org.junit.jupiter.api.extension.ExtensionContext;
  */
 public class TestSeparateExtension
         implements BeforeTestExecutionCallback, AfterTestExecutionCallback, BeforeAllCallback, AfterAllCallback {
-    private static final String SEPARATOR = "---------------------------------";
+    private static final String BEGIN_SEPARATOR = "↓↓↓---------------------------------↓↓↓";
+    private static final String OVER_SEPARATOR = "↑↑↑---------------------------------↑↑↑";
     private static final String BEGIN_ALL = "begin";
     private static final String AFTER_ALL = "over";
     private ThreadLocal<Date> beginDateThreadLocal = new ThreadLocal<>();
@@ -28,7 +29,7 @@ public class TestSeparateExtension
         String displayName = ctx.getDisplayName();
         Class<?> requiredTestClass = ctx.getRequiredTestClass();
         
-        System.out.println(new StringBuilder(SEPARATOR)
+        System.out.println(new StringBuilder(BEGIN_SEPARATOR)
                 .append("Begin Test: ")
                 .append(requiredTestClass.getSimpleName()).append(".").append(displayName)
                 .toString());
@@ -46,7 +47,7 @@ public class TestSeparateExtension
         } else {
             timeDesc = new StringBuilder().append(duration).append(" millis").toString();
         }
-        System.out.println(new StringBuilder(SEPARATOR).append(" Test Over, Use ").append(timeDesc).toString());
+        System.out.println(new StringBuilder(OVER_SEPARATOR).append(" Test Over, Use ").append(timeDesc).toString());
         System.out.println();// 空一行
         
         ctx.getExecutionException().ifPresent(Throwable::printStackTrace);// 打印异常堆记录

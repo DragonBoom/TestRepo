@@ -1,4 +1,4 @@
-package indi.oracle.java.reflect;
+package indi.oracle.java.lang.reflect;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

@@ -1,8 +1,5 @@
 package indi.oracle.java.lang;
 
-import java.util.LinkedList;
-import java.util.Stack;
-
 import org.junit.jupiter.api.Test;
 
 public class ThreadLocalTest {

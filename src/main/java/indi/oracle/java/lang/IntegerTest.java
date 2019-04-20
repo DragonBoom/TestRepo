@@ -17,6 +17,7 @@ public class IntegerTest {
     }
     
     @Test
+    @Disabled
     void paramTest() {
         int i = 1;
         setZero(1);
@@ -24,6 +25,17 @@ public class IntegerTest {
         Integer i2 = 1; 
         setZero2(i2);
         System.out.println(i2);// case 1
+    }
+    
+    @Test
+    void binaryTest() {
+        Integer i = 8;
+        System.out.println(i >> 1);// 8 / 2^1
+        System.out.println(i >> 32);// case 8 ?
+        System.out.println(i >> 31);// case 0 ?
+        
+        long l = 8;
+        System.out.println(l >> 32);// case 0
     }
     
     private int setZero(int x) {// 这里的x与上面的i都指向相同的地址，但对于整型，x = 0没有修改了地址的值，而是将x指向了0所在的地址

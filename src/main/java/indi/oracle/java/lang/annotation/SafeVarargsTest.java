@@ -5,8 +5,6 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import com.google.common.collect.ImmutableList;
-
 public class SafeVarargsTest {
 
     @Test

@@ -42,6 +42,7 @@ public class HashMapTest {
 		// HashMap中 null 的hash值取0
 		hashMap.put(null, "null");
 		logger.info("{}", hashMap.get(null));
+		logger.info("{}", "" == (String) hashMap.get("qq"));
 	}
 
 	@Test
