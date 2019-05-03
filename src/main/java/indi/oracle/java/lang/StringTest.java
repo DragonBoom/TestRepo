@@ -38,7 +38,7 @@ class StringTest {
 
     @Test
     @Disabled
-    void formatTest() {
+    void replaceTest() {
         String s = new String("wwwww\nwwww");
         System.out.println(s);
         System.out.println(s.replace("\n", ""));
@@ -69,7 +69,18 @@ class StringTest {
      * 测试字符串hashCode
      */
     @Test
+    @Disabled
     void hashCodeTest() {
         "hello".hashCode();
+    }
+    
+    /**
+     * 测试静态方法String.format
+     */
+    @Test
+    void formatTest() {
+        System.out.println(String.format("开始 1$", "了"));// 设置参数失败，case : 开始 1$
+        System.out.println(String.format("开始 %1$s", "了"));// 设置参数成功，case: 开始 了
+        System.out.println(String.format("开始%2$s%1$s%3$s", "吗", "了", "呢"));// 设置参数成功，case: 开始了吗呢
     }
 }
