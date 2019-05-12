@@ -57,15 +57,26 @@ class CharacterTest {
     }
     
     @Test
+    @Disabled
     void string2CharTest() {
         System.out.println(Character.toString('a'));// => String.toString('a');
     }
     
     @Test
+    @Disabled
     void unicodeTest() {
         Character c = new Character('a');
         System.out.println(c >= 0x4e00 && c <= 0x9fa5);// false
         Character c1 = new Character('啊');
         System.out.println(c >= 0x4e00 && c1 <= 0x9fa5);// true
+    }
+    
+    @Test
+    void englishTest() {
+        System.out.println('a' + 0);// 97
+        System.out.println('A' + 0);// 65
+        System.out.println('z' + 0);// 122
+        System.out.println('Z' + 0);// 90
+        // 综上，大小写字母的编码并不是连续的
     }
 }
