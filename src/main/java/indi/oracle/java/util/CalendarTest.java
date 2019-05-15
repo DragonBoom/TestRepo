@@ -19,6 +19,7 @@ public class CalendarTest {
      * @throws ParseException
      */
     @Test
+    @Disabled
     void skipWeekend() {
         TimeUnit unit = TimeUnit.HOURS;
         long duration = 24 * 3;
@@ -89,5 +90,22 @@ public class CalendarTest {
             }
         }
         System.out.println(calendar.getTime());
+    }
+    
+    @Test
+    @Disabled
+    void addFieldTest() {
+        
+    }
+    
+    /**
+     * 默认没有时区问题
+     */
+    @Test
+    void timezoneTest() {
+        Calendar instance = Calendar.getInstance();
+        instance.add(Calendar.HOUR, 1);
+        System.out.println(instance);
+        System.out.println(instance.getTime());
     }
 }

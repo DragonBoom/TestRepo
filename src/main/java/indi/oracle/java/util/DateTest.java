@@ -7,7 +7,9 @@ import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
+import java.util.concurrent.TimeUnit;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 public class DateTest {
@@ -65,10 +67,28 @@ public class DateTest {
     }
     
     @Test
+    @Disabled
     void dateCompare3() throws ParseException {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
         Date parse1 = sdf.parse("20180912");
         Date parse2 = sdf.parse("20180913");
         System.out.println(parse1.before(parse2));
+    }
+    
+    /**
+     * getTime得到的值，实际是不包含时区信息的
+     */
+    @Test
+    void getTimeTest() throws ParseException {
+        long time = new SimpleDateFormat("yyyyMMdd hh mm ss").parse("20190101 17 00 00").getTime();
+        long millis = time % TimeUnit.DAYS.toMillis(1);
+        System.out.println(millis);
+        System.out.println(TimeUnit.MILLISECONDS.toHours(millis));// case: 9
+
+        // 测试 小于8的时间
+        long time2 = new SimpleDateFormat("yyyyMMdd hh mm ss").parse("20190101 5 00 00").getTime();
+        long millis2 = time2 % TimeUnit.DAYS.toMillis(1);
+        System.out.println(millis2);
+        System.out.println(TimeUnit.MILLISECONDS.toHours(millis2));// case: 21 = (5 - 8 + 24)
     }
 }
