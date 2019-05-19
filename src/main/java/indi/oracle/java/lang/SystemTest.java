@@ -1,7 +1,6 @@
 package indi.oracle.java.lang;
 
-import java.io.PrintStream;
-
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
@@ -13,6 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 public class SystemTest {
 
     @Test
+    @Disabled
     void sysoutTest() {
         System.out.println("yahello");
         System.out.close();
@@ -20,5 +20,13 @@ public class SystemTest {
         
         log.debug("log yahello");// not print
         log.info("log yahello");
+    }
+    
+    @Test
+    void getPropertyTest() {
+        String property = System.getProperty("onedrive");
+        System.out.println(property);// case null
+        property = System.getenv("onedrive");
+        System.out.println(property);// case C:\Users\DragonBoom\OneDrive
     }
 }
