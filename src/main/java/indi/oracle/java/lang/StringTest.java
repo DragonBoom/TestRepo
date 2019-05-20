@@ -1,8 +1,10 @@
 package indi.oracle.java.lang;
 
+import java.util.Formatter;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.aspectj.apache.bcel.classfile.FieldOrMethod;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -85,18 +87,20 @@ class StringTest {
      * 测试静态方法String.format
      */
     @Test
-    @Disabled
+//    @Disabled
     void formatTest() {
         System.out.println(String.format("开始 1$", "了"));// 设置参数失败，case : 开始 1$
         System.out.println(String.format("开始 %1$s", "了"));// 设置参数成功，case: 开始 了
         System.out.println(String.format("开始%2$s%1$s%3$s", "吗", "了", "呢"));// 设置参数成功，case: 开始了吗呢
         System.out.println(String.format("你好 %s 吗?", "开心"));
+        System.out.println(String.format("测试 %03d", 1) );
     }
-    
+
     /**
      * 去掉首尾两端的空格
      */
     @Test
+    @Disabled
     void trimTest() {
         String expectStr = "fff a w b";
         String error1 = " fff a w b ";
