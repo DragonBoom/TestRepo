@@ -22,9 +22,14 @@
 
 	<repositories>
 		<repository>
-			<id>maven-restlet</id>
-			<name>WSO2 </name>
+			<id>1</id>
+			<name>WSO2</name>
 			<url>http://dist.wso2.org/maven2/</url>
+		</repository>
+		<repository>
+			<id>2</id>
+			<name>OpenKm</name>
+			<url>http://maven.openkm.com/</url>
 		</repository>
 	</repositories>
 
@@ -187,6 +192,12 @@
 			<artifactId>poi</artifactId>
 			<version>4.0.0</version>
 		</dependency>
+		<dependency>
+			<groupId>nl.siegmann.epublib</groupId>
+			<artifactId>epublib-core</artifactId>
+			<version>3.1</version>
+		</dependency>
+
 
 	</dependencies>
 
