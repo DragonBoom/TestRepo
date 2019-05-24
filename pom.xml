@@ -187,7 +187,11 @@
 			<artifactId>poi</artifactId>
 			<version>4.0.0</version>
 		</dependency>
-
+        <dependency>
+            <groupId>dragonboom</groupId>
+            <artifactId>util-core</artifactId>
+            <version>0.0.1</version>
+        </dependency>
 	</dependencies>
 
 </project>

@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
@@ -17,7 +18,13 @@ public class FilesTest {
      * java.nio.file.DirectoryNotEmptyException: d:\test 异常
      */
     @Test
+    @Disabled
     void moveTest() throws IOException {
         Files.move(Paths.get("e:", "test"), Paths.get("d:", "test"));// java.nio.file.DirectoryNotEmptyException: d:\test
+    }
+    
+    @Test
+    void deleteInNotExistDirectoryTest() throws IOException {
+        Files.delete(Paths.get("e:\\a\\b\\c\\d.a"));// case: throw NoSuchFileException: e:\a\b\c
     }
 }
