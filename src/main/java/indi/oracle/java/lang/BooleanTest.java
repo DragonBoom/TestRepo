@@ -1,9 +1,15 @@
 package indi.oracle.java.lang;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 
+import indi.util.extension.TestSeparateExtension;
+
+@ExtendWith(TestSeparateExtension.class)
 public class BooleanTest {
+    Boolean nullBoolean = null;
 	boolean a;
 
 	@Test
@@ -13,10 +19,24 @@ public class BooleanTest {
 		System.out.println(a);
 	}
 	
+	/**
+	 * 
+	 */
 	@Test
-	void go() {
-	    int i = 0;
-	    boolean s = false && ((i = 1) == 0 || true);
-	    System.out.println(i);
+	@Disabled
+	void nullWhenTernaryOperatorTest() {
+	    String s = nullBoolean ? "t" : "f";// case java.lang.NullPointerException
+	    System.out.println(s);
+	}
+	
+	@Test
+	void wrapperClassTest() {
+	    boolean result = nullBoolean == Boolean.TRUE;
+	    boolean result2 = true == Boolean.TRUE;
+	    boolean result3 = false == Boolean.TRUE;
+
+	    Assertions.assertFalse(result);
+	    Assertions.assertTrue(result2);
+	    Assertions.assertFalse(result3);
 	}
 }
