@@ -94,6 +94,7 @@ class StringTest {
         System.out.println(String.format("开始%2$s%1$s%3$s", "吗", "了", "呢"));// 设置参数成功，case: 开始了吗呢
         System.out.println(String.format("你好 %s 吗?", "开心"));
         System.out.println(String.format("测试 %03d", 1) );
+        System.out.println(String.format("测试 %s%s", "Hell", "o") );
     }
 
     /**

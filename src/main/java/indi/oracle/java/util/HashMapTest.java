@@ -1,10 +1,14 @@
 package indi.oracle.java.util;
 
 import java.util.HashMap;
-import org.junit.Before;
-import org.junit.Test;
+
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import indi.util.extension.TestSeparateExtension;
 
 /**
  * hashMap 中的modcount 是用来记录修改次数，用于iterator操作时的fail-fast异常的判断
@@ -26,26 +30,30 @@ import org.slf4j.LoggerFactory;
  * 
  * @author 13124
  */
+@ExtendWith(TestSeparateExtension.class)
 public class HashMapTest {
 	private static final Logger logger = LoggerFactory.getLogger(HashMapTest.class);
 	private static HashMap<Integer, String> hashMap = new HashMap<Integer, String>(123);
 
-	@Before
-	public void before() {
-		hashMap.put(1, "ff");
-		hashMap.remove(2);
-		hashMap.remove(1);
-	}
-
 	@Test
+	@Disabled
 	public void nullTest() {
 		// HashMap中 null 的hash值取0
 		hashMap.put(null, "null");
 		logger.info("{}", hashMap.get(null));
 		logger.info("{}", "" == (String) hashMap.get("qq"));
 	}
-
+	
 	@Test
-	public void multiThread() {
+	void capacityAlgorithmTest() {
+	    int cap = 1;
+	    int n = cap - 1;
+        n |= n >>> 1;
+        n |= n >>> 2;
+        n |= n >>> 4;
+        n |= n >>> 8;
+        n |= n >>> 16;
+        System.out.println(n - 1);
 	}
+
 }
