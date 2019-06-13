@@ -69,7 +69,7 @@ class StringTest {
      * 测试字符串与null相加
      */
     @Test
-//    @Disabled
+    @Disabled
     void addNullTest() {
         System.out.println("ff"+ null);// case: ffnull
     }
@@ -87,7 +87,7 @@ class StringTest {
      * 测试静态方法String.format
      */
     @Test
-//    @Disabled
+    @Disabled
     void formatTest() {
         System.out.println(String.format("开始 1$", "了"));// 设置参数失败，case : 开始 1$
         System.out.println(String.format("开始 %1$s", "了"));// 设置参数成功，case: 开始 了
@@ -110,5 +110,16 @@ class StringTest {
         System.out.println(expectStr.equals(error1.trim()));
         System.out.println(error2.trim());
         System.out.println(expectStr.equals(error2.trim()));
+    }
+    
+    @Test
+    void equalTest() {
+        String o = null;
+        if (true) {
+            o = "b";
+        }
+        String a = "ab";
+        System.out.println("a" + "b" == a);// print: false
+        System.out.println("a" + o == a);// print: false
     }
 }

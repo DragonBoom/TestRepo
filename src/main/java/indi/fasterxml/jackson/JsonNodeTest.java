@@ -1,10 +1,14 @@
 package indi.fasterxml.jackson;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
+import indi.util.extension.TestSeparateExtension;
+
+@ExtendWith(TestSeparateExtension.class)
 class JsonNodeTest {
 
     /**
@@ -16,6 +20,7 @@ class JsonNodeTest {
         objectNode.put("documentinfoid", "123");
 //        String text = objectNode.asText(); not this !!
         System.out.println(objectNode.toString());
+        System.out.println(objectNode.get("documentinfoid").asText());
         
         
     }
