@@ -24,7 +24,7 @@ class PathTest {
      * resolve 也是拼接，若传入路径是绝对路径，则只会返回传入路径
      */
     @Test
-//    @Disabled
+    @Disabled
     void resolveTest() {
         System.out.println(path1.resolve(path2));// case: d:\w\w\f
         System.out.println(path1);
@@ -37,7 +37,7 @@ class PathTest {
      * 若两个路径没有相同部分，则将抛异常
      */
     @Test
-//    @Disabled
+    @Disabled
     void releativeTest() {
         System.out.println(path1.relativize(path3));// case: t
 //        System.out.println(path1.relativize(path2));// case: java.lang.IllegalArgumentException: 'other' is different type of Path
@@ -50,5 +50,13 @@ class PathTest {
     void newPathTest() {
         Path path = Paths.get("");// 不会报错
         System.out.println(path);
+    }
+    
+    @Test
+    void getParentTest() {
+        Path path = Paths.get("d:/");
+        System.out.println(path = path.getParent());// print: null
+        System.out.println(path = path.getParent());
+        System.out.println(path = path.getParent());
     }
 }
