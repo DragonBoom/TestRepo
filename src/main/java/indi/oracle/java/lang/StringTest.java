@@ -1,5 +1,6 @@
 package indi.oracle.java.lang;
 
+import java.lang.Character.UnicodeBlock;
 import java.util.Formatter;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -112,7 +113,11 @@ class StringTest {
         System.out.println(expectStr.equals(error2.trim()));
     }
     
+    /**
+     * 测试+null值
+     */
     @Test
+    @Disabled
     void equalTest() {
         String o = null;
         if (true) {
@@ -121,5 +126,11 @@ class StringTest {
         String a = "ab";
         System.out.println("a" + "b" == a);// print: false
         System.out.println("a" + o == a);// print: false
+    }
+    
+    @Test
+    void unicodeTest() {
+//        System.out.println("\u0001");
+//        UnicodeBlock.AEGEAN_NUMBERS
     }
 }

@@ -6,6 +6,6 @@ class ClassCallerTest {
 
     @Test
     void go() {
-        System.out.println(StackTrace.getCallerClass());;
+        System.out.println(StackTraceTest.getCallerClass());;
     }
 }

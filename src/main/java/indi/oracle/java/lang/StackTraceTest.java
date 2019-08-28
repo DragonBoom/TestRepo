@@ -3,7 +3,7 @@ package indi.oracle.java.lang;
 import java.util.Arrays;
 import org.junit.jupiter.api.Test;
 
-class StackTrace {
+class StackTraceTest {
 
     /**
      * 利用堆栈记录，获取当前类的上一级调用者
@@ -19,7 +19,7 @@ class StackTrace {
         StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
         try {
             for (int i = 0; i < stackTrace.length; i++) {
-                if (StackTrace.class.getName().equals(stackTrace[i].getClassName())) {
+                if (StackTraceTest.class.getName().equals(stackTrace[i].getClassName())) {
                     return Class.forName(stackTrace[i + 1].getClassName());
                 }
             }

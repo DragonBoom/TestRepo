@@ -13,7 +13,7 @@ import indi.util.extension.TestSeparateExtension;
 /**
  * hashMap 中的modcount 是用来记录修改次数，用于iterator操作时的fail-fast异常的判断
  * <p>
- * ps.java方法的默认修饰符是default(只在接口中可写出)，与protected唯一不同是只能被同一包中的子类访问
+ * ps.java方法的默认修饰符是default(只在接口中可写出)，只能被同一包中的子类访问，并且只能在接口中主动声明
  * <p>
  * HashMap 中 newTab[e.hash & (newCap - 1)] = e;
  * <p>
@@ -43,7 +43,7 @@ public class HashMapTest {
 		logger.info("{}", hashMap.get(null));
 		logger.info("{}", "" == (String) hashMap.get("qq"));
 	}
-	
+
 	@Test
 	void capacityAlgorithmTest() {
 	    int cap = 1;
