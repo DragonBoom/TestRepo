@@ -1,5 +1,8 @@
 package indi.oracle.java.lang;
 
+import java.util.Collections;
+import java.util.LinkedList;
+
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -73,6 +76,10 @@ class CharacterTest {
     
     @Test
     void englishTest() {
+        System.out.println('1' + 0);// 49
+        System.out.println('2' + 0);// 50
+        
+        
         System.out.println('a' + 0);// 97
         System.out.println('A' + 0);// 65
         System.out.println('z' + 0);// 122
