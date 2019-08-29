@@ -2,12 +2,14 @@ package indi.fasterxml.jackson;
 
 import java.io.IOException;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 
@@ -23,6 +25,7 @@ public class ObjectMapperTest {
      * 简单测试能不能把字节数组序列化 可以
      */
     @Test
+    @Disabled
     void arraySerializeTest() {
         ObjectWriter writer = mapper.writer();
         try {
@@ -43,12 +46,20 @@ public class ObjectMapperTest {
      * 测试序列化时能不能把String转化为Integer 可以
      */
     @Test
+    @Disabled
     void string2IntegerTest() throws JsonParseException, JsonMappingException, JsonProcessingException, IOException {
         StringPropClass stringPropClass = new StringPropClass();
         stringPropClass.id = "12";
         IntegerPropClass readValue = 
                 mapper.readValue(mapper.writeValueAsString(stringPropClass), IntegerPropClass.class);
         System.out.println(readValue);// print: ObjectMapperTest.IntegerPropClass(id=12)
+    }
+    
+    @Test
+    void autoDecodeTest() throws IOException {
+        String json = "{\"id\": \"fff%E4%B8%AD%E6%96%87%E6%B5%8B%E8%AF%95123wa\"}";
+        JsonNode jsonNode = mapper.readTree(json);
+        System.out.println(jsonNode.get("id").asText());
     }
     
     @Data

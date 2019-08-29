@@ -17,4 +17,9 @@ public class BigDecimalTest {
         
         System.out.println(bigDecimal1.compareTo(bigDecimal2));// case -1
     }
+    
+    @Test
+    void toStringTest() {
+        System.out.println(new BigDecimal(123));// println: 123
+    }
 }

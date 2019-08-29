@@ -79,6 +79,7 @@ public class DateTest {
      * getTime得到的值，实际是不包含时区信息的
      */
     @Test
+    @Disabled
     void getTimeTest() throws ParseException {
         long time = new SimpleDateFormat("yyyyMMdd hh mm ss").parse("20190101 17 00 00").getTime();
         long millis = time % TimeUnit.DAYS.toMillis(1);
@@ -91,4 +92,17 @@ public class DateTest {
         System.out.println(millis2);
         System.out.println(TimeUnit.MILLISECONDS.toHours(millis2));// case: 21 = (5 - 8 + 24)
     }
+
+    @Test
+    @Disabled
+    void toStringTest() {
+        System.out.println(new Date());
+    }
+    
+    @Test
+    void newByMillisTest() {
+        Date date = new Date(1564547030000L);
+        System.out.println(date);
+    }
+    
 }

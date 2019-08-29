@@ -1,6 +1,8 @@
 package indi.oracle.java.lang;
 
+import java.io.UnsupportedEncodingException;
 import java.util.Formatter;
+import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -8,6 +10,7 @@ import org.aspectj.apache.bcel.classfile.FieldOrMethod;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.util.StringUtils;
 
 import indi.util.extension.TestSeparateExtension;
 
@@ -113,6 +116,7 @@ class StringTest {
     }
     
     @Test
+    @Disabled
     void equalTest() {
         String o = null;
         if (true) {
@@ -121,5 +125,24 @@ class StringTest {
         String a = "ab";
         System.out.println("a" + "b" == a);// print: false
         System.out.println("a" + o == a);// print: false
+    }
+    
+    /**
+     * 测试String.valueOf
+     */
+    @Test
+    @Disabled
+    void valueOf() {
+        Object obj = null;
+        String s = String.valueOf(obj);
+        System.out.println(Objects.isNull(s));// pritln false
+    }
+    
+    @Test
+    void charsetTest() throws UnsupportedEncodingException {
+        String origin = "编码";
+        System.out.println(new String(origin.getBytes()));
+        System.out.println(new String(origin.getBytes("utf-8"), "utf-8"));
+        System.out.println(new String(origin.getBytes("gbk"), "gbk"));
     }
 }

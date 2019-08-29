@@ -3,21 +3,37 @@ package indi.spring.beans;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.BeanUtils;
 
 import com.google.common.collect.Maps;
 
-import antlr.collections.List;
+import indi.util.extension.TestSeparateExtension;
 
+@ExtendWith(TestSeparateExtension.class)
 public class BeanUtilsTest {
 
     //    @Test
     void go() {
         //        BeanUtils.getPropertyDescriptors(List.class);
     }
+    
+    @Test
+    void nullOverrideTest() {
+        Value v1 = new Value();
+        v1.setName("wahahah");
+        System.out.println(v1);
+        
+        Value v2 = new Value();
+        BeanUtils.copyProperties(v2, v1);
+        
+        System.out.println(v1);
+    }
 
     @Test
+    @Disabled
     void mapBeanTest() throws IllegalAccessException, InvocationTargetException, NoSuchMethodException {
         Map<String, String> map = Maps.newHashMap();
         map.put("id", "123");
