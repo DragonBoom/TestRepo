@@ -115,6 +115,9 @@ class StringTest {
         System.out.println(expectStr.equals(error2.trim()));
     }
     
+    /**
+     * 测试+null值
+     */
     @Test
     @Disabled
     void equalTest() {
@@ -127,6 +130,7 @@ class StringTest {
         System.out.println("a" + o == a);// print: false
     }
     
+
     /**
      * 测试String.valueOf
      */
@@ -144,5 +148,11 @@ class StringTest {
         System.out.println(new String(origin.getBytes()));
         System.out.println(new String(origin.getBytes("utf-8"), "utf-8"));
         System.out.println(new String(origin.getBytes("gbk"), "gbk"));
+
+    @Test
+    void unicodeTest() {
+//        System.out.println("\u0001");
+//        UnicodeBlock.AEGEAN_NUMBERS
+
     }
 }
