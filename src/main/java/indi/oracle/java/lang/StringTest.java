@@ -148,6 +148,7 @@ class StringTest {
         System.out.println(new String(origin.getBytes()));
         System.out.println(new String(origin.getBytes("utf-8"), "utf-8"));
         System.out.println(new String(origin.getBytes("gbk"), "gbk"));
+    }
 
     @Test
     void unicodeTest() {

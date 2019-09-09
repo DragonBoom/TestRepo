@@ -12,6 +12,7 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
+import com.mysql.fabric.xmlrpc.base.Array;
 
 import indi.util.extension.TestSeparateExtension;
 import lombok.Data;
@@ -56,10 +57,26 @@ public class ObjectMapperTest {
     }
     
     @Test
+    @Disabled
     void autoDecodeTest() throws IOException {
         String json = "{\"id\": \"fff%E4%B8%AD%E6%96%87%E6%B5%8B%E8%AF%95123wa\"}";
         JsonNode jsonNode = mapper.readTree(json);
         System.out.println(jsonNode.get("id").asText());
+    }
+    
+    /**
+     * JsonArray String -> Long[]
+     * 
+     * @throws JsonParseException
+     * @throws JsonMappingException
+     * @throws IOException
+     */
+    @Test
+    void jsonArray2JavaArrayTest() throws JsonParseException, JsonMappingException, IOException {
+        String json = "[1, 2, 3]";
+        Long[] array = mapper.readValue(json, Long[].class);
+        
+        System.out.println(array);
     }
     
     @Data
