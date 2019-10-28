@@ -12,14 +12,15 @@ import indi.util.extension.TestSeparateExtension;
 import net.coobird.thumbnailator.Thumbnails;
 import net.coobird.thumbnailator.builders.ThumbnailParameterBuilder;
 import net.coobird.thumbnailator.geometry.Positions;
+import net.coobird.thumbnailator.resizers.configurations.Rendering;
 
 @ExtendWith(TestSeparateExtension.class)
-class ThumbnailsTest {
-    File testJpg = new File("e:/test.jpg");
-    File testJpg2 = new File("e:/test2.jpg");
-    File testPng = new File("e:/test.png");
-    File testPng2 = new File("e:/test2.png");
-    File tmpFile = new File("e:/tmp.dat");
+class ThumbnaliatorTest {
+    File testJpg = new File("e:/test/test.jpg");
+    File testJpg2 = new File("e:/test/test2.jpg");
+    File testPng = new File("e:/test/test.png");
+    File testPng2 = new File("e:/test/test2.png");
+    File tmpFile = new File("e:/test/tmp.dat");
     
     @Test
     @Disabled
@@ -75,8 +76,10 @@ class ThumbnailsTest {
         // 测试降低图片质量，图片大小是否会发生变化
         // jpg 会变化，但png不会
         long len = testPng.length();
-        Thumbnails.of(testPng).scale(1).outputFormat("jpg").toFile(testPng2);
-        testPng2 = new File(testPng2.getAbsolutePath() + ".jpg");
+        Thumbnails.of(testPng)
+//                .imageType(BufferedImage.TYPE_INT_ARGB)// 3750304
+                .scale(1)
+                .toFile(testPng2);
         long len2 = testPng2.length();
         System.out.println(len);
         System.out.println(len2);

@@ -23,6 +23,7 @@ public class FTPClientTest {
     
     // 测试登陆花费的时间
     @Test
+    @Disabled
     void loginTest() throws IOException {
         getConnection();// 183 millis
     }
@@ -69,6 +70,7 @@ public class FTPClientTest {
      * no buffer：13s
      */
     @Test
+    @Disabled
     void bufferTest() throws IOException {
         FTPClient ftpClient = getConnection();
         
@@ -83,6 +85,7 @@ public class FTPClientTest {
     }
     
     @Test
+    @Disabled
     void noBufferTest() throws IOException {
         FTPClient ftpClient = getConnection();
         
@@ -90,6 +93,14 @@ public class FTPClientTest {
             ftpClient.retrieveFile(absolutePath, out);
         }
         System.out.println(ftpClient.getReplyString());
+    }
+    
+    @Test
+    void ftpMkdirTest() throws IOException {
+        FTPClient ftpClient = getConnection();
+        
+        boolean result = ftpClient.makeDirectory("/upload/gas/test/test");
+        System.out.println(result);
     }
     
     private FTPClient getConnection() throws IOException {

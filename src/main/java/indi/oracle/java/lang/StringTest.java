@@ -90,7 +90,7 @@ class StringTest {
      * 测试静态方法String.format
      */
     @Test
-    @Disabled
+//    @Disabled
     void formatTest() {
         System.out.println(String.format("开始 1$", "了"));// 设置参数失败，case : 开始 1$
         System.out.println(String.format("开始 %1$s", "了"));// 设置参数成功，case: 开始 了
@@ -98,6 +98,7 @@ class StringTest {
         System.out.println(String.format("你好 %s 吗?", "开心"));
         System.out.println(String.format("测试 %03d", 1) );
         System.out.println(String.format("测试 %s%s", "Hell", "o") );
+        System.out.println(String.format("$#$测试 %s%s", "Hell", "o") );
     }
 
     /**
@@ -143,6 +144,7 @@ class StringTest {
     }
     
     @Test
+    @Disabled
     void charsetTest() throws UnsupportedEncodingException {
         String origin = "编码";
         System.out.println(new String(origin.getBytes()));
@@ -151,9 +153,12 @@ class StringTest {
     }
 
     @Test
+    @Disabled
     void unicodeTest() {
 //        System.out.println("\u0001");
 //        UnicodeBlock.AEGEAN_NUMBERS
 
     }
+    
+  
 }

@@ -11,10 +11,16 @@ import java.util.concurrent.TimeUnit;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 
+import indi.util.extension.TestSeparateExtension;
+
+@ExtendWith(TestSeparateExtension.class)
 public class DateTest {
+    SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 
-    // @Test
+     @Test
+     @Disabled
     void getCurrentDateTest() {
         long millis = System.currentTimeMillis();
         SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd");
@@ -96,13 +102,21 @@ public class DateTest {
     @Test
     @Disabled
     void toStringTest() {
-        System.out.println(new Date());
+        System.out.println(new Date());// print: Fri Oct 18 10:12:49 CST 2019
+        System.out.println(new Date().toString().substring(0, 10));
     }
     
+    /**
+     * 测试毫秒对应的时间是多少。。。
+     */
     @Test
+//    @Disabled
     void newByMillisTest() {
-        Date date = new Date(1564547030000L);
-        System.out.println(date);
+        Date date = new Date(1571628144000L);
+        System.out.println(sdf1.format(date));
+        
+        Date date2 = new Date(157162804208485L);
+        System.out.println(sdf1.format(date2));
     }
     
 }
