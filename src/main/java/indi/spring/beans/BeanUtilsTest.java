@@ -1,5 +1,6 @@
 package indi.spring.beans;
 
+import java.beans.PropertyDescriptor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
 
@@ -48,6 +49,17 @@ public class BeanUtilsTest {
         v2.name = "32";
         BeanUtils.copyProperties(v2, v);
         System.out.println(v);
+    }
+    
+    /**
+     * 测试如何用Spring的BeanUtils判断属性是否存在
+     * 
+     * @since 2019.10.30
+     */
+    @Test
+    void isPropertyExistsTest() {
+        PropertyDescriptor propertyDescriptor = BeanUtils.getPropertyDescriptor(Value.class, "name99");
+        System.out.println(propertyDescriptor);// print: null
     }
 
     public static class Value {

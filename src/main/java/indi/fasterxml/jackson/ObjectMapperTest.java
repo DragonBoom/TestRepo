@@ -6,16 +6,18 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
-import com.mysql.fabric.xmlrpc.base.Array;
 
 import indi.util.extension.TestSeparateExtension;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @ExtendWith(TestSeparateExtension.class)
 public class ObjectMapperTest {
@@ -72,16 +74,32 @@ public class ObjectMapperTest {
      * @throws IOException
      */
     @Test
+    @Disabled
     void jsonArray2JavaArrayTest() throws JsonParseException, JsonMappingException, IOException {
         String json = "[1, 2, 3]";
         Long[] array = mapper.readValue(json, Long[].class);
-        
-        System.out.println(array);
+        System.out.println(array.getClass());
+        System.out.println(array);// print: [Ljava.lang.Long;@6adbc9d
+    }
+    
+    @Test
+    void notEmptyFieldTest() throws JsonProcessingException {
+        StringPropClass obj = new StringPropClass("test", null);
+        /*
+         * Convenience method, equivalent to calling: 
+         * setPropertyInclusion(JsonInclude.Value.construct(incl, incl));
+         */
+        mapper.setSerializationInclusion(Include.NON_EMPTY);
+
+        System.out.println(mapper.writeValueAsString(obj));
     }
     
     @Data
+    @AllArgsConstructor
+    @NoArgsConstructor
     public static class StringPropClass {
         String id;
+        String name;
     }
     
     @Data
