@@ -90,7 +90,7 @@ class StringTest {
      * 测试静态方法String.format
      */
     @Test
-//    @Disabled
+    @Disabled
     void formatTest() {
         System.out.println(String.format("开始 1$", "了"));// 设置参数失败，case : 开始 1$
         System.out.println(String.format("开始 %1$s", "了"));// 设置参数成功，case: 开始 了
@@ -160,5 +160,20 @@ class StringTest {
 
     }
     
+    // 测试脱敏
+    @Test
+    void replaceAllTest() {
+        String result = "1234556679901".replaceAll("(?<=^.{3}).", "*");
+        System.out.println(deSensitization(result, 3, 4, '*'));
+    }
+    
+    private String deSensitization(String original, int prefix, int suffix, char c) {
+        char[] chars = original.toCharArray();
+        int len = chars.length;
+        for (int i = prefix; i < len && i < len - suffix; i++) {
+            chars[i] = c;
+        }
+        return new String(chars);
+    }
   
 }

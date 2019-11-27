@@ -36,4 +36,9 @@ class DateUtilsTest {
         Calendar calendar = Calendar.getInstance();
         System.out.println(calendar.get(Calendar.HOUR_OF_DAY));
     }
+    
+    @Test
+    void getToday() {
+        System.out.println(DateUtils.truncate(new Date(), Calendar.DATE));
+    }
 }

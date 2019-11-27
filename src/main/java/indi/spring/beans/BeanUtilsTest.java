@@ -1,5 +1,6 @@
 package indi.spring.beans;
 
+import java.beans.IntrospectionException;
 import java.beans.PropertyDescriptor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
@@ -59,6 +60,21 @@ public class BeanUtilsTest {
     @Test
     void isPropertyExistsTest() {
         PropertyDescriptor propertyDescriptor = BeanUtils.getPropertyDescriptor(Value.class, "name99");
+        System.out.println(propertyDescriptor);// print: null
+    }
+    
+    /**
+     * 测试获取不存在的属性
+     * 
+     * @throws IntrospectionException 
+     * 
+     * @since 2019.10.30
+     */
+    @Test
+//    @Disabled
+    void getNotExistsPorpertyDescriptorTest() throws IntrospectionException {
+        PropertyDescriptor propertyDescriptor = BeanUtils.getPropertyDescriptor(Value.class, "name3");// print null
+        // throws: java.beans.IntrospectionException: Method not found: isName3
         System.out.println(propertyDescriptor);// print: null
     }
 

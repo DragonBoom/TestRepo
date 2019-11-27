@@ -68,7 +68,7 @@ class PropertyDescriptorTest {
      */
     @Test
     @Disabled
-    void getNotExpistsPorpertyTest() throws IntrospectionException {
+    void getNotExistsPorpertyTest() throws IntrospectionException {
         PropertyDescriptor propertyDescriptor = new PropertyDescriptor("name3", MyBean.class);
         // throws: java.beans.IntrospectionException: Method not found: isName3
         System.out.println(propertyDescriptor);
