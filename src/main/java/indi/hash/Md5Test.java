@@ -3,19 +3,16 @@ package indi.hash;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.nio.ByteBuffer;
-import java.nio.channels.FileChannel;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 import org.apache.commons.codec.digest.DigestUtils;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.springframework.mock.web.MockMultipartFile;
 
-import com.google.common.hash.HashFunction;
 import com.google.common.hash.Hasher;
 import com.google.common.hash.Hashing;
 
@@ -33,6 +30,7 @@ class Md5Test {
      * @throws NoSuchAlgorithmException 
      */
     @Test
+    @Disabled
     void guavaMD5ForStreamTest() throws IOException, NoSuchAlgorithmException {
         File toHashFile = new File("e:/for test/ToHash");
         FileInputStream fileInputStream = new FileInputStream(toHashFile);
@@ -64,6 +62,12 @@ class Md5Test {
         System.out.println(digest0.equals(digest1));// print: true
         System.out.println(digest1.equals(digest2));// print: true
         System.out.println(digest1.equals(digest3));
+    }
+    
+    @Test
+    void sameTest() {
+        String md5Hex = DigestUtils.md5Hex("a");
+        Assertions.assertEquals("0CC175B9C0F1B6A831C399E269772661", md5Hex.toUpperCase());
     }
     
 }

@@ -1,6 +1,7 @@
 package indi.oracle.java.util;
 
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
@@ -102,10 +103,25 @@ public class CalendarTest {
      * 默认没有时区问题
      */
     @Test
+    @Disabled
     void timezoneTest() {
         Calendar instance = Calendar.getInstance();
         instance.add(Calendar.HOUR, 1);
         System.out.println(instance);
         System.out.println(instance.getTime());
+    }
+    
+    @Test
+    void truncateTest() {
+        Calendar instance = Calendar.getInstance();
+        instance.setTime(new Date());
+        instance.set(Calendar.HOUR_OF_DAY, 0);
+//        instance.set(Calendar.HOUR, 0); case println 12:00:00
+        instance.set(Calendar.MINUTE, 0);
+        instance.set(Calendar.SECOND, 0);
+        instance.set(Calendar.MILLISECOND, 0);
+        Date date = instance.getTime();
+        System.out.println(date);
+        System.out.println(new SimpleDateFormat("HH:mm:ss").format(date));
     }
 }

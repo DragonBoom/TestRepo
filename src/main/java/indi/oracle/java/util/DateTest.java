@@ -11,10 +11,16 @@ import java.util.concurrent.TimeUnit;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 
+import indi.util.extension.TestSeparateExtension;
+
+@ExtendWith(TestSeparateExtension.class)
 public class DateTest {
+    SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 
-    // @Test
+     @Test
+     @Disabled
     void getCurrentDateTest() {
         long millis = System.currentTimeMillis();
         SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd");
@@ -79,6 +85,7 @@ public class DateTest {
      * getTime得到的值，实际是不包含时区信息的
      */
     @Test
+    @Disabled
     void getTimeTest() throws ParseException {
         long time = new SimpleDateFormat("yyyyMMdd hh mm ss").parse("20190101 17 00 00").getTime();
         long millis = time % TimeUnit.DAYS.toMillis(1);
@@ -91,4 +98,25 @@ public class DateTest {
         System.out.println(millis2);
         System.out.println(TimeUnit.MILLISECONDS.toHours(millis2));// case: 21 = (5 - 8 + 24)
     }
+
+    @Test
+    @Disabled
+    void toStringTest() {
+        System.out.println(new Date());// print: Fri Oct 18 10:12:49 CST 2019
+        System.out.println(new Date().toString().substring(0, 10));
+    }
+    
+    /**
+     * 测试毫秒对应的时间是多少。。。
+     */
+    @Test
+//    @Disabled
+    void newByMillisTest() {
+        Date date = new Date(1571628144000L);
+        System.out.println(sdf1.format(date));
+        
+        Date date2 = new Date(157162804208485L);
+        System.out.println(sdf1.format(date2));
+    }
+    
 }

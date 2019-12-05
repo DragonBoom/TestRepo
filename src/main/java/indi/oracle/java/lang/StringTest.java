@@ -1,7 +1,8 @@
 package indi.oracle.java.lang;
 
-import java.lang.Character.UnicodeBlock;
+import java.io.UnsupportedEncodingException;
 import java.util.Formatter;
+import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -9,6 +10,7 @@ import org.aspectj.apache.bcel.classfile.FieldOrMethod;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.util.StringUtils;
 
 import indi.util.extension.TestSeparateExtension;
 
@@ -96,6 +98,7 @@ class StringTest {
         System.out.println(String.format("你好 %s 吗?", "开心"));
         System.out.println(String.format("测试 %03d", 1) );
         System.out.println(String.format("测试 %s%s", "Hell", "o") );
+        System.out.println(String.format("$#$测试 %s%s", "Hell", "o") );
     }
 
     /**
@@ -128,9 +131,49 @@ class StringTest {
         System.out.println("a" + o == a);// print: false
     }
     
+
+    /**
+     * 测试String.valueOf
+     */
     @Test
+    @Disabled
+    void valueOf() {
+        Object obj = null;
+        String s = String.valueOf(obj);
+        System.out.println(Objects.isNull(s));// pritln false
+    }
+    
+    @Test
+    @Disabled
+    void charsetTest() throws UnsupportedEncodingException {
+        String origin = "编码";
+        System.out.println(new String(origin.getBytes()));
+        System.out.println(new String(origin.getBytes("utf-8"), "utf-8"));
+        System.out.println(new String(origin.getBytes("gbk"), "gbk"));
+    }
+
+    @Test
+    @Disabled
     void unicodeTest() {
 //        System.out.println("\u0001");
 //        UnicodeBlock.AEGEAN_NUMBERS
+
     }
+    
+    // 测试脱敏
+    @Test
+    void replaceAllTest() {
+        String result = "1234556679901".replaceAll("(?<=^.{3}).", "*");
+        System.out.println(deSensitization(result, 3, 4, '*'));
+    }
+    
+    private String deSensitization(String original, int prefix, int suffix, char c) {
+        char[] chars = original.toCharArray();
+        int len = chars.length;
+        for (int i = prefix; i < len && i < len - suffix; i++) {
+            chars[i] = c;
+        }
+        return new String(chars);
+    }
+  
 }

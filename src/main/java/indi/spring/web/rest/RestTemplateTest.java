@@ -39,7 +39,7 @@ public class RestTemplateTest {
      * <p>经测试，可用RestTemplate下载文件
      */
     @Test
-//    @Disabled
+    @Disabled
     void downloadTest() throws IOException {
         String url = "http://down10.zol.com.cn/xiazai/utorrentv3.5.5.44876.exe";
         byte[] bytes = restTemplate.getForObject(url, byte[].class);
