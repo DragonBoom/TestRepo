@@ -25,6 +25,7 @@ class PatternTest {
      * @since 2019.08.08
      */
     @Test
+    @Disabled
     void rareStringPatternTest() {
         String name = "努尔麦麦提·卡卡西";
         // 匹配非英文、中文、数字、下划线、（全角/半角）点、数字
@@ -37,5 +38,13 @@ class PatternTest {
         System.out.println(founded.length());
         System.out.println(name.replaceAll(pattern, ""));
         // 正则的 \s 无法匹配\u0000 !!!
+    }
+    
+    @Test
+    void uriParseTest() {
+        String url = "https://konachan.com/post/show/292249/am1m-animal_ears-brave_girl_ravens-breasts-cleavag";
+        Matcher matcher = Pattern.compile("(?<=/)\\d+?(?=/)").matcher(url);
+        System.out.println(matcher.find());
+        System.out.println(matcher.group());
     }
 }

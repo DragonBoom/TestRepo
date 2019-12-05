@@ -8,8 +8,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import com.zaxxer.hikari.HikariDataSource;
 
-@Configuration
-@EnableJpaRepositories
+//@Configuration
+//@EnableJpaRepositories
 public class MyConfiguration {
 
     // @Bean
