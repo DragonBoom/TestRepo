@@ -28,5 +28,15 @@ public class SystemTest {
         System.out.println(property);// case null
         property = System.getenv("onedrive");
         System.out.println(property);// case C:\Users\DragonBoom\OneDrive
+        
+        // os.version: 6  = win vista
+        property = System.getProperty("os.version");// print: 6.3
+        System.out.println(property);
+        
+        // java.net.preferIPv4Stack
+        // 当os.version错误，或操作系统不支持 Dualstackplainsocketimpl（注释写着win系统版本必须大于vista(os.version=6.0)） 时，可用该属性强行使用ipv4？
+        // DefaultDatagramSocketImplFactory preferIPv4Stack = Boolean.parseBoolean(System.getProperties().getProperty("java.net.preferIPv4Stack"));
+        System.out.println(Boolean.parseBoolean(System.getProperty("java.net.preferIPv4Stack")));
+        
     }
 }

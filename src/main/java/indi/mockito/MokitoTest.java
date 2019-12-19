@@ -5,7 +5,13 @@ import java.util.LinkedList;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
-class SimpleTest {
+/**
+ * for org.mockito.Mockito
+ * 
+ * @author wzh
+ * @since 2019.12.16
+ */
+class MokitoTest {
     
     @Test
     void go() {
