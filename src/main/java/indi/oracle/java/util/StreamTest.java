@@ -2,6 +2,7 @@ package indi.oracle.java.util;
 
 import java.util.LinkedList;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
@@ -34,6 +35,7 @@ public class StreamTest {
     }
 
     @Test
+    @Disabled
     void closeTest() {
         LinkedList<Object> l = new LinkedList<>();
         l.add("1");

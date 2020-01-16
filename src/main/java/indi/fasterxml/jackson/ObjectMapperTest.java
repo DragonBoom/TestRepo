@@ -1,6 +1,8 @@
 package indi.fasterxml.jackson;
 
 import java.io.IOException;
+import java.util.Date;
+import java.util.Map;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -14,6 +16,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 
+import indi.util.TestObjects.DatePropClass;
 import indi.util.extension.TestSeparateExtension;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -83,6 +86,7 @@ public class ObjectMapperTest {
     }
     
     @Test
+    @Disabled
     void notEmptyFieldTest() throws JsonProcessingException {
         StringPropClass obj = new StringPropClass("test", null);
         /*
@@ -92,6 +96,24 @@ public class ObjectMapperTest {
         mapper.setSerializationInclusion(Include.NON_EMPTY);
 
         System.out.println(mapper.writeValueAsString(obj));
+    }
+    
+    @Test
+    void convertValueTest() {
+        // 1. convert 2 map test
+        // a. str
+        StringPropClass strClass = new StringPropClass("arg1", "arg2");
+        Map<?, ?> map = mapper.convertValue(strClass, Map.class);
+        System.out.println(map.get("id"));// print arg1
+        // b. date
+        DatePropClass datePropClass = new DatePropClass();
+        datePropClass.setDate(new Date());
+        map = mapper.convertValue(datePropClass, Map.class);
+        System.out.println(map.get("id"));// print: null
+        // WARN:
+        System.out.println(map.get("date"));// print: 1577163565439
+        System.out.println(map.get("date").getClass());// print: class java.lang.Long
+        
     }
     
     @Data
