@@ -35,6 +35,7 @@ class PatternTest {
      * 测试用于匹配HTTP Range请求头的正则
      */
     @Test
+    @Disabled
     void HTTPRangeHeaderMatchTest() {
         String rangeHeader1  = "bytes=2482046-";
         String rangeHeader2  = "bytes=2482046-2482047";
@@ -66,10 +67,25 @@ class PatternTest {
     }
     
     @Test
+    @Disabled
     void uriParseTest() {
         String url = "https://konachan.com/post/show/292249/am1m-animal_ears-brave_girl_ravens-breasts-cleavag";
         Matcher matcher = Pattern.compile("(?<=/)\\d+?(?=/)").matcher(url);
         System.out.println(matcher.find());
         System.out.println(matcher.group());
+    }
+    
+    @Test
+    void test1() {
+        String pattern = "^([0-9]|[A-Z]){6,17}$";
+        String vehicleNo = "FHXFAF";
+        boolean find = Pattern.compile(pattern).matcher(vehicleNo).find();
+        System.out.println(find);
+        vehicleNo = "FHXAF11";
+        find = Pattern.compile(pattern).matcher(vehicleNo).find();
+        System.out.println(find);
+        vehicleNo = "FH测试FFFFFFF";
+        find = Pattern.compile(pattern).matcher(vehicleNo).find();
+        System.out.println(find);
     }
 }

@@ -34,13 +34,18 @@ public class DateTest {
         Date date = new Date(System.currentTimeMillis());
         System.out.println(date);
     }
-    
-    // @Test
+
+    @Test
     void dateFormatTest() {
         System.out.println(new Date());
         System.out.println(new java.sql.Date(System.currentTimeMillis()));
         System.out.println(LocalDate.now());
         System.out.println(LocalDate.now().format(DateTimeFormatter.BASIC_ISO_DATE));
+        
+        System.out.println(LocalDate.now().format(DateTimeFormatter.ofPattern("yyMMdd")));// print: 191227
+        
+        SimpleDateFormat sdf = new SimpleDateFormat("yyMMdd");
+        System.out.println(sdf.format(new Date()));// print: 191227
     }
     
     // @Test
@@ -73,12 +78,12 @@ public class DateTest {
     }
     
     @Test
-    @Disabled
+//    @Disabled
     void dateCompare3() throws ParseException {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
         Date parse1 = sdf.parse("20180912");
         Date parse2 = sdf.parse("20180913");
-        System.out.println(parse1.before(parse2));
+        System.out.println(parse1.before(parse2));// print: true
     }
     
     /**
@@ -110,7 +115,7 @@ public class DateTest {
      * 测试毫秒对应的时间是多少。。。
      */
     @Test
-//    @Disabled
+    @Disabled
     void newByMillisTest() {
         Date date = new Date(1571628144000L);
         System.out.println(sdf1.format(date));

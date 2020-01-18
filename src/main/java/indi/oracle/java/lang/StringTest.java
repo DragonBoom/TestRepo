@@ -162,6 +162,7 @@ class StringTest {
     
     // 测试脱敏
     @Test
+    @Disabled
     void replaceAllTest() {
         String result = "1234556679901".replaceAll("(?<=^.{3}).", "*");
         System.out.println(deSensitization(result, 3, 4, '*'));
@@ -174,6 +175,14 @@ class StringTest {
             chars[i] = c;
         }
         return new String(chars);
+    }
+    
+    @Test
+    void castExceptionTest() {
+//        System.out.println(Integer.valueOf("sdfsdf"));// java.lang.NumberFormatException: For input string: "sdfsdf"
+        Object f = "fff";
+        System.out.println((int) f);// java.lang.ClassCastException: java.lang.String cannot be cast to java.lang.Integer
+        
     }
   
 }
