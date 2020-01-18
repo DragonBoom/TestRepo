@@ -1,4 +1,4 @@
-package indi.spring.rabbitmq;
+package indi.spring.redis;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -17,14 +17,14 @@ import indi.util.extension.TestSeparateExtension;
 class ImageIOTest {
     
     @Test
-    @Disabled
+//    @Disabled
     void suffixesTest() {
         // 获取支持的图片文件后缀：
-        System.out.println(Arrays.asList(ImageIO.getReaderFileSuffixes()));
-        System.out.println(Arrays.asList(ImageIO.getWriterFileSuffixes()));
+        System.out.println(Arrays.asList(ImageIO.getReaderFileSuffixes()));// print: [jpg, bmp, gif, png, jpeg, wbmp]
     }
     
     @Test
+    @Disabled
     void getImageTest() throws IOException {
         // 测试后缀不是图片格式，能否读取图片
         BufferedImage image = ImageIO.read(new File("e://素材/test.png.dat"));

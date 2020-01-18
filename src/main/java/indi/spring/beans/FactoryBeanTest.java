@@ -8,7 +8,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import indi.util.extension.TestSeparateExtension;
 
-@SpringBootTest(classes = {Application.class})
+@SpringBootTest()
 @ExtendWith({SpringExtension.class, TestSeparateExtension.class})
 public class FactoryBeanTest {
     @Autowired(required = false)
