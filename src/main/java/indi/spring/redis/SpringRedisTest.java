@@ -2,6 +2,7 @@ package indi.spring.redis;
 
 import java.util.concurrent.TimeUnit;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,8 +25,12 @@ public class SpringRedisTest {
     
     @Autowired(required = false)
     private RedisTemplate<String, Object> strObjRedisTemplate;
+    
+    @Autowired
+    private SimpleRedisLock simpleRedisLock;
 
     @Test
+    @Disabled
     void firstTest() {
         System.out.println(strRedisTemplate);
         ValueOperations<String, String> opsForValue = strRedisTemplate.opsForValue();
@@ -35,6 +40,7 @@ public class SpringRedisTest {
     }
     
     @Test
+    @Disabled
     void queueTest() {
         System.out.println(strObjRedisTemplate);
         ListOperations<String, Object> ops = strObjRedisTemplate.opsForList();
@@ -54,19 +60,16 @@ public class SpringRedisTest {
     
     private String LOCK_KEY_PREFIX = "lock";
     
+    /**
+     * 测试用redis实现同步锁
+     */
     @Test
     void lockTest() {
         String lockKey = LOCK_KEY_PREFIX + 123;
-        ValueOperations<String, Object> ops = strObjRedisTemplate.opsForValue();
-        // 借助setnx指令，获得原子性
-        boolean hasLock = ops.setIfAbsent(lockKey, 1);// like setnx
-        // 获取不到锁则需要在一定限度内重试
-        if (hasLock) {
-            // 获取到锁，需要避免死锁，如设置30s后过期
-            // 该操作原理是啥，安全吗，万无一失吗？
-            strObjRedisTemplate.expire(lockKey, 30, TimeUnit.SECONDS);
-            // 要是获取到锁后，设置过期失败？
-        }
-        System.out.println(hasLock);
+        Object lockSign = simpleRedisLock.lock(lockKey);
+        // do something
+        System.out.println("lock done !!");
+        simpleRedisLock.unlock(lockKey, lockSign);
     }
+    
 }

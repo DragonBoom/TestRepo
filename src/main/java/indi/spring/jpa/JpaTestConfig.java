@@ -10,9 +10,10 @@ import com.zaxxer.hikari.HikariDataSource;
 
 //@Configuration
 //@EnableJpaRepositories
-public class MyConfiguration {
+public class JpaTestConfig {
 
     // @Bean
+    // 意义不明...
     public DataSource dataSource() {
         HikariDataSource dataSource = new HikariDataSource();
         dataSource.setJdbcUrl(

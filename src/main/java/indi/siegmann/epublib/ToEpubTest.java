@@ -17,6 +17,12 @@ import nl.siegmann.epublib.service.MediatypeService;
 import nl.siegmann.epublib.domain.Resource;
 import nl.siegmann.epublib.epub.EpubWriter;
 
+/**
+ * 测试epub的工具库 ?
+ * 
+ * @author wzh
+ * @since 2020.02.04
+ */
 @ExtendWith(TestSeparateExtension.class)
 public class ToEpubTest {
 
