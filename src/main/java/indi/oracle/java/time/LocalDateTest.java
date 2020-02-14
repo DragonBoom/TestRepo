@@ -1,4 +1,4 @@
-package indi.oracle.java.time.LocalDate;
+package indi.oracle.java.time;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

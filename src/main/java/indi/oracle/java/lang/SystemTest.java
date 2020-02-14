@@ -24,6 +24,8 @@ public class SystemTest {
     
     @Test
     void getPropertyTest() {
+        System.out.println(System.getProperty("os.name"));// print Windows 10
+        System.out.println(System.getProperty("os.name").startsWith("Win"));// print true
         String property = System.getProperty("onedrive");
         System.out.println(property);// case null
         property = System.getenv("onedrive");
