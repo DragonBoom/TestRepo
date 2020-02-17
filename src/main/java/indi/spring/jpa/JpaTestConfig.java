@@ -8,8 +8,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import com.zaxxer.hikari.HikariDataSource;
 
-//@Configuration
-//@EnableJpaRepositories
+@Configuration
+@EnableJpaRepositories(repositoryBaseClass = MyBaseRepoImpl.class)// 设置基础Repo，只能用于覆盖默认实现
 public class JpaTestConfig {
 
     // @Bean

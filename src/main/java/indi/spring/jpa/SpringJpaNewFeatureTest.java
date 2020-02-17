@@ -41,9 +41,11 @@ class SpringJpaNewFeatureTest {
      * 
      * <p>底层是通过反射获取domain实例的参数，以此构建查询的对象，再交由hibernate构建最终的查询sql
      * 
-     * @throws ParseException 
+     * @throws ParseException
+     * @since 2020.02.09 
      */
     @Test
+    @Disabled
     void exampleQueryTest() throws ParseException {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         // 1. Create a new instance of the domain object
@@ -72,10 +74,19 @@ class SpringJpaNewFeatureTest {
         }
     }
     
+    /**
+     * 测试自定义独立仓库（即仅继承才生效的仓库）。通过自定义一接口与其实现类，然后为Jpa Repo接口继承自定义的接口，之后发现注入的接口
+     * 拥有了自定义的方法。
+     * 
+     * <p>说实话这个有点鸡肋。。。因为自定义的接口没有传入domainClass，无法获取domain（实体类），不好实现较复杂的逻辑。
+     * 
+     * @author DragonBoom
+     * @since 2020.02.10
+     */
     @Test
-    @Disabled
-    void placehold() {
-        
+//    @Disabled
+    void customizingIndividualRepoTest() {
+        testEntityDao.go();// 注意，该方法是由独立的接口提供的，不是Spring自动生成的！
     }
     
     @Autowired
