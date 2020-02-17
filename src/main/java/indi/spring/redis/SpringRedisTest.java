@@ -14,7 +14,7 @@ import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import indi.test.TestSeparateExtension;
+import indi.util.extension.TestSeparateExtension;
 
 @SpringBootTest
 @ExtendWith({SpringExtension.class, TestSeparateExtension.class})
