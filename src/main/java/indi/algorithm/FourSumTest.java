@@ -42,6 +42,7 @@ public class FourSumTest {
         * <p>递归是深度优先，采用栈的结构出入结点，一直维护着一个栈的List，每次循环，在找到目标队列后将List添加至结果中，然后再深复制一个新List继续出栈入栈。对每次递归，将遍历其下级深度的所有可能，最后返回时将不包含当前结点。
         * <p>由于使用了暴力破解，时间复杂度应该是 O(n^4)
         */
+        // O(n^4)
         private List<Integer> go(int[] nums, int begin, int depth, int sum, int target, List<Integer> tempList, List<List<Integer>> result) {
             sum += nums[begin];
             depth--;
@@ -79,5 +80,88 @@ public class FourSumTest {
             tempList.remove(tempList.size() - 1);// 移除当前节点，保证返回到上一级递归时，可以添加其他同级的结点，即处于没有添加当前结点的状态
             return tempList;
         }
+    }
+    
+    // O(n^(lg2+1))
+    class Solution2 {
+
+        public List<List<Integer>> fourSum(int[] nums, int target) {
+            // 思路2：模仿3sum，通过移动左右游标，而不是嵌套循环来实现
+            // 移动左右游标的原理是通过最大、最小值的移动来判断与目标值的差距并预测下一步的行动，从而通过一次遍历实现两次遍历的效果。因此，一次只能移动两个游标
+            // 对于这个问题，可转化为1 + 3sum
+
+            List<List<Integer>> result = new ArrayList<>();
+
+            if (nums == null || nums.length < 4) {
+                return result;
+            }
+
+            // sort
+            Arrays.sort(nums);
+
+            int len = nums.length;
+            for(int i = 0; i + 3 < len; i++) {
+                // skip duplicate (depth = 4)
+                // 在该深度内，只有1个游标在遍历，因此1个值只需要取第1次（注意只取1次这个说法不够准确，且起点为该深度的起点，不一定是0）
+                while (i - 1 >= 0 && nums[i - 1] == nums[i]) {
+                    i++;
+                }
+                // calc 3 sum
+                threeSum(i + 1, nums, target - nums[i], result);
+            }
+            return result;
+        }
+
+        void threeSum(int begin, int[] nums, int target, List<List<Integer>> result) {
+            int prevIndex = begin - 1;
+            int len = nums.length;
+            for (int i = begin; i + 2 < len; i++) {
+                // skip dulicate (depth = 3)
+                // 在该深度内，只有1个游标在遍历，因此1个值只需要取第1次（注意只取1次这个说法不够准确，且起点为该深度的起点，不一定是0）
+                while (i - 1 > prevIndex && i + 2 < len && nums[i - 1] == nums[i]) {
+                    i++;
+                }
+                int low = i + 1;
+                int high = len - 1;
+
+                // move low or high
+                while (low < high) {
+                    // System.out.println(prevIndex + " " + nums[prevIndex] + " " + nums[i] + " " + nums[low] + " " + nums[high]);
+                    int sum = nums[i] + nums[low] + nums[high];
+                    if (sum == target) {
+                        List<Integer> singleResult = new ArrayList<>();
+                        singleResult.add(nums[prevIndex]);
+                        singleResult.add(nums[i]);
+                        singleResult.add(nums[low]);
+                        singleResult.add(nums[high]);
+                        result.add(singleResult);
+                        // 移动low与high至更下、更大的值
+                        while (low + 1 < len && nums[low + 1] == nums[low]) {
+                            low++;
+                        }
+                        while (high - 1 > prevIndex && nums[high] - 1 == nums[high]) {
+                            high--;
+                        }
+                        low++;
+                        high--;
+                    } else if (sum < target) {
+                        // 移动low至更大的值
+                        while (low + 1 < len && nums[low + 1] == nums[low]) {
+                            low++;
+                        }
+                        low++;
+
+                    } else if (sum > target) {
+                        // 移动high至更小的值
+                        while (high - 1 > prevIndex && nums[high] - 1 == nums[high]) {
+                            high--;
+                        }
+                        high--;
+                    }
+                }
+            }
+        }
+
+
     }
 }

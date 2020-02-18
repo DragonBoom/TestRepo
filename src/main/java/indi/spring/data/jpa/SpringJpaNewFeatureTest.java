@@ -1,4 +1,4 @@
-package indi.spring.jpa;
+package indi.spring.data.jpa;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

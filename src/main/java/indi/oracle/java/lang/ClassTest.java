@@ -25,6 +25,7 @@ public class ClassTest {
      * 测试父类的this
      */
     @Test
+    @Disabled
     void superClassThisTest() {
         Parent.Child child = new Parent.Child();
         
@@ -47,6 +48,11 @@ public class ClassTest {
             public String name;
 
         }
+    }
+    
+    @Test
+    void isAssignableFromTest() {
+        System.out.println(String.class.isAssignableFrom(String.class));// println: true
     }
 
 }
