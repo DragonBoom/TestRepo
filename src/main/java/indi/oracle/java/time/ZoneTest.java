@@ -1,13 +1,11 @@
 package indi.oracle.java.time;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import java.time.ZoneOffset;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import indi.test.TestSeparateExtension;
+import indi.util.extension.TestSeparateExtension;
 
 @ExtendWith(TestSeparateExtension.class)
 class ZoneTest {

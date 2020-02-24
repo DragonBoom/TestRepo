@@ -10,7 +10,8 @@ import org.junit.jupiter.api.extension.BeforeTestExecutionCallback;
 import org.junit.jupiter.api.extension.ExtensionContext;
 
 /**
- * 引入该插件以为每个单元测试添加分隔符
+ * 引入该插件以为每个单元测试添加分隔符，以及其他优化处理
+ * 
  * @author DragonBoom
  *
  */
