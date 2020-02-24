@@ -50,9 +50,25 @@ public class ClassTest {
         }
     }
     
+    // 测试用法
     @Test
+    @Disabled
     void isAssignableFromTest() {
+        // 判断是否为另一个类的子类或子接口
         System.out.println(String.class.isAssignableFrom(String.class));// println: true
+    }
+    
+    /** 
+     * 测试用获取类的各种名称
+     * 
+     * @author DragonBoom
+     * @since 2020.02.23
+     */
+    @Test
+    void nameTest() {
+        Class<? extends ClassTest> class1 = this.getClass();
+        System.out.println(class1.getSimpleName());
+        System.out.println(class1.getName());
     }
 
 }
