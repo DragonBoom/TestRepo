@@ -1,4 +1,4 @@
-package indi.spring.jpa;
+package indi.spring.data.jpa;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

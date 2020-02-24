@@ -1,7 +1,7 @@
 /**
  * 
  */
-package indi.spring.jpa;
+package indi.spring.data.jpa;
 
 import javax.persistence.EntityManager;
 

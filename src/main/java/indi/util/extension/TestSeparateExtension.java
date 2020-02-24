@@ -51,7 +51,8 @@ public class TestSeparateExtension
         System.out.println(new StringBuilder(OVER_SEPARATOR).append(" Test Over, Use ").append(timeDesc).toString());
         System.out.println();// 空一行
         
-        ctx.getExecutionException().ifPresent(Throwable::printStackTrace);// 打印异常堆记录
+        // 打印异常堆记录，从而不必进到JUnit窗口才能查看异常信息
+        ctx.getExecutionException().ifPresent(Throwable::printStackTrace);
     }
     
     @Override

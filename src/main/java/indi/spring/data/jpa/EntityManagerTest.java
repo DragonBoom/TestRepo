@@ -1,4 +1,4 @@
-package indi.spring.jpa;
+package indi.spring.data.jpa;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
