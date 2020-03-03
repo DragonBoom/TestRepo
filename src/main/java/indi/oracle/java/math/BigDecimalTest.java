@@ -36,6 +36,7 @@ public class BigDecimalTest {
         System.out.println(divide);
         // 取小数点后3位，满5加1
         divide = BigDecimal.valueOf(20000).divide(BigDecimal.valueOf(6), 3, RoundingMode.HALF_UP);
-        System.out.println(divide);// print: 5.71
+        System.out.println(divide);// print: 3333.333
+        System.out.println(divide.doubleValue());// print: 3333.333
     }
 }

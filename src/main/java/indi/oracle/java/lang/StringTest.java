@@ -1,16 +1,13 @@
 package indi.oracle.java.lang;
 
 import java.io.UnsupportedEncodingException;
-import java.util.Formatter;
 import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.aspectj.apache.bcel.classfile.FieldOrMethod;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.springframework.util.StringUtils;
 
 import indi.util.extension.TestSeparateExtension;
 
@@ -99,6 +96,7 @@ class StringTest {
         System.out.println(String.format("测试 %03d", 1) );
         System.out.println(String.format("测试 %s%s", "Hell", "o") );
         System.out.println(String.format("$#$测试 %s%s", "Hell", "o") );
+        System.out.println(String.format("%.0f", 1.2221f));
     }
 
     /**
@@ -178,11 +176,22 @@ class StringTest {
     }
     
     @Test
+    @Disabled
     void castExceptionTest() {
 //        System.out.println(Integer.valueOf("sdfsdf"));// java.lang.NumberFormatException: For input string: "sdfsdf"
         Object f = "fff";
         System.out.println((int) f);// java.lang.ClassCastException: java.lang.String cannot be cast to java.lang.Integer
         
+    }
+    
+    @Test
+    void simpleTest() {
+        String uploadPath = "/upload/vphall/201705/20170503/23";
+        String targetPath = "";
+        for (String folder : uploadPath.split("/")) {
+            targetPath = targetPath + "/" + folder;
+            System.out.println(targetPath);
+        }
     }
   
 }

@@ -12,7 +12,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import indi.util.extension.TestSeparateExtension;
 
 @ExtendWith(TestSeparateExtension.class)
-class DoubleTest {
+class DoubleFloatTest {
     
     /**
      * 测试将double转化为字符串
@@ -40,6 +40,7 @@ class DoubleTest {
      * @since 2020.02.25
      */
     @Test
+    @Disabled
     void divideTest() {
         double dividend = 2000d;// 被除数
         double divisor = 6d;// 除数
@@ -60,7 +61,16 @@ class DoubleTest {
         
         
         System.out.println(quotient * 100);// print: 33330.0
-        
+    }
+    
+    // 乘法测试
+    @Test
+    void multiplyTest() {
+        // 直接对浮点型相乘，会出现问题
+        double d = 0.14d;
+        System.out.println(d * 100);// println: 14.000000000000002
+        float f = 0.14f;
+        System.out.println(f * 100);// println: 14.0
     }
 
 }
