@@ -21,6 +21,13 @@
 	</parent>
 
 	<repositories>
+		<!-- 声明部份依赖所需的第三方仓库前，最好先声明中央仓库的镜像，这样，两个仓库都有的资源也能优先去中央仓库的镜像获取，避免网速问题 -->
+		<repository>
+			<id>alimaven</id>
+			<name>aliyun maven</name>
+			<url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+		</repository>
+
 		<repository>
 			<id>1</id>
 			<name>WSO2</name>
@@ -31,9 +38,17 @@
 			<name>OpenKm</name>
 			<url>http://maven.openkm.com/</url>
 		</repository>
+
 	</repositories>
 
 	<dependencies>
+		<!-- poi的maven依赖可见：https://poi.apache.org/components/ -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>4.1.2</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
@@ -51,7 +66,7 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
 		</dependency>
-		      <!-- 启用H2数据库 -->
+		<!-- 启用H2数据库 -->
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
@@ -189,11 +204,6 @@
 			<version>1.9.3</version>
 		</dependency>
 		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi</artifactId>
-			<version>4.0.0</version>
-		</dependency>
-		<dependency>
 			<groupId>dragonboom</groupId>
 			<artifactId>util-core</artifactId>
 			<version>0.0.1</version>
@@ -239,13 +249,37 @@
 			<artifactId>thumbnailator</artifactId>
 			<version>0.4.8</version>
 		</dependency>
+
 		<dependency>
-			<!-- 该依赖maven仓库文件丢失，只能去官网下载 -->
+			<!-- 旧项目所使用的json依赖，该依赖maven仓库文件丢失，只能去官网下载 -->
 			<!-- https://sourceforge.net/projects/json-lib/files/json-lib/json-lib-2.4/json-lib-2.4-jdk15.jar/download -->
 			<groupId>net.sf.json-lib</groupId>
 			<artifactId>json-lib</artifactId>
 			<version>2.4</version>
 		</dependency>
+
+		<dependency>
+			<groupId>net.sourceforge.htmlunit</groupId>
+			<artifactId>htmlunit</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+		</dependency>
+		<!-- openfeign + jackson decoder -->
+		<dependency>
+			<groupId>io.github.openfeign</groupId>
+			<artifactId>feign-jackson</artifactId>
+			<version>11.0</version>
+		</dependency>
+		<!-- openfeign + slf4j feign logger -->
+		<dependency>
+			<groupId>io.github.openfeign</groupId>
+			<artifactId>feign-slf4j</artifactId>
+			<version>11.0</version>
+		</dependency>
+
+
 
 	</dependencies>
 

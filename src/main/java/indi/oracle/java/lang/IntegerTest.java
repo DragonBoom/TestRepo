@@ -8,6 +8,22 @@ import indi.util.extension.TestSeparateExtension;
 
 @ExtendWith(TestSeparateExtension.class)
 public class IntegerTest {
+    
+    @Test
+    @Disabled
+    void equalsTest() {
+        int iBase1 = 129;
+        System.out.println(Integer.valueOf(iBase1) == Integer.valueOf(iBase1));// print: false
+        
+        // 使用valueOf方法创建-128~127的整型
+        int iBase2 = 127;
+        System.out.println(Integer.valueOf(iBase2) == Integer.valueOf(iBase2));// print: true
+        
+        // 使用new方法创建整型
+        System.out.println(new Integer(iBase2) == new Integer(iBase2));// print: false
+        
+        // 这是因为字面量为-128~127的通过valueOf方法创建的Integer都取自缓存，缓存可见Integer的内部类IntegerCache
+    }
 
     @Test
     @Disabled
@@ -28,6 +44,7 @@ public class IntegerTest {
     }
     
     @Test
+    @Disabled
     void binaryTest() {
         Integer i = 8;
         System.out.println(i >> 1);// 8 / 2^1

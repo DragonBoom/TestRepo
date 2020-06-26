@@ -127,6 +127,8 @@ class StringTest {
         String a = "ab";
         System.out.println("a" + "b" == a);// print: false
         System.out.println("a" + o == a);// print: false
+        System.out.println(o == "b");// print: true
+        System.out.println("c" == "c");// print: true
     }
     
 

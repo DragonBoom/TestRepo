@@ -27,16 +27,21 @@ class EntityManagerTest {
         
     }
 
+    // 测试EntityManager的事务
     @Test
     // @Transactional
-    void entityManagerTest() {
+    void transactionTest() {
         // 利用工厂模式创建EntityManager
         entityManager = factory.createEntityManager();
         System.out.println(entityManager.getClass());
         TestEntityDO2 entity = new TestEntityDO2();
-        entity.setId(124L);
+        // 为自增字段设置值，会导致：
+        // org.hibernate.PersistentObjectException: detached entity passed to persist: indi.spring.data.jpa.TestEntityDO2
+//        entity.setId(124L);
+        entity.setUsername("testName");
+        
         entityManager.getTransaction().begin();
-        entityManager.persist(entity);
+        entityManager.persist(entity);// 
         entityManager.getTransaction().commit();
     }
     

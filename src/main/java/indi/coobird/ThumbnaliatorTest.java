@@ -10,9 +10,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 
 import indi.util.extension.TestSeparateExtension;
 import net.coobird.thumbnailator.Thumbnails;
-import net.coobird.thumbnailator.builders.ThumbnailParameterBuilder;
 import net.coobird.thumbnailator.geometry.Positions;
-import net.coobird.thumbnailator.resizers.configurations.Rendering;
 
 @ExtendWith(TestSeparateExtension.class)
 class ThumbnaliatorTest {
@@ -40,7 +38,6 @@ class ThumbnaliatorTest {
     void compressTest() throws IOException {
         // 通过指定高度压缩
         // 处理半透明png，透明部分会变黑
-        
         Thumbnails.of(testJpg).height(1024).allowOverwrite(true)
         /*
          * 指定图片类型，以解决处理半透明png变色问题，该配置项默认为原图类型

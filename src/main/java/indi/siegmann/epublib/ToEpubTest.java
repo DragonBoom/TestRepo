@@ -18,7 +18,7 @@ import nl.siegmann.epublib.domain.Resource;
 import nl.siegmann.epublib.epub.EpubWriter;
 
 /**
- * 测试epub的工具库 ?
+ * 测试epub的工具库epublib
  * 
  * @author wzh
  * @since 2020.02.04
@@ -26,8 +26,9 @@ import nl.siegmann.epublib.epub.EpubWriter;
 @ExtendWith(TestSeparateExtension.class)
 public class ToEpubTest {
 
+    // 测试由html新建epub文件
     @Test
-    void go() throws IOException {
+    void createEpubTest() throws IOException {
         Book book = new Book();
         byte[] bytes = "<html lang=\"en\">wahahahha </html>".getBytes();
         MediaType mediaType = MediatypeService.XHTML;

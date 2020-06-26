@@ -4,6 +4,12 @@ import org.junit.jupiter.api.Test;
 
 class RuntimeInfoTest {
 
+    /**
+     * 测试通过Runtime类获取信息
+     * 
+     * @author DragonBoom
+     * @since 2020.06.18
+     */
 	@Test
 	void test() {
 		Runtime runtime = Runtime.getRuntime();
