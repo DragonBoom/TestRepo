@@ -1,22 +1,25 @@
 package indi.util;
 
 import java.util.concurrent.TimeUnit;
+import java.util.function.BooleanSupplier;
+
+import javax.annotation.Nullable;
 
 import indi.exception.WrapperException;
 
 public class ThreadUtils {
     
     /**
-     * 给定时间内未能完成，则结束任务
+     * 挂起当前线程直至完成任务或超时
      * 
-     * @param function
-     * @param millis
-     * @return false - 未能按时完成，已终止任务
+     * @param function 返回任务完成与否的方法，返回true表示任务完成，将不断轮询该方法
+     * @param timeoutMillis 超时时间，毫秒
+     * @param sleepMillis 每次轮询间隔
+     * @return 返回true表示因任务完成而结束，false表示因超时而结束
      */
-    public static final boolean run(Runnable function, int millis, int sleepMillis) {
-        Long deadlineMillis = System.currentTimeMillis() + millis;
-        while (System.currentTimeMillis() < deadlineMillis) {
-            function.run();
+    public static final boolean holdUntil(@Nullable BooleanSupplier function, int timeoutMillis, int sleepMillis) {
+        Long deadlineMillis = System.currentTimeMillis() + timeoutMillis;
+        while (System.currentTimeMillis() < deadlineMillis && !function.getAsBoolean()) {
             try {
                 TimeUnit.MILLISECONDS.sleep(sleepMillis);
             } catch (InterruptedException e) {

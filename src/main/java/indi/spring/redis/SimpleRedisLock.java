@@ -29,6 +29,7 @@ public class SimpleRedisLock {
     private Integer expireSecends = 30;
 
     /** 锁的使用记录表，记录 键 + 最近一次持有的线程对象 */
+    // 不适用于分布式架构，只用于单机场景的优化
     @Deprecated// 无法解决判断+行为可能不同步的问题
     private ConcurrentHashMap<String, Thread> lockTable = new ConcurrentHashMap<String, Thread>();
     
@@ -60,7 +61,6 @@ public class SimpleRedisLock {
                 Thread.sleep(lockFailSleepMillis);
                 retryTimes++;
             } catch (InterruptedException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
         }
@@ -99,6 +99,13 @@ public class SimpleRedisLock {
         // 接下来的问题就是要做到一致性(前后一致)地删除键
         // 通过watch指令 + redis事物实现 （这种实现方式应该都是通过redis指令实现的）
         strObjRedisTemplate.watch(lockKey);// 监视键，若提交事务时键的值与一开始监视时的不同（暂不清楚这个判断是不是最后才进行），将不提交事物
+        
+        // 2020.06.27 补充：检查锁是否仍被当前线程持有
+        Object lockV = strObjRedisTemplate.opsForValue().get(lockKey);
+        if (!lockSign.equals(lockV)) {
+            throw new RuntimeException("系统繁忙，请稍后再试");// 此时锁已被其他线程持有
+        }
+        
         
         // 开始事物（RedisTemplate需要启用事务）
         strObjRedisTemplate.multi();

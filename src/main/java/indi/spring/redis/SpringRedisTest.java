@@ -67,7 +67,7 @@ public class SpringRedisTest {
     private String LOCK_KEY_PREFIX = "lock";
     
     /**
-     * 测试用redis实现同步锁
+     * 测试用redis实现分布式同步锁
      */
     @Test
     @Disabled
