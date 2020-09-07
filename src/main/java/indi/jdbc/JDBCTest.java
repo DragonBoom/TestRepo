@@ -23,7 +23,9 @@ import com.zaxxer.hikari.HikariDataSource;
  * @since 2020.07.01
  */
 public class JDBCTest {
-    private static String JDBC_URL = "jdbc:mysql://127.0.0.1:3306/test?serverTimezone=Hongkong&useSSL=false&useUnicode=true&characterEncoding=UTF-8",
+    private static final String 
+    JDBC_URL = 
+    "jdbc:mysql://127.0.0.1:3306/test?serverTimezone=Hongkong&useSSL=false&useUnicode=true&characterEncoding=UTF-8",
     JDBC_USER_NAME = "root", 
     JDBC_PASSWORD = "!qQ1312449403";
 
@@ -158,7 +160,7 @@ public class JDBCTest {
         hikariDataSource.setJdbcUrl(JDBC_URL);
         hikariDataSource.setUsername(JDBC_USER_NAME);
         hikariDataSource.setPassword(JDBC_PASSWORD);
-        
+
         Connection connection = hikariDataSource.getConnection();
         
         String username = queryUsernameByPreparedStatement(1, connection);

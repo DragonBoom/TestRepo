@@ -186,14 +186,24 @@ class StringTest {
         
     }
     
+    // 空格也会被当作一节
     @Test
-    void simpleTest() {
+    @Disabled
+    void splitTest() {
         String uploadPath = "/upload/vphall/201705/20170503/23";
         String targetPath = "";
         for (String folder : uploadPath.split("/")) {
+            System.out.println(folder);
             targetPath = targetPath + "/" + folder;
             System.out.println(targetPath);
         }
+    }
+    
+    // matches方法的正则匹配是否是全字匹配？ Y
+    @Test
+    void matchesTest() {
+        String str = "abcd";
+        System.out.println(str.matches("a"));// false
     }
   
 }

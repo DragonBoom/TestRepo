@@ -39,4 +39,13 @@ public class BooleanTest {
 	    Assertions.assertTrue(result2);
 	    Assertions.assertFalse(result3);
 	}
+	
+	@Test
+	void operatorTest() {
+	    int i = 0;
+	    // 即不会执行下一行中的i++
+	    System.out.println(i > 0 && ++i > 0);// print: false
+	    System.out.println(i);// print: 0
+	    
+	}
 }

@@ -1,6 +1,7 @@
 package indi.oracle.java.lang;
 
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.ReentrantLock;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -44,7 +45,7 @@ class ThreadTest {
      * 测试对睡眠中的线程执行interrupt方法
      */
     @Test
-//    @Disabled
+    @Disabled
     void interruptWhileSleepTest() throws InterruptedException {
         Thread t = newThread(10, "hello", "throws interrrupted exception");
         t.start();

@@ -17,7 +17,7 @@ import indi.util.extension.TestSeparateExtension;
  * @author wzh
  * @since 2020.01.04
  */
-@SpringBootTest(properties = "spring.profiles.active=rabbit")// 使用默认配置
+@SpringBootTest(properties = "spring.profiles.active=rabbit")// 使用rabbit配置
 @ExtendWith({SpringExtension.class, TestSeparateExtension.class})
 class SpringTest {
     @Autowired

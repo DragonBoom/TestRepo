@@ -1,7 +1,10 @@
 package indi.oracle.java.lang;
 
 import java.lang.reflect.Field;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -52,10 +55,13 @@ public class ClassTest {
     
     // 测试用法
     @Test
-    @Disabled
+//    @Disabled
     void isAssignableFromTest() {
-        // 判断是否为另一个类的子类或子接口
-        System.out.println(String.class.isAssignableFrom(String.class));// println: true
+        // 判断被调对象是否为另一个类的父类或接口
+        // 可以理解为用于判断“是否被实现”
+        System.out.println(ArrayList.class.isAssignableFrom(List.class));// println: false
+        System.out.println(List.class.isAssignableFrom(ArrayList.class));// println: true
+        System.out.println(Collection.class.isAssignableFrom(ArrayList.class));// println: true
     }
     
     /** 
@@ -65,6 +71,7 @@ public class ClassTest {
      * @since 2020.02.23
      */
     @Test
+    @Disabled
     void nameTest() {
         Class<? extends ClassTest> class1 = this.getClass();
         System.out.println(class1.getSimpleName());

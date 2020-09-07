@@ -9,6 +9,8 @@ public class DirectSort {
 	 * 
 	 * <p>不稳定是例子：220 
 	 * 
+	 * <p>需要注意与冒泡排序的区别
+	 * 
 	 * @param toSort
 	 */
 	public static void sort(int[] toSort) {

@@ -6,7 +6,11 @@ import java.util.regex.Pattern;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 
+import indi.test.TestSeparateExtension;
+
+@ExtendWith(TestSeparateExtension.class)
 class PatternTest {
 
     /**
@@ -98,6 +102,16 @@ class PatternTest {
         // 以下正则用于获取文件名
         String pattern = "(?<=(\\\\|/|^))[^(\\\\|/)]+?(?=(\\.[^(\\\\|/)]{1,9}|$))";
         testRegexp(pattern, "d:w/f\\agx.jpg", "f.jpg", "w/f");
+    }
+    
+    @Test
+    void regexpTest() {
+        Matcher matcher = Pattern.compile("^\\d{0,2} {0,4}(?=\\[)").matcher("1 [f");
+        if (matcher.find()) {
+            System.out.println(matcher.group());
+        } else {
+            System.out.println("pattern not find");
+        }
     }
     
     void testRegexp(String pattern, String... texts) {

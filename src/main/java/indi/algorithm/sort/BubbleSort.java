@@ -14,6 +14,7 @@ public class BubbleSort {
             for (int j = 0; j < length - i; j++) {
                 int n = j + 1;
                 // 交换下标为 j 与 j + 1的元素
+                // 对于整数类型，可用亦或操作，不使用中间变量地交换数值
                 if (toSort[j] > toSort[n]) {
                     toSort[j] = toSort[j] ^ toSort[n];
                     toSort[n] = toSort[j] ^ toSort[n];

@@ -64,6 +64,7 @@ public class QuickSort {
 		 */
 		toSort[temp] = toSort[low];
 		while (low < high) {
+		    // 当low == high时，empty == low == high，此时交换值没有影响
 		    // 从右往左，找到比中值小的数
 			while (low < high && toSort[high] >= tempValue) {
 				high--;

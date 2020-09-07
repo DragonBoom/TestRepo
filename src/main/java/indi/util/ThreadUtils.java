@@ -29,6 +29,22 @@ public class ThreadUtils {
         return true;
     }
     
+    /**
+     * 挂起当前线程指定时间。具体实现为简单的Thread.sleep
+     * 
+     * @param timeoutMillis 挂起时间，毫秒
+     * @return 返回true表示因任务完成而结束，false表示因超时而结束
+     * @return
+     */
+    public static final boolean holdUntil(int timeoutMillis) {
+        try {
+            TimeUnit.MILLISECONDS.sleep(timeoutMillis);
+        } catch (InterruptedException e) {
+            throw new WrapperException(e);
+        }
+        return true;
+    }
+    
     public static final boolean hang(int sleepMillis, int millis) {
         Long deadlineMillis = System.currentTimeMillis() + millis;
         while (System.currentTimeMillis() < deadlineMillis) {

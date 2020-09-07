@@ -14,5 +14,6 @@ final class Blank {
 
     @Test
     void v() throws IOException {
+        // do something
     }
 }

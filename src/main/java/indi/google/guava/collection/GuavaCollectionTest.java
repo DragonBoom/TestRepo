@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
+import com.google.common.collect.HashMultimap;
 import com.google.common.collect.ImmutableList;
 
 import indi.util.extension.TestSeparateExtension;
