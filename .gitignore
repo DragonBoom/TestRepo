@@ -36,4 +36,4 @@ buildNumber.properties
 .mvn/timing.properties
 .mvn/wrapper/maven-wrapper.jar
 .factorypath
-src/main/resources/*.properties
+src/main/resource/*.properties
