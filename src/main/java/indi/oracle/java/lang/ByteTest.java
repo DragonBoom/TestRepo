@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import indi.util.PrintUtils;
 import indi.util.extension.TestSeparateExtension;
 
 @ExtendWith(TestSeparateExtension.class)
@@ -44,17 +43,4 @@ public class ByteTest {
         System.out.println((char) (b2));
     }
 
-    @Test
-	void lengthTest() {
-	    PrintUtils.with(str -> ((String) str).getBytes().length)
-	            .print("")
-	            .print(",")
-	            .print("，")
-	            .print("￥")
-	            .print("1")
-	            .print("a")
-	            .print("啊")
-	            .print("繁体")
-	            ;
-	}
 }

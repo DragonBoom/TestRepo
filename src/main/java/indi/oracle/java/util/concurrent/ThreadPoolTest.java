@@ -8,7 +8,7 @@ import java.util.concurrent.Executors;
 
 import org.junit.jupiter.api.Test;
 
-import indi.util.ThreadUtils;
+import indi.util.TestUtils;
 
 /**
  * @author wzh
@@ -32,7 +32,7 @@ class ThreadPoolTest {
         executorService.execute(() -> {
             System.out.println("4");
         });
-        ThreadUtils.holdUntil(10000);
+        TestUtils.holdUntil(10000);
         
         // 结束线程池
         executorService.shutdown();

@@ -1,14 +1,13 @@
 package indi.oracle.java.lang;
 
 import java.util.concurrent.TimeUnit;
-import java.util.concurrent.locks.ReentrantLock;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 import indi.util.StringUtils;
-import indi.util.ThreadUtils;
+import indi.util.TestUtils;
 import indi.util.extension.TestSeparateExtension;
 
 @ExtendWith(TestSeparateExtension.class)
@@ -54,7 +53,7 @@ class ThreadTest {
         t.interrupt();// 子线程抛异常：java.lang.RuntimeException: throws interrrupted exception
         System.out.println("is interrupted ?" + t.isInterrupted());// print false
         
-        ThreadUtils.holdUntil(() -> {
+        TestUtils.holdUntil(() -> {
             return !t.isAlive();
         }, 5000, 500);
         // 当前线程不受影响，仍能正常执行

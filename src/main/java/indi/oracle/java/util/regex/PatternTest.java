@@ -96,33 +96,35 @@ class PatternTest {
     }
     
     @Test
-//    @Disabled
+    @Disabled
     void test2() {
         // 测试前后关联的正则(lookbehind, lookahead)
         // 以下正则用于获取文件名
         String pattern = "(?<=(\\\\|/|^))[^(\\\\|/)]+?(?=(\\.[^(\\\\|/)]{1,9}|$))";
-        testRegexp(pattern, "d:w/f\\agx.jpg", "f.jpg", "w/f");
+        test(pattern, "d:w/f\\agx.jpg", "f.jpg", "w/f");
     }
     
     @Test
     void regexpTest() {
-        Matcher matcher = Pattern.compile("^\\d{0,2} {0,4}(?=\\[)").matcher("1 [f");
-        if (matcher.find()) {
-            System.out.println(matcher.group());
-        } else {
-            System.out.println("pattern not find");
-        }
+        test("\\](?=[^\\]|\\[|\\(|\\)|$])", "[sf]f");
     }
     
-    void testRegexp(String pattern, String... texts) {
+    /**
+     * 快速且可批量地测试匹配正则
+     */
+    private void test(String pattern, String... texts) {
         for (String text : texts) {
             Matcher matcher = Pattern.compile(pattern).matcher(text);
             String matchR = null;
             if (matcher.find()) {
                 matchR = matcher.group();
-                System.out.println(text + " -> " + matchR);
+                System.out.println(pattern);
+                System.out.println("  " + text + "  --get-->  |" + matchR);
+                System.out.println("----匹配成功----");
             } else {
-                Assertions.fail(text);
+                System.out.println(pattern);
+                System.out.println("----匹配失败----");
+//                Assertions.fail(text);
             }
         }
     }

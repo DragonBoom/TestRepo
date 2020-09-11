@@ -1,13 +1,9 @@
 package indi.oracle.java.lang;
 
-import java.util.Collections;
-import java.util.LinkedList;
-
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import indi.util.PrintUtils;
 import indi.util.extension.TestSeparateExtension;
 
 @ExtendWith(TestSeparateExtension.class)
@@ -41,22 +37,6 @@ class CharacterTest {
     @Disabled
     public void staticFieldsTest() {
         System.out.println("the number of byte to represent a char: " + Character.BYTES);
-    }
-    
-    /**
-     *  字符长度测试
-     */
-    @Test
-    @Disabled
-    void lengthTest() {
-        PrintUtils.with(str -> ((String)str).toCharArray().length)
-                .print("1")
-                .print("2")
-                .print("啊")
-                .print("a")// [a] -> 1
-                .print("繁体")// [繁体] -> 2
-                ;
-
     }
     
     @Test

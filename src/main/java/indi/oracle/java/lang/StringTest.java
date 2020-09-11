@@ -162,10 +162,11 @@ class StringTest {
     
     // 测试脱敏
     @Test
-    @Disabled
+//    @Disabled
     void replaceAllTest() {
         String result = "1234556679901".replaceAll("(?<=^.{3}).", "*");
         System.out.println(deSensitization(result, 3, 4, '*'));
+        System.out.println("fff".replace("fff", "[fff]"));
     }
     
     private String deSensitization(String original, int prefix, int suffix, char c) {
@@ -201,6 +202,7 @@ class StringTest {
     
     // matches方法的正则匹配是否是全字匹配？ Y
     @Test
+    @Disabled
     void matchesTest() {
         String str = "abcd";
         System.out.println(str.matches("a"));// false

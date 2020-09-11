@@ -1,3 +1,6 @@
+/**
+ * 
+ */
 package indi.util;
 
 import java.util.concurrent.TimeUnit;
@@ -7,7 +10,11 @@ import javax.annotation.Nullable;
 
 import indi.exception.WrapperException;
 
-public class ThreadUtils {
+/**
+ * @author wzh
+ * @since 2020.09.09
+ */
+public class TestUtils {
     
     /**
      * 挂起当前线程直至完成任务或超时

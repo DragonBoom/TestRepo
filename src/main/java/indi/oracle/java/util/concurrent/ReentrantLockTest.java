@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import indi.util.ThreadUtils;
+import indi.util.TestUtils;
 
 /**
  * 可重入锁
@@ -219,7 +219,7 @@ Thread ID = 13 1593938921484
         new Thread(consum).start();
         new Thread(consum).start();
         
-        ThreadUtils.holdUntil(() -> false, 500, 100000);
+        TestUtils.holdUntil(() -> false, 500, 100000);
         
     }
 }
