@@ -8,23 +8,32 @@ import java.util.concurrent.PriorityBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 
+import indi.test.TestSeparateExtension;
+
+/**
+ * 2021.06.11 本类应该是用于测试线程池的处理顺序是否有序;
+ * 可以看出，任务的处理顺序是由工作队列(workQueue)决定的
+ * 
+ */
+@ExtendWith(TestSeparateExtension.class)
 public class ThreadPoolTest {
 	private final static int MAX_THREADS = 5;
 	private int coreSize;
 	private int size;
 	private long aliveSecond;
 
-	@Before
+	@BeforeEach
 	public void beforeEach() {
-		System.out.println("```````````````````````");
 		coreSize = 10;
 		size = 10;
 		aliveSecond = 60;
 	}
 
+	// 无序
 	@Test
 	public void orderTest1() {
 		ExecutorService es = Executors.newCachedThreadPool();
@@ -51,11 +60,13 @@ public class ThreadPoolTest {
 		}
 	}
 
+	// 有序
 	@Test
 	public void orderTest2() {
 		BlockingQueue<Runnable> queue = new ArrayBlockingQueue<>(100);
 		ExecutorService es = new ThreadPoolExecutor(coreSize, size, aliveSecond, TimeUnit.SECONDS,
 				queue);
+		
 		int s = 10;
 		while (s > 0) {
 			es.submit(new MyThread(s));
@@ -81,6 +92,7 @@ public class ThreadPoolTest {
 		}
 	}
 
+	// 无序，会按自然顺序而不是提交顺序执行
 	@Test
 	public void orderTest3() {
 		BlockingQueue<Runnable> queue = new PriorityBlockingQueue<>(100, null);

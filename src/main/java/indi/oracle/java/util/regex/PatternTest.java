@@ -3,7 +3,6 @@ package indi.oracle.java.util.regex;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -81,32 +80,9 @@ class PatternTest {
     }
     
     @Test
-    @Disabled
-    void test1() {
-        String pattern = "^([0-9]|[A-Z]){6,17}$";
-        String vehicleNo = "FHXFAF";
-        boolean find = Pattern.compile(pattern).matcher(vehicleNo).find();
-        System.out.println(find);
-        vehicleNo = "FHXAF11";
-        find = Pattern.compile(pattern).matcher(vehicleNo).find();
-        System.out.println(find);
-        vehicleNo = "FH测试FFFFFFF";
-        find = Pattern.compile(pattern).matcher(vehicleNo).find();
-        System.out.println(find);
-    }
-    
-    @Test
-    @Disabled
-    void test2() {
-        // 测试前后关联的正则(lookbehind, lookahead)
-        // 以下正则用于获取文件名
-        String pattern = "(?<=(\\\\|/|^))[^(\\\\|/)]+?(?=(\\.[^(\\\\|/)]{1,9}|$))";
-        test(pattern, "d:w/f\\agx.jpg", "f.jpg", "w/f");
-    }
-    
-    @Test
     void regexpTest() {
-        test("\\](?=[^\\]|\\[|\\(|\\)|$])", "[sf]f");
+        test("(?<=\\.)[^\\.]+$", "d:\\f\\CCF20140611_00004");
+        test("[^\\[\\]\\d]", "[by:PLASTICMEMORIES_]");
     }
     
     /**
@@ -129,3 +105,4 @@ class PatternTest {
         }
     }
 }
+

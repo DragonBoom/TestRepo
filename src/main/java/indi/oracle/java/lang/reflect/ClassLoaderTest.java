@@ -31,7 +31,7 @@ class ClassLoaderTest {
         MyClassLoader myClassLoader = new MyClassLoader();// define class loader
         byte[] bytes = Files.readAllBytes(Paths.get("d:", "CbpmCalendarDO.class"));
 
-        Class<?> class1 = myClassLoader.loadClass("com.hauxsoft.entity.CbpmCalendarDO", bytes);// 自己是实现的方法，用于加载类
+        Class<?> class1 = myClassLoader.loadClass("com.hauxsoft.entity.CbpmCalendarDO", bytes);// 自己实现的方法，用于加载类
         System.out.println(class1);
         Object newInstance = class1.newInstance();
         System.out.println(newInstance);

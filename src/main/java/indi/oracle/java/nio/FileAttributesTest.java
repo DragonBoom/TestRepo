@@ -7,11 +7,14 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.attribute.BasicFileAttributeView;
 import java.nio.file.attribute.BasicFileAttributes;
+import java.nio.file.attribute.FileTime;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 import indi.util.extension.TestSeparateExtension;
+import lombok.SneakyThrows;
 
 /**
  * 测试 【文件属性】 相关内容
@@ -28,6 +31,7 @@ class FileAttributesTest {
      * @throws IOException 
      */
     @Test
+    @Disabled
     void linkTest() throws IOException {
         // 找出快捷方式 
         Path dir = Paths.get("e:", "for test", "link file test");// 该目录下包含了快捷方式
@@ -58,5 +62,18 @@ class FileAttributesTest {
                      */
                 });
         
+    }
+    
+    /**
+     * 测试修改创建时间
+     * 
+     * @since 2021.08.04
+     */
+    @Test
+    @SneakyThrows
+    void modifyTimeTest() {
+        BasicFileAttributeView attributeView = Files.getFileAttributeView(Paths.get("e:", "test.txt"), BasicFileAttributeView.class);
+        // 修改：最后修改时间，最后访问时间，创建时间
+        attributeView.setTimes(FileTime.fromMillis(System.currentTimeMillis()), FileTime.fromMillis(System.currentTimeMillis()), FileTime.fromMillis(System.currentTimeMillis()));
     }
 }

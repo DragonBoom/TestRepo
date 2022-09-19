@@ -1,5 +1,6 @@
 package indi.oracle.java.lang;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -44,7 +45,7 @@ public class IntegerTest {
     }
     
     @Test
-    @Disabled
+//    @Disabled
     void binaryTest() {
         Integer i = 8;
         System.out.println(i >> 1);// 8 / 2^1
@@ -53,6 +54,11 @@ public class IntegerTest {
         
         long l = 8;
         System.out.println(l >> 32);// case 0
+
+        // 测试用二进制表示负数时，字面量是否被当作补码 Y
+        Assertions.assertEquals(0b11111111111111111111111111111111, -1);
+        // 测试最小值的二进制表示
+        Assertions.assertEquals(0b10000000000000000000000000000000, Integer.MIN_VALUE);
     }
     
     private int setZero(int x) {// 这里的x与上面的i都指向相同的地址，但对于整型，x = 0没有修改了地址的值，而是将x指向了0所在的地址

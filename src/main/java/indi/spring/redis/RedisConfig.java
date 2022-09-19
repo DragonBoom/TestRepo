@@ -4,7 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.serializer.JdkSerializationRedisSerializer;
+import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 @Configuration
 public class RedisConfig {
@@ -17,6 +17,7 @@ public class RedisConfig {
          * 默认将注入 JdkSerializationRedisSerializer 作为默认的序列化工具，能实现字节数组到对象的序列化
          * 但对象必须实现Serializable接口
          */
+        redisTemplate.setDefaultSerializer(new StringRedisSerializer());// 为了直接修改键、值，用该序列化器
         redisTemplate.setConnectionFactory(factory);
         // 开启对事物的支持
         redisTemplate.setEnableTransactionSupport(true);

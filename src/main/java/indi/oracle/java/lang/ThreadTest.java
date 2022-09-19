@@ -2,6 +2,7 @@ package indi.oracle.java.lang;
 
 import java.util.concurrent.TimeUnit;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -80,5 +81,23 @@ class ThreadTest {
         System.out.println("is alive ?" + t.isAlive());// true
 //        ThreadUtils.holdUntil(() -> false, 500, 500);
         System.out.println("completed!");
+    }
+    
+    @Test
+    @Disabled
+    void interruptWhileNoStart() {
+        Assertions.assertDoesNotThrow(() -> {
+            Thread t = newThread(0, null, "throws interrrupted exception");
+            t.interrupt();// Unless the current thread is interrupting itself, which isalways permitted,
+        });
+    }
+    
+    @Test
+    void stackTraceTest() {
+        Thread thread = Thread.currentThread();
+        StackTraceElement[] stackTraces = thread.getStackTrace();
+        for (StackTraceElement ste : stackTraces) {
+            System.out.println(ste);
+        }
     }
 }

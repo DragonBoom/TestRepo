@@ -1,5 +1,9 @@
 package indi.lombok;
 
+import org.junit.jupiter.api.extension.ExtendWith;
+
+import indi.test.TestSeparateExtension;
+
 /**
  * 测试@Data注解
  * 
@@ -8,6 +12,10 @@ package indi.lombok;
  * @author Think
  *
  */
-public class DataAnnotationTest {
+@ExtendWith(TestSeparateExtension.class)
+class DataAnnotationTest {
+    
+
+    
 
 }

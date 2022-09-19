@@ -63,4 +63,9 @@ public class TestUtils {
         }
         return true;
     }
+    
+    public static final <T> T doAndReturn(Runnable fun, T toReturn) {
+        fun.run();
+        return toReturn;
+    }
 }

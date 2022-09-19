@@ -12,7 +12,6 @@ import org.springframework.data.redis.core.ListOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
-import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
@@ -70,13 +69,18 @@ public class SpringRedisTest {
      * 测试用redis实现分布式同步锁
      */
     @Test
-    @Disabled
-    void lockTest() {
+//    @Disabled
+    void lockTest() throws InterruptedException {
+        // 若使用默认序列化器，Redis的键为：\xac\xed\x00\x05t\x00\alock123
         String lockKey = LOCK_KEY_PREFIX + 123;
+        System.out.println("lock key: " + lockKey);
         Object lockSign = simpleRedisLock.lock(lockKey);
         // do something
         System.out.println("lock done !!");
+        Thread.sleep(20000);
+        // 此时可手动访问Redis修改值以测试事务回滚
         simpleRedisLock.unlock(lockKey, lockSign);
+        System.out.println("unlock done !!");
     }
     
 }

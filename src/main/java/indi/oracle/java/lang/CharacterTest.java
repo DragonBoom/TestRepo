@@ -47,7 +47,7 @@ class CharacterTest {
     
     @Test
     @Disabled
-    void unicodeTest() {
+    void chineseUnicodeTest() {
         Character c = new Character('a');
         System.out.println(c >= 0x4e00 && c <= 0x9fa5);// false
         Character c1 = new Character('啊');
@@ -55,6 +55,7 @@ class CharacterTest {
     }
     
     @Test
+    @Disabled
     void englishTest() {
         System.out.println('1' + 0);// 49
         System.out.println('2' + 0);// 50
@@ -65,5 +66,20 @@ class CharacterTest {
         System.out.println('z' + 0);// 122
         System.out.println('Z' + 0);// 90
         // 综上，大小写字母的编码并不是连续的
+    }
+    
+    @Test
+    void compareTest() {
+        char c1 = ' ';
+        char c2 = '1';
+        char c3 = '_';
+        char c4 = '\'';
+        char c5 = '.';
+        // 从小到大排序，得到结果与windows文件名排序一致（但测试样本不全，不保证所有字符的排序都一致）
+        System.out.println(c1 < c2);// print: true
+        System.out.println(c1 < c3);// print: true
+        System.out.println(c1 < c5);// print: true
+        System.out.println(c2 < c3);// print: true
+        System.out.println(c4 < c3);// print: true
     }
 }

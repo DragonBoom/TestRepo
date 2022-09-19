@@ -21,7 +21,7 @@ import indi.util.TestUtils;
  */
 public class ReentrantLockTest {
 	private static final Logger logger = LoggerFactory.getLogger("");
-
+	
 	@Test
 	@Disabled
 	public void whatTest() {
@@ -163,6 +163,7 @@ Thread ID = 13 1593938921484
 	 * @since 2020.07.05
 	 */
 	@Test
+	@Disabled
     void conditionConsumerProducerTest() {
         ReentrantLock lock = new ReentrantLock();
         Condition productCondition = lock.newCondition();// 生产条件

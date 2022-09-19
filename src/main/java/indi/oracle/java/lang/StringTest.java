@@ -1,10 +1,10 @@
 package indi.oracle.java.lang;
 
-import java.io.UnsupportedEncodingException;
 import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -96,7 +96,8 @@ class StringTest {
         System.out.println(String.format("测试 %03d", 1) );
         System.out.println(String.format("测试 %s%s", "Hell", "o") );
         System.out.println(String.format("$#$测试 %s%s", "Hell", "o") );
-        System.out.println(String.format("%.0f", 1.2221f));
+        System.out.println(String.format("%.0f", 1.2221f));// print: 1
+        System.out.println(String.format("%+3d", 2));// print:   2 （数字前有两个空格）
     }
 
     /**
@@ -142,15 +143,6 @@ class StringTest {
         String s = String.valueOf(obj);
         System.out.println(Objects.isNull(s));// pritln false
     }
-    
-    @Test
-    @Disabled
-    void charsetTest() throws UnsupportedEncodingException {
-        String origin = "编码";
-        System.out.println(new String(origin.getBytes()));
-        System.out.println(new String(origin.getBytes("utf-8"), "utf-8"));
-        System.out.println(new String(origin.getBytes("gbk"), "gbk"));
-    }
 
     @Test
     @Disabled
@@ -162,7 +154,7 @@ class StringTest {
     
     // 测试脱敏
     @Test
-//    @Disabled
+    @Disabled
     void replaceAllTest() {
         String result = "1234556679901".replaceAll("(?<=^.{3}).", "*");
         System.out.println(deSensitization(result, 3, 4, '*'));
@@ -206,6 +198,30 @@ class StringTest {
     void matchesTest() {
         String str = "abcd";
         System.out.println(str.matches("a"));// false
+    }
+    
+    @Test
+    @Disabled
+    void compateToTest() {
+        // 测试能否数字化地进行比较: N
+        System.out.println("11.jpg".compareTo("1.jpg"));
+        System.out.println("11.jpg".compareTo("2.jpg"));
+        System.out.println("img005.jpg".compareTo("img005_2.jpg"));
+    }
+    
+    /**
+     * 通过编码创建字符串
+     * 
+     * @since 2021.12.23
+     */
+    @Test
+    void newStringByCodeTest() {
+        // 𤭢，无法用字符字面量表示
+        "𤭢".codePoints().forEach(System.out::println);
+        int[] codes = new int[] {150370};
+        String ns = new String(codes, 0, 1);
+        System.out.println(ns);
+        Assertions.assertEquals("𤭢", ns);
     }
   
 }

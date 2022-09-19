@@ -7,6 +7,8 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
+import indi.data.Wrapper;
+import indi.data.Wrapper.IntWrapper;
 import indi.util.extension.TestSeparateExtension;
 
 @ExtendWith(TestSeparateExtension.class)
@@ -37,10 +39,27 @@ class ObjectTest {
     }
     
     @Test
+    @Disabled
     void newObjectTest() {
         String str0 = "123";
         String str1 = new String("123");
         System.out.println(str0 == str1);// means str0 == "123" 
         System.out.println(str0 == "123");// means str1 != "123" 
+    }
+    
+    /**
+     * 测试当值域发生变化时，哈希值是否改变：Y
+     * 
+     * @since 2021.12.09
+     */
+    @Test
+//    @Disabled
+    void hashTest() {
+        IntWrapper i = Wrapper.IntWrapper.of(1);
+        int hashCode = i.hashCode();
+        i.setValue(2);
+        boolean r = i.hashCode() == hashCode;
+        System.out.println(r);
+        Assertions.assertEquals(false, r);
     }
 }

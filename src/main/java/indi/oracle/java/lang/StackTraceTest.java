@@ -1,6 +1,7 @@
 package indi.oracle.java.lang;
 
 import java.util.Arrays;
+
 import org.junit.jupiter.api.Test;
 
 class StackTraceTest {
@@ -17,6 +18,7 @@ class StackTraceTest {
 
     public static Class<?> getCallerClass() {
         StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
+        System.out.println(Arrays.toString(stackTrace));
         try {
             for (int i = 0; i < stackTrace.length; i++) {
                 if (StackTraceTest.class.getName().equals(stackTrace[i].getClassName())) {

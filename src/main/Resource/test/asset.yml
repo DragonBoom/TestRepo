@@ -1,0 +1,74 @@
+# fdsaf
+sprite:
+  image1:
+    file: 1.png
+    newSprite: true
+    rect:
+      position:
+        x: 0
+        y: 0
+      size:
+        x: 414
+        y: 550
+    pivot:
+      x: 0.5
+      y: 0.31
+    pixelsPerUnit: 100
+    extrude: 1
+    meshType: Tight
+    border:
+      x: 0
+      y: 0
+      z: 0
+      w: 0
+    generateFallbackPhysicsShape: false
+    expireTime: -1
+    condition: true
+  image2:
+    file: 2.png
+    newSprite: true
+    rect:
+      position:
+        x: 0
+        y: 0
+      size:
+        x: 414
+        y: 550
+    pivot:
+      x: 0.5
+      y: 0.31
+    pixelsPerUnit: 100
+    extrude: 1
+    meshType: Tight
+    border:
+      x: 0
+      y: 0
+      z: 0
+      w: 0
+    generateFallbackPhysicsShape: false
+    expireTime: -1
+    condition: true
+  image3:
+    file: 3.png
+    newSprite: true
+    rect:
+      position:
+        x: 0
+        y: 0
+      size:
+        x: 414
+        y: 550
+    pivot:
+      x: 0.5
+      y: 0.31
+    pixelsPerUnit: 100
+    extrude: 1
+    meshType: Tight
+    border:
+      x: 0
+      y: 0
+      z: 0
+      w: 0
+    generateFallbackPhysicsShape: false
+    expireTime: -1
+    condition: true

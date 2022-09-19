@@ -11,13 +11,13 @@ import org.slf4j.LoggerFactory;
 import indi.util.extension.TestSeparateExtension;
 
 /**
- * hashMap 中的modcount 是用来记录修改次数，用于iterator操作时的fail-fast异常的判断
+ * hashMap 中的modcount是用来记录修改次数，用于iterator操作时的fail-fast异常的判断
  * <p>
- * ps.java方法的默认修饰符是default(只在接口中可写出)，只能被同一包中的子类访问，并且只能在接口中主动声明
+ * ps. java方法的默认修饰符是default(只在接口中可写出)，只能被同一包中的子类访问，并且只能在接口中主动声明（接口的默认修饰符是public）
  * <p>
  * HashMap 中 newTab[e.hash & (newCap - 1)] = e;
  * <p>
- * 扰动函数: HashMap 的节点(node)求hash值的函数(h = key.hashCode()) ^ (h >>> 16)称为 扰动函数 ,
+ * 扰动函数: HashMap 的结点(node)求hash值的函数(h = key.hashCode()) ^ (h >>> 16)称为 扰动函数 ,
  * int 最大为32位，h>>>16是將原始哈希值的高半区移到低办区,得到0000****的数值，
  * 该函数其实是將哈希值(通过objects的方法获取)的高位区与低位区在低位区进行异或运算，即在低位区得到混淆了原始哈希码的高、低位的序列,
  * 变相在低位区保存了高位区的信息(高位区保持不变), 方便之后的 hash & (length - 1) 在低位区取值能取到分布更均匀的数

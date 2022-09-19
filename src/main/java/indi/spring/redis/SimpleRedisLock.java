@@ -33,8 +33,8 @@ public class SimpleRedisLock {
     @Deprecated// 无法解决判断+行为可能不同步的问题
     private ConcurrentHashMap<String, Thread> lockTable = new ConcurrentHashMap<String, Thread>();
     
-    public Object generateLockSign() {
-        return System.nanoTime();
+    public String generateLockSign() {
+        return Long.toString(System.nanoTime());
     }
     
     /**
@@ -54,6 +54,8 @@ public class SimpleRedisLock {
         // 生成锁的签名，并尝试通过setnx模式取得锁
         // 会不会存在一直获取不到锁的情况？（比如上锁后，突然关闭服务器）通过expire指令实现，使得基本上不会出现死锁的情况
         Object lockSign = null;
+        System.out.println(lockKey);
+        System.out.println(ops.get(lockKey));
         while (!(hasLock = ops.setIfAbsent(lockKey, lockSign = generateLockSign()))// = setnx
                 && System.currentTimeMillis() < maxTimes) {
             try {
@@ -65,6 +67,8 @@ public class SimpleRedisLock {
             }
         }
         // 记录锁被当前线程使用
+        System.out.println(ops.get(lockKey));
+        
         lockTable.put(lockKey, Thread.currentThread());
         
         // 获取不到锁的，则需要在一定限度内重试（当持续一段时间的量非常大时，可能需要考虑长时间抢不到锁的情况）
@@ -98,6 +102,7 @@ public class SimpleRedisLock {
         // 像通过签名机制，利用值存放签名的方式实现了对所的归属的判断
         // 接下来的问题就是要做到一致性(前后一致)地删除键
         // 通过watch指令 + redis事物实现 （这种实现方式应该都是通过redis指令实现的）
+        // 必须先watch再multi，否则会报错
         strObjRedisTemplate.watch(lockKey);// 监视键，若提交事务时键的值与一开始监视时的不同（暂不清楚这个判断是不是最后才进行），将不提交事物
         
         // 2020.06.27 补充：检查锁是否仍被当前线程持有
@@ -107,10 +112,10 @@ public class SimpleRedisLock {
         }
         
         
-        // 开始事物（RedisTemplate需要启用事务）
+        // 开始事物（RedisTemplate需要启用事务，见：RedisConfig）
         strObjRedisTemplate.multi();
         Boolean isDeleted = strObjRedisTemplate.delete(lockKey);
-        System.out.println(isDeleted);// 若RedisTemplate不启用事物， print: true；启用事物后，print: false
+        System.out.println("isDeleted: " + isDeleted);// 若RedisTemplate不启用事物， print: true；启用事物后，print: false
         // 提交事物
         List<Object> execResults = strObjRedisTemplate.exec();
         if (execResults == null || execResults.size() == 0) {

@@ -2,17 +2,21 @@ package indi.oracle.java.nio;
 
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.stream.Stream;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
+import indi.data.Wrapper.BooleanWrapper;
 import indi.io.FileUtils;
 import indi.util.extension.TestSeparateExtension;
+import lombok.SneakyThrows;
 
 @ExtendWith(TestSeparateExtension.class)
 public class FilesTest {
@@ -30,8 +34,11 @@ public class FilesTest {
     }
     
     @Test
+    @Disabled
     void deleteInNotExistDirectoryTest() throws IOException {
-        Files.delete(Paths.get("e:\\a\\b\\c\\d.a"));// case: throw NoSuchFileException: e:\a\b\c
+        Assertions.assertThrows(NoSuchFileException.class, () -> {
+            Files.delete(Paths.get("e:\\a\\b\\c\\d.a"));// case: throw NoSuchFileException: e:\a\b\c
+        });
     }
     
     /*
@@ -60,6 +67,7 @@ public class FilesTest {
      * @since 2020.08.31
      */
     @Test
+    @Disabled
     void accessDeniedTest() throws IOException {
         Path dest = subFolder1Path.getParent().resolve("!_" + subFolder1Path.getFileName().toString());
         // 清空移动的目标目录
@@ -88,5 +96,39 @@ public class FilesTest {
 //        System.out.println(Files.list(dir).findFirst());// 该操作属于中断操作，但不会关闭流
         
         Files.move(subFolder1Path, dest);
+    }
+    
+    @Test
+    @SneakyThrows
+    @Disabled
+    void sizeForDirTest() {
+        Path emptyPath = Paths.get("f:", "byCrawler");
+        Path notEmptyPath = Paths.get("f:", "byCrawler", "konachan");
+        Assertions.assertEquals(0, Files.size(emptyPath));
+        long notEmptyPathSize = Files.size(notEmptyPath);
+        System.out.println(notEmptyPathSize);
+        Assertions.assertTrue(notEmptyPathSize == 0);// Files.size可接收指向目录的参数，但返回值只有0
+    }
+    
+    @Test
+    @Disabled
+    void listTest() throws IOException {
+        Path source = Paths.get("f:", "byCrawler");
+        BooleanWrapper containsFolderW = BooleanWrapper.of(false);
+        try (Stream<Path> stream = Files.list(source)) {
+            stream.forEach(p -> {
+                Assertions.assertFalse(p.equals(source));// 不包含源目录
+                if (Files.isDirectory(p)) {
+                    containsFolderW.setTrue();
+                }
+            });
+        }
+        Assertions.assertEquals(true, containsFolderW.get());// 会包含子目录条目
+    }
+    
+    @Test
+    void fileVisitorTest() {
+        // 经测试，用Files.walkFileTree执行FileVisitor，当对某目录执行preVisitDirectory返回FileVisitResult.SKIP_SUBTREE时，
+        // 不对该目录执行FileVisitor.postVisitDirectory
     }
 }

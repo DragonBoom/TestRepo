@@ -20,5 +20,5 @@ class URLDecoderTest {
         String decode = URLDecoder.decode(encode, "utf-8");
         System.out.println(decode);// print: fff中文测试123wa
     }
-
 }
+    

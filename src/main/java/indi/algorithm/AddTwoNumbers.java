@@ -1,9 +1,11 @@
 package indi.algorithm;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 import indi.util.extension.TestSeparateExtension;
+import lombok.EqualsAndHashCode;
 
 /**
  * You are given two non-empty linked lists representing two non-negative integers. 
@@ -23,11 +25,6 @@ import indi.util.extension.TestSeparateExtension;
  */
 @ExtendWith(TestSeparateExtension.class)
 class AddTwoNumbers {
-
-    @Test
-    void go() {
-
-    }
     
     private final ListNode EMPTY_NODE = new ListNode(0);
     
@@ -68,19 +65,39 @@ class AddTwoNumbers {
             l1 = l1.next;
             l2 = l2 == null ? null : l2.next;
         }
-        if (isCarry) {
+        if (isCarry) {// 为最后一次循环进位
             lastNode.next = new ListNode(1);
+            isCarry = false;
         }
         return result;
     }
     
-    public class ListNode {
-        int val;
-        ListNode next;
+    @EqualsAndHashCode
+    public static class ListNode {
+        private int val;
+        private ListNode next;
 
-        ListNode(int x) {
+        public ListNode(int x) {
             val = x;
         }
+    }
+    
+    @Test
+    void go() {
+        ListNode l1 = new ListNode(2);
+        l1.next = new ListNode(4);
+        l1.next.next = new ListNode(6);
+        
+        ListNode l2 = new ListNode(5);
+        l2.next = new ListNode(6);
+        l2.next.next = new ListNode(4);
+        
+        ListNode r = new ListNode(7);
+        r.next = new ListNode(0);
+        r.next.next = new ListNode(1);
+        r.next.next.next = new ListNode(1);// 测试 进位导致增加链表深度
+        
+        Assertions.assertEquals(r, addTwoNumbers(l1, l2));
     }
     
 }

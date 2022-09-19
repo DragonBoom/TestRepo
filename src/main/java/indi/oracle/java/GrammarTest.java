@@ -1,10 +1,21 @@
 package indi.oracle.java;
-import java.util.Random;
-
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 
-public class Others {
+import indi.test.TestSeparateExtension;
+import indi.util.TestObjects;
+import indi.util.TestObjects.Plain1ArgObj;
+import indi.util.TestUtils;
+
+/**
+ * 测试java基础语法
+ * 
+ * @author wzh
+ * @since 2020.09.29
+ */
+@ExtendWith(TestSeparateExtension.class)
+class GrammarTest {
 	int i = 0;
 
 	static {
@@ -17,17 +28,6 @@ public class Others {
 
 	static {
 		System.out.println("init 3 !!");
-	}
-
-	public static void main(String[] args) {
-		@SuppressWarnings("unused")
-		String s = "1";
-		try {
-			throw new Error("print error right?");
-		} catch (Error e) {
-			e.printStackTrace();
-		}
-
 	}
 
 	// @Test
@@ -155,8 +155,17 @@ public class Others {
 	// 静态初始化块只会执行一次，非静态初始化块每次创建对象时都会执行一次
 	// @Test
 	void initCodeTest() {
-		String a = Others.class.getName();
-		Others o = new Others();
-		String b = Others.class.getName();
+		String a = GrammarTest.class.getName();
+		GrammarTest o = new GrammarTest();
+		String b = GrammarTest.class.getName();
+	}
+	
+	// 三元运算符测试
+	@Test
+	void ternaryTest() {
+	    Plain1ArgObj obj = new TestObjects.Plain1ArgObj();
+	    @SuppressWarnings("unused")
+        boolean test = false ? TestUtils.doAndReturn(() -> obj.setArg1("f"), true) : false;
+	    Assertions.assertNull(obj.getArg1());// 预测：执行三元运算时，只执行匹配的一元
 	}
 }

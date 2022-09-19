@@ -2,9 +2,9 @@ package indi.oracle.java.beans;
 
 import java.beans.IntrospectionException;
 import java.beans.PropertyDescriptor;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -91,8 +91,11 @@ class PropertyDescriptorTest {
     
     @Test
     void getParentPropertyTest() throws IntrospectionException {
-        PropertyDescriptor propertyDescriptor = new PropertyDescriptor("name2", MyBean.class);
+        String propertyName = "name2";
+        PropertyDescriptor propertyDescriptor = new PropertyDescriptor(propertyName, MyBean.class);
         System.out.println(propertyDescriptor);
+        Assertions.assertEquals(propertyName, propertyDescriptor.getName());
+        Assertions.assertEquals(propertyName, propertyDescriptor.getDisplayName());
     }
 
     @Data

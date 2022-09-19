@@ -2,6 +2,7 @@ package indi.oracle.java.util;
 
 import java.util.LinkedList;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -64,6 +65,7 @@ public class StreamTest {
      * @since 2020.09.04
      */
     @Test
+    @Disabled
     void limitTest() {
         long count = l.stream()
             .filter(obj -> {
@@ -73,5 +75,28 @@ public class StreamTest {
             .limit(1)
             .count();
         System.out.println(count);
+    }
+    
+    /**
+     * 测试累加方法reduce()的使用：
+     * T reduce(T identity, BinaryOperator<T> accumulator);
+     * 
+     * 该方法的第一个参数identity实际上就是累加的起始值，第二参数是累加函数
+     * 
+     * @since 2021.12.14
+     */
+    @Test
+    void reduceTest() {
+        Integer r = l.stream()
+                .map(o -> (String) o)
+                .map(Integer::parseInt)
+                .reduce(9, (total, next) -> total + next);
+        Assertions.assertEquals(19, r);
+        
+        r = l.stream()
+                .map(o -> (String) o)
+                .map(Integer::parseInt)
+                .reduce(0, (total, next) -> total + next);
+        Assertions.assertEquals(10, r);
     }
 }
