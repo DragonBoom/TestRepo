@@ -18,7 +18,7 @@ import indi.test.TestSeparateExtension;
  */
 @ExtendWith(TestSeparateExtension.class)
 class SimpleDateFormatTest {
-
+    // 线程不安全？
     private static final SimpleDateFormat helper = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss:S");
 
     /**

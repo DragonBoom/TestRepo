@@ -60,10 +60,10 @@ public class JDBCTest {
         
         // 1. 执行查询
         // 使用Statement查询
-        String username = queryUsernameByStatement(1, connection);
+        String username = queryUsernameByStatement(123, connection);
         System.out.println("username1: " + username);
         // 使用PreparedStatement查询
-        String username2 = queryUsernameByPreparedStatement(1, connection);
+        String username2 = queryUsernameByPreparedStatement(123, connection);
         System.out.println("username2: " + username2);
         
         // ！！事务地插入一条数据
@@ -82,7 +82,7 @@ public class JDBCTest {
         Statement statement = connection.createStatement();
         // 执行查询（直接执行）
         // 不可设置参数
-        ResultSet rs = statement.executeQuery("select t.* from test_entity2 t where t.id = " + id);
+        ResultSet rs = statement.executeQuery("select t.* from test_entity t where t.id = " + id);
         
         // 操作结果集，获取查询结果
         // 需要逐行处理
@@ -98,7 +98,7 @@ public class JDBCTest {
     private String queryUsernameByPreparedStatement(long id, Connection connection) throws SQLException {
         // 获取SQL语句对象，注意看该方法的注释
         // PreparedStatement可执行多次
-        PreparedStatement statement = connection.prepareStatement("select t.* from test_entity2 t where t.id = ? ");// 声明自增字段
+        PreparedStatement statement = connection.prepareStatement("select t.* from test_entity t where t.id = ? ");// 声明自增字段
         // 可设置参数
         statement.setLong(1, id);
         
@@ -115,6 +115,7 @@ public class JDBCTest {
         return rs.getString("username");
     }
     
+    /** 带事务地插入数据 */
     private int insertWithTransaction(Date createTime, String username, Connection connection) throws SQLException {
         boolean autoCommit = connection.getAutoCommit();
         // 关闭自动提交，从而开启事务
@@ -123,10 +124,9 @@ public class JDBCTest {
         }
         // 获取SQL语句对象
         PreparedStatement prepareStatement = 
-                connection.prepareStatement("insert into test_entity2 (create_time, username) values(?, ?) ");
+                connection.prepareStatement("insert into test_entity (create_time, username) values(?, ?) ");
         // 设置参数
         prepareStatement.setTimestamp(1, new Timestamp(createTime.getTime()));// timestamp对应MySQL的datetime
-        
         prepareStatement.setString(2, username);
         // 执行查询
         // true表示有结果集，false表示数据库返回了更新数量或没有返回

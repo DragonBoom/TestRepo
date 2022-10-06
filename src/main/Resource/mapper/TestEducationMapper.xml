@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="indi.mybatis.dao.TestEducationMapper">
+	
+	<!-- 下面是基础的增删改查 -->
+	<select id="getOne" resultType="MyBatisTestEducationDO">
+		select t.* from test_education t where t.id = #{id}
+	</select>
+	<!-- useGeneratedKeys="true"开启接收自增字段；keyProperty用于指定要将自动生成的值赋给哪个变量 -->
+	<insert id="insert" useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO test_education (user_id, username, sex, school_name, major, begin_time, end_time) 
+		VALUES(#{userId}, #{username}, #{sex}, #{schoolName}, #{major}, #{beginTime}, #{endTime})
+	</insert>
+	
+	<select id="listByUserId" resultType="MyBatisTestEducationDO">
+		select t.* from test_education t where t.user_id = #{userId}
+	</select>
+	
+	<update id="updateDynamic">
+		update test_education
+		<set>
+			<if test="username != null">username = #{username},</if>
+			<if test="sex != null">sex = #{sex},</if>
+			<if test="schoolName != null">school_name = #{schoolName},</if>
+			<if test="major != null">major = #{major},</if>
+			<if test="beginTime != null">begin_time = #{beginTime},</if>
+			<if test="endTime != null">end_time = #{endTime},</if>
+		</set>
+		where id = #{id}
+	</update>
+</mapper>

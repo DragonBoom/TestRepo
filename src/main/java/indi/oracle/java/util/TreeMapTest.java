@@ -28,6 +28,7 @@ public class TreeMapTest {
 
 	@Test
 	void go() {
+	    // 反序输出
 		TreeMap<MyClass, String> t = new TreeMap<>(Collections.reverseOrder());
 		MyClass m1 = new MyClass(1);
 		MyClass m2 = new MyClass(2);

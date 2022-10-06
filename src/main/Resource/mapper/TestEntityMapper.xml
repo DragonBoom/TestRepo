@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- 表头是必须的 -->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="indi.mybatis.dao.TestEntityMapper"><!-- 不能用别名 -->
+	<!-- 开启二级缓存（作用域为当前 命名空间；如果不同mapper有相同命名空间，也将使用同一个二级缓存） -->
+	<!-- 开启后，debug日志中能看到 `Cache Hit RatioXXX`等缓存相关的信息 -->
+	
+	<!-- 2022.09.30 在配置文件中开启了对特定几个包的类别名扫描，之后使用别名即可 -->
+	<!-- 下面是基础的增删改查 -->
+	<select id="getOne" resultType="MyBatisTestDO"><!-- 即使有Spring环境，resultType也不能省略路径 -->
+		select t.* from test_entity t where t.id = #{id}
+	</select>
+	<delete id="delete">
+		delete from test_entity where id = #{id}
+	</delete>
+	<update id="update">
+		update test_entity set 
+		username = #{username}, sex = #{sex}, mobile_phone = #{mobilePhone}, create_time = #{createTime}
+		where id = #{id}
+	</update>
+	<!-- useGeneratedKeys="true"开启接收自增字段；keyProperty用于指定要将自动生成的值赋给哪个变量 -->
+	<!-- 其实并不用设置 useGeneratedKeys -->
+	<insert id="insert" keyProperty="id">
+		INSERT INTO test_entity (username, sex, mobile_phone, create_time)
+		VALUES(#{username}, #{sex}, #{mobilePhone}, #{createTime})
+	</insert>
+
+	<!-- 下面是列表查询 -->
+	<!-- 指定返回类型为DO，将得到List<DO> -->
+	<select id="listAll" resultType="MyBatisTestDO">
+		select t.* from test_entity t
+	</select>
+	<!-- 指定返回类型为map，将得到List<Map> -->
+	<select id="queryAll" resultType="map">
+		select t.* from test_entity t
+	</select>
+	<!-- 分页查询。返回Map的集合而不是DO的集合，是为了便于按业务需要去扩展字段 -->
+	<select id="queryAllPage" resultType="map">
+		select t.* from test_entity t where 1 = 1
+		<if test="id != null">and t.id = #{id}</if>
+		<if test="username != null">and t.username = #{username}</if>
+		<if test="sex != null">and t.sex = #{sex}</if>
+		<if test="mobilePhone != null">and t.mobile_phone = #{mobilePhone}</if>
+		<if test="createTime != null">and t.create_time = #{createTime}</if>
+	</select>
+	<!-- 当有多个参数时，没法直接使用map里的键 -->
+	<select id="queryPage" resultType="map">
+		select t.* from test_entity t
+		<trim prefix="where" prefixOverrides="and |or ">
+			<if test="params.username != null">and t.username like '%' #{params.username} '%'</if>
+			<if test="params.sex != null">and t.sex = #{params.sex}</if>
+			<if test="params.mobilePhone != null">and t.mobile_phone = #{params.mobilePhone}</if>
+			<if test="params.createTime != null">and t.create_time = #{params.createTime}</if>
+		</trim>
+		<if test="params.id != null">and t.id = #{params.id}</if>
+	</select>
+
+	<!-- 下面是 关联查询 -->
+	<!-- 集合的嵌套select查询 -->
+	<select id="getFullEducation" resultMap="MyBatisTestEducationDTOSelect">
+		select * from test_entity t where t.id = #{id}
+	</select>
+	<resultMap type="indi.mybatis.data.MyBatisTestEducationDTO"
+		id="MyBatisTestEducationDTOSelect">
+		<!-- 嵌套select查询时，column用于指定 要向select传递的列；若列不存在，将跳过而不是报错 -->
+		<!-- 测试引用其他mapper时引用的是xml还是接口。居然是接口！！！ -->
+		<collection property="educations" column="{userId=id}"
+			ofType="MyBatisTestEducationDO" select="indi.mybatis.dao.TestEducationMapper.listByUserId"></collection>
+	</resultMap>
+	<!-- 集合的嵌套结果映射 -->
+	<!-- 不能有重复字段；要将模糊的字段指出来，如：两个表共用的字段 -->
+	<!-- 这里实际发生了自动聚合 -->
+	<select id="getFullEducation2" resultMap="MyBatisTestEducationDTOMap">
+		SELECT en.*, edu.`id` AS edu_id, edu.`school_name`, edu.`major`,
+		edu.`begin_time`, edu.`end_time`
+		FROM test_entity en JOIN
+		test_education edu ON en.`id` = edu.`user_id`
+		where en.id = #{id}
+	</select>
+	<resultMap type="MyBatisTestEducationDTO" id="MyBatisTestEducationDTOMap">
+		<id property="id" column="id" />
+		<result property="username" column="username" />
+		<result property="sex" column="sex" />
+		<collection property="educations" ofType="MyBatisTestEducationDO">
+			<id property="id" column="edu_id" />
+			<result property="username" column="username" />
+			<result property="sex" column="sex" />
+		</collection>
+	</resultMap>
+
+
+	<!-- 下面是 其他 -->
+	<select id="getCreateTime" resultType="date">
+		select t.create_time from
+		test_entity t where t.id = #{id}
+	</select>
+	<select id="fuzzQueryUsername" resultType="map">
+		select t.* from
+		test_entity t where t.username like "%"#{username}"%"
+	</select>
+	<!-- 测试多参数，写法1 -->
+	<select id="queryPage1" resultType="map">
+		select t.* from test_entity t
+		limit #{offset}, #{size}
+	</select>
+	<!-- 测试多参数，写法2 -->
+	<select id="queryPage2" resultType="map">
+		select t.* from test_entity t
+		limit #{param1}, #{param2}
+	</select>
+	<!-- 测试插入null值时是否需要指定jdbcType -->
+	<insert id="insertWithNull" useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO test_entity (username, sex, mobile_phone, create_time)
+		VALUES(#{username}, #{sex}, #{mobilePhone,jdbcType=VARCHAR},
+		#{createTime})
+	</insert>
+	<!-- 测试同时使用<set>和<where> -->
+	<update id="updateNotNull">
+		update test_entity
+		<set>
+			<if test="username != null"> username = #{username},</if>
+			<if test="sex != null"> sex = #{sex},</if>
+			<if test="mobilePhone != null"> mobile_phone = #{mobilePhone},</if>
+			<if test="createTime != null"> create_time = #{createTime},</if>
+		</set>
+		<where><!-- 这里总不能再用if了吧 -->
+			id = #{id}
+		</where>
+	</update>
+	<!-- 测试foreach -->
+	<select id="queryByIds" resultType="MybatisTestDO">
+		select t.* from test_entity t
+		<where>
+			<!-- 没有设置item、index属性时，不能使用这两个变量（应该是为了保守起见才如此设计的） -->
+			<foreach collection="ids" open="id in(" separator="," close=")" item="item" index="index">
+				#{item}
+			</foreach>
+		</where>
+	</select>
+
+</mapper>
