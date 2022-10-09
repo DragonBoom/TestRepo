@@ -54,6 +54,7 @@ class FeignTest {
 
         // 自行代理方法：
         // Fetch and print a list of the contributors to this library.
+        // 接口改了，没法映射到Contributor中，会报错
         List<Contributor> contributors = github.contributors("OpenFeign", "feign");
         for (Contributor contributor : contributors) {
             System.out.println(contributor.login + " (" + contributor.contributions + ")");

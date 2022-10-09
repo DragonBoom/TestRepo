@@ -18,7 +18,7 @@ import org.junit.jupiter.api.Test;
 import com.google.code.kaptcha.impl.DefaultKaptcha;
 import com.google.code.kaptcha.util.Config;
 
-public class GetKaptchaTest {
+public class KaptchaTest {
     private static String location;
 
     @BeforeAll
