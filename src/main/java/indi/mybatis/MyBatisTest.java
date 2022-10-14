@@ -45,7 +45,7 @@ import lombok.SneakyThrows;
  * @author wzh
  * @since 2020.07.19
  */
-@ActiveProfiles("mybatis")// 加载测试用配置文件
+@ActiveProfiles({"secret", "mybatis"})// 加载测试用配置文件
 @ExtendWith({TestSeparateExtension.class, SpringExtension.class})
 @SpringBootTest// 为测试分页插件，不能用下面的注解
 //@MybatisTest// 专门测试MyBatis（不会扫描其他bean），可结合其他测试注解使用

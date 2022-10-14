@@ -85,16 +85,15 @@
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.junit.platform/junit-platform-commons -->
-
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-api</artifactId>
-			<scope>test</scope>
+<!--			<scope>test</scope> 为了能在非测试路径下使用junit，不能设置scope为test-->
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<scope>test</scope>
+<!--			<scope>test</scope> 为了能在非测试路径下使用junit，不能设置scope为test-->
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.data</groupId>

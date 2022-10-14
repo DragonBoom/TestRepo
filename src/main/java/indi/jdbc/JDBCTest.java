@@ -11,10 +11,14 @@ import java.sql.Timestamp;
 import java.util.Date;
 import java.util.Enumeration;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import org.springframework.core.env.PropertySource;
 
 import com.zaxxer.hikari.HikariDataSource;
+
+import indi.util.SpringUtils;
 
 /**
  * 
@@ -23,12 +27,22 @@ import com.zaxxer.hikari.HikariDataSource;
  * @since 2020.07.01
  */
 public class JDBCTest {
-    private static final String 
-    JDBC_URL = 
-    "jdbc:mysql://127.0.0.1:3306/test?serverTimezone=Hongkong&useSSL=false&useUnicode=true&characterEncoding=UTF-8",
-    JDBC_USER_NAME = "root", 
-    JDBC_PASSWORD = "!qQ1312449403";
+    private static String JDBC_URL;
+    private static String JDBC_USER_NAME;
+    private static String JDBC_PASSWORD;
 
+    @BeforeAll
+    static void init() {
+        // 从配置文件中读取配置
+        PropertySource<?> propertySource = SpringUtils.getPropertySource("application-secret.properties");
+        JDBC_URL = (String) propertySource.getProperty("local.mysql.url.test");
+        JDBC_USER_NAME = (String) propertySource.getProperty("local.mysql.username");
+        JDBC_PASSWORD = (String) propertySource.getProperty("local.mysql.password");
+        System.out.println(JDBC_URL);
+        System.out.println(JDBC_USER_NAME);
+        System.out.println(JDBC_PASSWORD);
+    }
+    
     /**
      * 测试使用JDBC开启事务访问数据库
      * 
@@ -109,10 +123,10 @@ public class JDBCTest {
         // 需要逐行处理
 //        boolean first = rs.first();
 //        System.out.println(first);
-        boolean next = rs.next();
+        boolean next = rs.next();// 结果集执行next后才是第一行
         System.out.println("move next row success ?" + next);
         
-        return rs.getString("username");
+        return next ? rs.getString("username") : null;
     }
     
     /** 带事务地插入数据 */
@@ -163,7 +177,7 @@ public class JDBCTest {
 
         Connection connection = hikariDataSource.getConnection();
         
-        String username = queryUsernameByPreparedStatement(1, connection);
+        String username = queryUsernameByPreparedStatement(123, connection);
         System.out.println(username);// print: 1592911763146
         hikariDataSource.close();
     } 
