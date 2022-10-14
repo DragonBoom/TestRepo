@@ -36,5 +36,5 @@ buildNumber.properties
 .mvn/timing.properties
 .mvn/wrapper/maven-wrapper.jar
 .factorypath
-src/main/resource/*.properties
+application-secret.properties
 mybatis-config.xml
