@@ -23,10 +23,11 @@ class RabbitmqPlainTest {
     static void init() {
         PropertySource<?> propertySource = SpringUtils.getPropertySource("application-secret.properties");
         // 从Spring配置文件读取配置（application-rabbit.properties）
-        rabbitUsername = (String) propertySource.getProperty("vps1.spring.rabbitmq.username");
-        rabbitPassword = (String) propertySource.getProperty("vps1.spring.rabbitmq.password");
-        rabbitHost = (String) propertySource.getProperty("vps1.spring.rabbitmq.host");
-        rabbitPort = Integer.parseInt((String) propertySource.getProperty("vps1.spring.rabbitmq.port"));
+        rabbitUsername = (String) propertySource.getProperty("vps1.rabbitmq.username");
+        rabbitPassword = (String) propertySource.getProperty("vps1.rabbitmq.password");
+        rabbitHost = (String) propertySource.getProperty("vps1.rabbitmq.host");
+        rabbitPort = Integer.parseInt((String) propertySource.getProperty("vps1.rabbitmq.port"));
+
     }
 
     /**
