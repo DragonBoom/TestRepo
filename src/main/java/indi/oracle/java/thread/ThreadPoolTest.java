@@ -14,11 +14,6 @@ import org.junit.jupiter.api.extension.ExtendWith;
 
 import indi.test.TestSeparateExtension;
 
-/**
- * 2021.06.11 本类应该是用于测试线程池的处理顺序是否有序;
- * 可以看出，任务的处理顺序是由工作队列(workQueue)决定的
- * 
- */
 @ExtendWith(TestSeparateExtension.class)
 public class ThreadPoolTest {
 	private final static int MAX_THREADS = 5;
@@ -33,6 +28,11 @@ public class ThreadPoolTest {
 		aliveSecond = 60;
 	}
 
+	/*
+	 * 2021.06.11 本类应该是用于测试线程池的处理顺序是否有序;
+	 * 可以看出，任务的处理顺序是由工作队列(workQueue)决定的
+	 *
+	 */
 	// 无序
 	@Test
 	public void orderTest1() {

@@ -36,12 +36,12 @@
         </repository>
 
         <repository>
-            <id>1</id>
+            <id>WSO2</id>
             <name>WSO2</name>
             <url>http://dist.wso2.org/maven2/</url>
         </repository>
         <repository>
-            <id>2</id>
+            <id>OpenKm</id>
             <name>OpenKm</name>
             <url>http://maven.openkm.com/</url>
         </repository>
@@ -170,6 +170,7 @@
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
         </dependency>
+        <!-- 能找到的maven仓库没有pom文件 https://dist.wso2.org/maven2/com/google/code/kaptcha/2.3.0/ -->
         <dependency>
             <groupId>com.google.code</groupId>
             <artifactId>kaptcha</artifactId>
